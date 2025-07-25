@@ -1,0 +1,52 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.nav-links {
+    display: none;
+}
+
+.about-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+}
+
+.contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.projects-grid {
+    grid-template-columns: 1fr;
+}
+
+.section {
+    padding: 4rem 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+}
+
+/* Scroll animations */
+.fade-in {
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
