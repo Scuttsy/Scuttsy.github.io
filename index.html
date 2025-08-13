@@ -14,13 +14,13 @@
         <div class="nav-container">
             <ul class="nav-links">
                 <li><a href="#about">Projects</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="aboutme.html">About</a></li>
             </ul>
         </div>
     </nav>
 
     
-    <div src="resources/images/background.mp4"  type="video/mp4" class="main">
+    <div class="main">
         <section id="about" class="section about-section">
             <div class="about-card fade-in">
                 <div class="about-text">
@@ -40,19 +40,20 @@
                     </h3>
                 </div>
                 <div class="about-tags">
-                    <a href="scutts001@gmail.com" class="about-tag">
+                    <a onclick="copyEmail()" class="about-tag" style="cursor: pointer;">
                         <img src="resources/images/email.png" alt="email" class="icon">
                     </a>
-                    <a href="https://www.youtube.com/@Scuttsy"class="about-tag">
+                    <a href="https://www.youtube.com/@Scuttsy" target="_blank" class="about-tag">
                         <img src="resources/images/youtube.png" alt="youtube" class="icon">
                     </a>
                     
-                    <a href="https://www.linkedin.com/in/samuel-cutts-02a096296/"class="about-tag">
+                    <a href="https://www.linkedin.com/in/samuel-cutts-02a096296/" target="_blank" class="about-tag">
                         <img src="resources/images/linkedin.png" alt="linkedin" class="icon">
                     </a>
                     
-                    <a href="https://www.linkedin.com/in/samuel-cutts-02a096296/"class="about-tag">
-                        <img src="resources/images/cv.png" alt="linkedin" class="icon">
+                    <a href="https://drive.google.com/uc?export=download&id=1HlrMfJTZouGmIIsU-5a4aQPYhEYs3kHm" target="_blank" class="about-tag">
+                        <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
+                        <p>SEE MY RESUME</p>
                     </a>
                 </div>
 
@@ -67,7 +68,7 @@
                          </div>
                         </div>
                     <div class="project-content">
-                        <h3>ULTRA SPRING</h3>
+                        <h3>ULTRASPRING</h3>
                         <p>Fast paced platformer prototype highlighting the iterative process to Game Design.</p>
                     </div>
                 </a>
@@ -86,8 +87,8 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>ULTRA SPRING</h3>
-                        <p>Description of ultra spring will go here</p>
+                        <h3>Design Process</h3>
+                        <p>My philosophy to Game Design revolved around rapid prototyping and playtesting as early as possible.</p>
                     </div>
                 </a>
                 <a href="#" class="project-card fade-in">
@@ -98,13 +99,36 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Project Title 2</h3>
-                        <p>Another project description showcasing your skills and the impact of your work on users or clients.</p>
+                        <h3>Personal Proj</h3>
+                        <p>Description of personal project, prob the retrofit from design den</p>
                     </div>
                 </a>
-                <a href="#" class="project-card fade-in">
-                    <section class="section-title">
-                        </section>
+                <div class="project-card fade-in">
+                    <div class="project-content">
+                        <h2 style="font-weight: 300;">Game Jams</h2>
+                        <a href="https://skyyyla.itch.io/ratobotica" target="_blank" class="gameJam fade-in">
+                            <img src="resources/images/ratabotica.png" alt="ratabotica">
+                            <div>
+                                <h3>Ratabotica</h3>
+                                <p>Programming, 3 C's, 3D art</p>
+                            </div>
+                        </a>
+                        <a href="https://opisthokontessa.itch.io/plantisine" target="_blank" class="gameJam fade-in">
+                            <img src="resources/images/planticine.png" alt="planticine">
+                            <div>
+                                <h3>Planticine</h3>
+                                <p>Programming, UX, Shaders, Audio</p>
+                            </div>
+                        </a>
+                        <a href="https://skyyyla.itch.io/starfall" target="_blank" class="gameJam fade-in">
+                            <img src="resources/images/starfall.png" alt="starfall">
+                             <div>
+                                <h3>Starfall</h3>
+                                <p>Entire second phase</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -114,10 +138,14 @@
     
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Samuel Cutts. All rights reserved.</p>
-    </footer>
+    <a>
+        <footer class="footer">
+            <p>&copy; 2025 Samuel Cutts. All rights reserved.</p>
+        </footer>
+    </a>
 
+    <script src="javascript/main.js"></script>
 
 </body>
+
 </html> 
