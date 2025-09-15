@@ -76,7 +76,7 @@
             border-radius: 25px;
             padding: 3rem;
             box-shadow: var(--shadow);
-            border: 1px solid rgba(0,0,0,0.05);
+             border: 2px solid rgba(216, 212, 221, 0.05);
             max-width: 700px;
             margin: 0 auto;
         }
@@ -225,7 +225,7 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 2px solid rgba(216, 212, 221, 0.05);
             object-fit: contain;
             text-decoration: none;
             color: inherit;
@@ -342,5 +342,19 @@
             width: 100%;
             margin-bottom: 1rem;
         }
+        .arrow {
+            height: 4rem;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .arrow_curved {
+            height: 100%;
+            padding-top: 4rem;
+            padding-bottom: 7rem;
+            overflow: hidden;
+        }
+        
 
         
