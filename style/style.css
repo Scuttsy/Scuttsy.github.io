@@ -185,7 +185,7 @@
             font-size: 2.5rem;
             font-weight: 600;
             color: var(--text-primary);
-            align-self: flex-start !important;
+            align-self: flex-start;
         }
         .section-description {
             width: 100%;
@@ -360,6 +360,141 @@
             padding-bottom: 7rem;
             overflow: hidden;
         }
-        
+        .outside-link{
+        width: 700px;
+        height: 400px;
+    }
+    .itch-embed{
+        width: 100%;
+        height: 200px;
+    }
+    .documentation{
+        width: 1200px !important; 
+        transform: translate(0, 80px);
+    }
+    .button{
+        width: 100%; 
+        display: flex; 
+        justify-content: center; 
+        margin: 20px 0;
+    }
+    
+       
+@media all and (max-width: 800px) {
+    .body {
+        align-items: center;
+    }
+    .main {
+        margin-top: 10px;
+    }
+    .outside-link{
+        width: 400px;
+        height: 300px;
+    }
+    .itch-embed{
+        width: 100%;
+        height: 200px;
+
+    }
+    .main-description {
+        width: 100%;
+        margin-top: 100px;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .section-description ul {
+        align-items: left;
+        padding-top: 20px;
+    }
+
+    .section-description li {
+        text-align: left;
+    }
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem 3rem;
+    }
+
+    .about-card {
+        padding: 2rem;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 1rem 1rem;
+        width: 400px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+    .project-card {
+        width: 100%;
+    }
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .tag {
+        font-size: 0.8rem;
+    }
+
+    .arrow_curved {
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+        transform: scale(0.4, 1);
+        transform-origin: 30% 50%;
+    }
+    .button{
+        width: 300px; 
+        display: flex; 
+        align-self: center;
+        justify-content: center; 
+        margin: 20px 0;
+    }
+}
 
         

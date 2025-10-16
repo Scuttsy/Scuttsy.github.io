@@ -61,3 +61,18 @@
 .nav-links a:hover::after {
     width: 100%;
 }
+
+@media (max-width: 800px) {
+    .nav-container {
+        padding: 0 1rem;
+        align-self: center;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+    }
+}
