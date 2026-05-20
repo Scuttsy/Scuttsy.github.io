@@ -464,6 +464,7 @@
         font-size: 2.5rem;
         justify-content: center;
         text-align: center;
+        flex-direction: column;
     }
 
     .section h2 {
@@ -509,6 +510,11 @@
         align-self: center;
         justify-content: center; 
         margin: 20px 0;
+    }
+
+    .profile{
+        width: 200px;
+        height: 200px;
     }
 }
 
