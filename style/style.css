@@ -397,15 +397,15 @@
 
        
     .profile-card{
-        width: 300px;
-        height: 300px;
+        width: 15rem;
+        height: 15rem;
         background: var(--secondary-color);
         background-size: cover;
         background-position: center center;
         border-radius: 20px;
         overflow: hidden;
         box-shadow: var(--shadow);
-        border: 2px solid rgba(216, 212, 221, 0.05);
+        border: 5px solid rgba(216, 212, 221, 0.05);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -538,8 +538,8 @@
     }
 
     .profile-card{
-        width: 250px;
-        height: 250px;
+        width: 15rem;
+        height: 15rem;
     }
 
     .profile-card img{
