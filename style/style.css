@@ -18,6 +18,10 @@
         scroll-behavior: smooth;
     }
 
+    keywords {
+        display: none;
+    }
+
     body {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         line-height: 1.6;
@@ -427,7 +431,7 @@
         align-items: center;
     }
     .main {
-        margin-top: 10px;
+        margin: 0px 1rem 20px;
     }
     .outside-link{
         width: 400px;
@@ -457,11 +461,11 @@
     .about-section {
         flex-direction: column;
         align-items: center;
-        padding: 0 1rem 3rem;
+        padding: 0 1rem 1.5rem;
+        gap: 1rem;
     }
-
     .about-card {
-        padding: 2rem;
+        padding: 1.2rem;
         max-width: 100%;
         text-align: center;
     }
@@ -469,17 +473,37 @@
     .about-image {
         height: 300px;
     }
+    .about-text h1{
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
 
     .about-text h2 {
         font-size: 1.8rem;
     }
 
     .about-text h3 {
-        font-size: 1.3rem;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .about-text p {
         font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .about-tags {
+        gap: 0.6rem;
+    }
+
+    .about-tag {
+        padding: 5px 10px;
+        font-size: 0.95rem;
+        border-radius: 18px;
+    }
+
+    .about-tag P {
+        font-size: 0.95rem;
     }
 
     .section {
@@ -504,21 +528,33 @@
     .projects-grid {
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 20px;
     }
 
     .project-card {
         max-width: 100%;
+        width: 100%;
     }
 
     .project-image {
-        height: 200px;
+        height: 150px;
     }
-    .project-card {
-        width: 100%;
+
+    .project-content {
+        padding: 0.7rem;
     }
     .project-content h3 {
         font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .project-content p {
+        margin-bottom: 0.5rem;
+    }
+
+    .project-tags {
+        padding: 8px 15px;
+        gap: 0.7rem;
     }
 
     .tag {
