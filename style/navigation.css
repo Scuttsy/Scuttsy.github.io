@@ -1,7 +1,7 @@
 /* Navigation */
 .nav {
     position: fixed;
-    display: block;
+    display: flex;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -9,11 +9,12 @@
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255,255,255,0.1);
     transition: all 0.3s ease;
+    justify-content: space-between;
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 300px;
+    margin: 0 10px;
     padding: 0 2rem;
     display: flex;
     justify-content: center;
@@ -37,7 +38,7 @@
 .nav-links a {
     text-decoration: none;
     font-size: 25px;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-weight: 600;
     transition: color 0.3s ease;
     position: relative;
@@ -60,6 +61,14 @@
 
 .nav-links a:hover::after {
     width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-self: center;
+    margin: 0 10px;
 }
 
 @media (max-width: 800px) {

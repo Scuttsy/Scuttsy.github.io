@@ -30,6 +30,17 @@ p {
     display: block;
     font-size: 1.2rem;
     color: var(--text-secondary);
+    margin: 10px;
+}
+
+.small p {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 10px;
+}
+.small ol {
+    margin-left: 1.2rem;
 }
 
 b {
