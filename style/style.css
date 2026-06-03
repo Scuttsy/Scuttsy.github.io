@@ -160,10 +160,14 @@
     /* Sections */
     .section {
         max-width: 1080px;
-        margin: 0;
         justify-content: center;
         display: flex;
         
+    }
+    .section img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
     }
 
     .section-title {
