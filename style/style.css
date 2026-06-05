@@ -25,7 +25,7 @@
 
     body {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        line-height: 1.6;
+        line-height: 1;
         background-image: url("/resources/images/background.gif");
         overflow-x: hidden;
         align-items: center;
@@ -49,7 +49,7 @@
     .main {
         display: flex;
         flex-direction: column;
-        margin: 120px 8rem 30px;
+        margin: 80px 8rem 30px;
         align-items: center;
     }
 
@@ -69,7 +69,7 @@
         position: relative;
         display: flex;
         /* align-self: start; */
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
         gap: 2rem;
     }
 
@@ -162,7 +162,7 @@
         max-width: 1080px;
         justify-content: center;
         display: flex;
-        
+        flex-direction: row;
     }
     .section img{
         width: 100%;
@@ -199,6 +199,7 @@
         font-weight: 600;
         color: var(--text-primary);
         align-self: flex-start;
+        margin-bottom: 1rem;
     }
     .section-description {
         width: 100%;
@@ -225,7 +226,7 @@
         /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
         gap: 30px;
         width: 100%;
-        justify-content: center;
+        justify-content: right;
         flex-direction: row-reverse;
     }
 
@@ -294,18 +295,17 @@
 
 
     .project-content {
-        padding: 1rem;
+        padding: 0px 15px 15px 15px;
     }
 
     .project-content h3 {
         font-size: 1.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 15px;
         color: var(--text-primary);
     }
 
     .project-content p {
         color: var(--text-secondary);
-        margin-bottom: 1.5rem;
     }
 
     .project-tags {
@@ -381,12 +381,20 @@
         align-items: center;
         justify-content: center;
     }
-    .arrow_curved {
-        height: 100%;
-        padding-top: 4rem;
-        padding-bottom: 7rem;
-        overflow: hidden;
+
+    .arrow_curved_container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        object-fit: fill;
     }
+
+    .arrow_curved {
+        height: 70% !important;
+        width: auto !important;
+    }
+  
+
     .outside-link{
     width: 700px;
     height: 400px;
@@ -438,7 +446,7 @@
         align-items: center;
     }
     .main {
-        margin: 1rem 0rem 20px;
+        margin: 30px .5rem 20px .5rem ;
     }
     .outside-link{
         width: 400px;
@@ -467,9 +475,8 @@
     .about-section {
         flex-direction: column;
         align-items: center;
-        padding: 0 1rem 1.5rem;
+        padding: 0 1rem 1.5rem 1rem;
         gap: 1rem;
-        margin-top: 50px;
     }
     .about-card {
         padding: 1.2rem;
@@ -515,7 +522,7 @@
 
     .section {
         padding: 1rem 1rem;
-        width: 400px;
+        max-width: 400px;
         margin-bottom: auto;
     }
 
@@ -532,7 +539,10 @@
         text-align: center;
         justify-content: center;
         align-self: center;
+        margin-bottom: 10px;
     }
+
+   
 
     .projects-grid {
         flex-direction: column;
@@ -570,11 +580,12 @@
         font-size: 0.8rem;
     }
 
+    .arrow_curved_container {
+        display: none
+    }
+
     .arrow_curved {
-        padding-top: 2rem;
-        padding-bottom: 5rem;
-        transform: scale(0.4, 1);
-        transform-origin: 30% 50%;
+        display: none;
     }
     .button{
         width: 300px; 
