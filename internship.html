@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="style/navigation.css">   
     <link rel="stylesheet" href="style/aboutme.css">
     <link rel="stylesheet" href="style/gallery.css">
+    <link rel="script" href="javascript/main.js">
     <link rel="icon" type="image/x-icon" href="resources/images/icon.svg">
 
-    <script rel="script" href="javascript/main.js"></script>
 </head>
+
 
 <body class="background-tint">
     <nav class="nav">
-        <div class="nav-container" style="justify-content: center;">
+        <div class="nav-container">
             <ul class="nav-links">
                 <li><a href="index.html">Projects</a></li>
                 <li><a href="aboutme.html">About</a></li>
@@ -38,11 +39,13 @@
                     <p>
                         I completed an 18 week internship at Para Fauna
                         studios, a small indie studio based in Ghent, 
-                        Belgium. During my time there, I worked on a 3 small mobile/web
-                        games for Poki, one of we shipped on steam, as well their flagship 
-                        project: Adapta Solva. I grew my skills in Design, planning and 
-                        working under tight time constraints. I had the pleasure of doing 
-                        this with an awesome team.
+                        Belgium. During my time there, I worked on a 
+                        variety of projects, including their flagship 
+                        project Adapta Solva, 2 small mobile/web games 
+                        for Poki andparticipated in a Steam Release. I 
+                        gained valuable experience in game design, 
+                        playtesting, and iteration, and I had the 
+                        opportunity to work with an awesome team.
                     </p>
                 </div>
         </section>
@@ -50,8 +53,8 @@
         <section class="section section-description">
             <h2>Key Takeaways</h2>
                 <p>
-                    As an indie developer, I handled every technical task associated 
-                    with any given feature, given we were with only 2 artists and 2 programmers,
+                    As an indie developer, I had to handle a range of
+                    responsibilities. With only 2 artists and 2 programmers,
                     I often had to stretch beyond pure design work and take on
                     larger sections of the pipeline. I gained experience in:
                     <ul>
@@ -59,7 +62,6 @@
                         <li>Technical Art</li>
                         <li>Playtesting and Iteration</li>
                         <li>Writing scalable code</li>
-                        <li>Working for fast turnarounds</li>
                         <li>Seeing a feature through from concept 
                             to final implementation
                         </li>
@@ -72,14 +74,12 @@
             <h2>Responsibilities</h2>
             <p>    
                 Given the small team size of 4, I had to define my responsibilities more often 
-                than working within a defined project structure.
+                than working within a defined project structure.   
             </p>
 
             <ul>
                 <li>Task Creation and estimation</li>
-                <li>Starting and finishing a feature without constant guidance</li>
-                <li>Designing and implementing new features</li>
-                <li>Documenting my process to fit the needs of my team</li>
+                <li></li>
             </ul>
         </section>
 
@@ -87,62 +87,41 @@
             <h2>Adapta Solva</h2>
             <div>
                 <p>
-                    I had the opportunity to work on the flagship project at Para Fauna. My primary responsibilities were to solve two majour challenges players were currently experiencing. The first was a sense of continuity for playsessions. In other words, giving players a sense that the levels they are playing are part of a larger, connected world. The second challenge was communicating to the player their impact on the game world by the action of restoring a corrupted forest through their afforded actions.
+                    I had the opportunity to work on the flagship project at Para Fauna.
                 </p>
             </div>
 
             <h3>Level Design</h3>
-            <div>
-                <p>
-                    My solution to giving players a stronger sense of continuity was to adapt and flesh out a previous idea for a hub world with interconnected tracks leading to and away from the hub. Additionally, I furthered the player's connection to the puzzles by adding traversal sections between each of the main puzzles, to break up the pacing.
-                </p>
-
-                <h4>Hub World</h4>
-                <P>
-                    I was inspired by the hub worlds of traditional puzzle platformers and aimed to create a hubworld that focused on tutorialisation, story and exploration with secrets. To this end I took inspiration from games such as Spyro and Super Mario Sunshine. My first blockout of the hub involved forcing the player to perform a simple, low stakes puzzle to unlock each door.
-                </P>
-
-                <img src="resources/images/ParaFauna/HubBlockout01.png" alt="Hub Blockout 01" style="object-fit: scale-down;">
-
-                <p>
-                    We found after playtesting that the core idea of the hub worked, but the forced puzzles were causing players to view the hub as one large puzzle. So I retrofitted each of the puzzles into optional secret objectives to unlock collectables. As well as improved telegraphing for the player. This is what the final blockout looked like:
-                </p>
-
-                <img src="resources/images/ParaFauna/HubBlockout03.png" alt="Hub Blockout 3" style="object-fit: scale-down;">
-
-                <h4>Platforming sections</h4>
-                <p>
-                    In addtion to the Hub world, I added traversal sections with light platforming as a way to flesh out the tracks and break up the pacing. Lastly, the platforming sections act as an important form of tutorialisation.
-                </p>
-
-                <div class="scroll-container">
-                    <div class="pic-container">
-                        <div class="parent">
-                            <a onclick="popOut()" class="wrapper thumb-1" style="cursor: pointer;">
-                                <div class="content">
-                                    <img src="resources/images/ParaFauna/track01.png" alt="track01">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                    <div class="parent">
-                        <div class="wrapper thumb-1">
-                            <div class="content">
-                                <img src="resources/images/ParaFauna/track02.png" alt="track02">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <h3>Restoration Design</h3>
             <p>
-                To achieve a sense of restoring the dead forest that the player inhabits and have that feel as satisfying as possible, I pitched and implemented a system of feedback that would be delivered to the player. 
+                One of the challenges that the project needed to overcome was 
+                delivering a sense of restoring the dead forest that you play 
+                and have that feel as satisfying as possible. To that end I pitched
+                a system of feedback that would be delivered to the player. I wanted
             </p>
+        </section>
 
-            <h4>Texture painting</h4>
+        <!-- ParaFauna Gallery Section -->
+        <section class="section section-description">
+            <h2>Visual Effects & Track Gallery</h2>
+            <p>Below is a gallery of some of the visual effects and restoration tracks from Adapta Solva. Click any image to expand.</p>
+            
+            <div class="gallery-wrapper">
+                <div class="gallery" id="gallery">
+                    <!-- Gallery items will be inserted here by JavaScript -->
+                </div>
+            </div>
 
+            <div class="modal" id="modal">
+                <button class="modal-nav prev" id="prevBtn" style="display:none;">Γ¥«</button>
+                <div class="modal-content" id="modalContent">
+                    <!-- Content will be inserted here -->
+                </div>
+                <button class="modal-nav next" id="nextBtn" style="display:none;">Γ¥»</button>
+                <span class="modal-close" id="closeBtn">&times;</span>
+                <div class="modal-counter" id="counter"></div>
+            </div>
         </section>
 
         <section class="section section-description">
@@ -161,17 +140,10 @@
                 
         </section>
 
-        
+    </div>
+    </div>
+    </div>
 
-        <div class="button">
-            <a href="index.html" class="button-content hoverCard fade-in">
-                <div class="project-content">
-                    <h2>Back to Projects</h2>
-                </div>
-            </a>
-        </div>
+    <script src="javascript/gallery.js"></script>
 
-    </div>
-    </div>
-    </div>
 </body>
