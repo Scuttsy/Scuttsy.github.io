@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/typography.css">
     <link rel="stylesheet" href="style/navigation.css">   
     <link rel="stylesheet" href="style/aboutme.css">
+    <link rel="stylesheet" href="style/gallery.css">
     <link rel="script" href="javascript/main.js">
     <link rel="icon" type="image/x-icon" href="resources/images/icon.svg">
 
@@ -99,11 +100,53 @@
                 and have that feel as satisfying as possible. To that end I pitched
                 a system of feedback that would be delivered to the player. I wanted
             </p>
+
+            <!-- Gallery 1: Restoration Effects -->
+            <div data-gallery-id="1">
+                <div class="gallery-wrapper">
+                    <div class="gallery" id="gallery-1">
+                        <!-- Gallery items will be inserted here by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="modal" id="modal-1">
+                    <button class="modal-nav prev" id="prevBtn-1" style="display:none;">←</button>
+                    <div class="modal-content" id="modalContent-1">
+                        <!-- Content will be inserted here -->
+                    </div>
+                    <button class="modal-nav next" id="nextBtn-1" style="display:none;">→</button>
+                    <span class="modal-close" id="closeBtn-1">&times;</span>
+                    <div class="modal-counter" id="counter-1"></div>
+                </div>
+            </div>
         </section>
 
         <section class="section section-description">
             <h2>Monkey Swing</h2>
-                
+            
+            <h3>Platforming</h3>
+            <p>
+                Add your platforming description here.
+            </p>
+
+            <!-- Gallery 2: Platforming -->
+            <div data-gallery-id="2">
+                <div class="gallery-wrapper">
+                    <div class="gallery" id="gallery-2">
+                        <!-- Gallery items will be inserted here by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="modal" id="modal-2">
+                    <button class="modal-nav prev" id="prevBtn-2" style="display:none;">←</button>
+                    <div class="modal-content" id="modalContent-2">
+                        <!-- Content will be inserted here -->
+                    </div>
+                    <button class="modal-nav next" id="nextBtn-2" style="display:none;">→</button>
+                    <span class="modal-close" id="closeBtn-2">&times;</span>
+                    <div class="modal-counter" id="counter-2"></div>
+                </div>
+            </div>
         </section>
 
         <section class="section section-description">
@@ -121,6 +164,6 @@
     </div>
     </div>
 
-
+    <script src="javascript/gallery.js"></script>
 
 </body>
