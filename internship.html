@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/typography.css">
     <link rel="stylesheet" href="style/navigation.css">   
     <link rel="stylesheet" href="style/aboutme.css">
+    <link rel="stylesheet" href="style/gallery.css">
     <link rel="script" href="javascript/main.js">
     <link rel="icon" type="image/x-icon" href="resources/images/icon.svg">
 
@@ -101,6 +102,28 @@
             </p>
         </section>
 
+        <!-- ParaFauna Gallery Section -->
+        <section class="section section-description">
+            <h2>Visual Effects & Track Gallery</h2>
+            <p>Below is a gallery of some of the visual effects and restoration tracks from Adapta Solva. Click any image to expand.</p>
+            
+            <div class="gallery-wrapper">
+                <div class="gallery" id="gallery">
+                    <!-- Gallery items will be inserted here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="modal" id="modal">
+                <button class="modal-nav prev" id="prevBtn" style="display:none;">❮</button>
+                <div class="modal-content" id="modalContent">
+                    <!-- Content will be inserted here -->
+                </div>
+                <button class="modal-nav next" id="nextBtn" style="display:none;">❯</button>
+                <span class="modal-close" id="closeBtn">&times;</span>
+                <div class="modal-counter" id="counter"></div>
+            </div>
+        </section>
+
         <section class="section section-description">
             <h2>Monkey Swing</h2>
                 
@@ -121,6 +144,6 @@
     </div>
     </div>
 
-
+    <script src="javascript/gallery.js"></script>
 
 </body>
