@@ -1,8 +1,158 @@
-﻿const galleryData = [
-    { src: 'resources/images/ParaFauna/Resto_01.mp4', type: 'video' },
-    { src: 'resources/images/ParaFauna/Resto_02.gif', type: 'image' },
+﻿class GalleryManager {
+    constructor(galleryId, galleryData) {
+        this.galleryId = galleryId;
+        this.galleryData = galleryData;
+        this.currentIndex = 0;
+        this.isDown = false;
+        this.startX = 0;
+        this.scrollLeft = 0;
+        this.hasDragged = false;
+
+        this.gallery = document.getElementById(`gallery-${galleryId}`);
+        this.galleryWrapper = document.querySelector(`[data-gallery-id="${galleryId}"] .gallery-wrapper`);
+        this.modal = document.getElementById(`modal-${galleryId}`);
+        this.modalContent = document.getElementById(`modalContent-${galleryId}`);
+        this.closeBtn = document.getElementById(`closeBtn-${galleryId}`);
+        this.prevBtn = document.getElementById(`prevBtn-${galleryId}`);
+        this.nextBtn = document.getElementById(`nextBtn-${galleryId}`);
+        this.counter = document.getElementById(`counter-${galleryId}`);
+
+        if (!this.gallery || !this.galleryWrapper) {
+            console.warn(`Gallery with ID "${galleryId}" not found in DOM`);
+            return;
+        }
+
+        this.init();
+    }
+
+    init() {
+        this.initGallery();
+        this.attachEventListeners();
+    }
+
+    initGallery() {
+        this.galleryData.forEach((item, index) => {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = `gallery-item ${item.type}`;
+
+            if (item.type === 'image') {
+                galleryItem.innerHTML = `<img src="${item.src}" alt="Gallery item ${index + 1}">`;
+            } else {
+                galleryItem.innerHTML = `<video src="${item.src}"></video><div class="play-icon"></div>`;
+            }
+
+            galleryItem.addEventListener('click', (e) => {
+                if (!this.hasDragged) {
+                    this.openModal(index);
+                }
+            });
+            this.gallery.appendChild(galleryItem);
+        });
+    }
+
+    openModal(index) {
+        this.currentIndex = index;
+        this.updateModal();
+        this.modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    closeModal() {
+        this.modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    updateModal() {
+        const item = this.galleryData[this.currentIndex];
+        this.modalContent.innerHTML = '';
+
+        if (item.type === 'image') {
+            const img = document.createElement('img');
+            img.src = item.src;
+            this.modalContent.appendChild(img);
+        } else {
+            const video = document.createElement('video');
+            video.src = item.src;
+            video.controls = true;
+            video.autoplay = true;
+            this.modalContent.appendChild(video);
+        }
+
+        this.counter.textContent = `${this.currentIndex + 1} / ${this.galleryData.length}`;
+        this.prevBtn.disabled = this.currentIndex === 0;
+        this.nextBtn.disabled = this.currentIndex === this.galleryData.length - 1;
+    }
+
+    nextItem() {
+        if (this.currentIndex < this.galleryData.length - 1) {
+            this.currentIndex++;
+            this.updateModal();
+        }
+    }
+
+    prevItem() {
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
+            this.updateModal();
+        }
+    }
+
+    attachEventListeners() {
+        this.galleryWrapper.addEventListener('mousedown', (e) => {
+            this.isDown = true;
+            this.hasDragged = false;
+            this.galleryWrapper.classList.add('dragging');
+            this.startX = e.pageX - this.galleryWrapper.offsetLeft;
+            this.scrollLeft = this.galleryWrapper.scrollLeft;
+        });
+
+        document.addEventListener('mouseup', () => {
+            this.isDown = false;
+            this.hasDragged = false;
+            this.galleryWrapper.classList.remove('dragging');
+        });
+
+        this.galleryWrapper.addEventListener('mousemove', (e) => {
+            if (!this.isDown) return;
+            e.preventDefault();
+            const x = e.pageX - this.galleryWrapper.offsetLeft;
+            const walk = (x - this.startX) * 2;
+            if (Math.abs(walk) > 5) {
+                this.hasDragged = true;
+            }
+            this.galleryWrapper.scrollLeft = this.scrollLeft - walk;
+        });
+
+        this.galleryWrapper.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            this.galleryWrapper.scrollLeft += e.deltaY * 2;
+        });
+
+        this.closeBtn.addEventListener('click', () => this.closeModal());
+        this.nextBtn.addEventListener('click', () => this.nextItem());
+        this.prevBtn.addEventListener('click', () => this.prevItem());
+
+        this.modal.addEventListener('click', (e) => {
+            if (e.target === this.modal) {
+                this.closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (this.modal.classList.contains('active')) {
+                if (e.key === 'ArrowRight') this.nextItem();
+                if (e.key === 'ArrowLeft') this.prevItem();
+                if (e.key === 'Escape') this.closeModal();
+            }
+        });
+    }
+}
+
+const galleryData1 = [
     { src: 'resources/images/ParaFauna/WallRestore_Ice02.gif', type: 'image' },
+    { src: 'resources/images/ParaFauna/Resto_02.gif', type: 'image' },
     { src: 'resources/images/ParaFauna/Restore_Ice02_01.gif', type: 'image' },
+    { src: 'resources/images/ParaFauna/Resto_01.mp4', type: 'video' },
     { src: 'resources/images/ParaFauna/RestoreVFX06.mp4', type: 'video' }
 ];
 
@@ -15,146 +165,19 @@ const galleryData2 = [
     {src: 'resources/images/ParaFauna/track06.png', type: 'image'},
     {src: 'resources/images/ParaFauna/track07.png', type: 'image'},
     {src: 'resources/images/ParaFauna/track08.png', type: 'image'},
-]
+];
 
-let currentIndex = 0;
-let isDown = false;
-let startX = 0;
-let scrollLeft = 0;
-let hasDragged = false;
-
-const gallery = document.getElementById('gallery');
-const galleryWrapper = document.querySelector('.gallery-wrapper');
-const modal = document.getElementById('modal');
-const modalContent = document.getElementById('modalContent');
-const closeBtn = document.getElementById('closeBtn');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const counter = document.getElementById('counter');
-
-function initGallery() {
-    galleryData.forEach((item, index) => {
-        const galleryItem = document.createElement('div');
-        galleryItem.className = `gallery-item ${item.type}`;
-        
-        if (item.type === 'image') {
-            galleryItem.innerHTML = `<img src="${item.src}" alt="Gallery item ${index + 1}">`;
-        } else {
-            galleryItem.innerHTML = `<video src="${item.src}"></video><div class="play-icon"></div>`;
-        }
-        
-        galleryItem.addEventListener('click', (e) => {
-            if (!hasDragged) {
-                openModal(index);
-            }
-        });
-        gallery.appendChild(galleryItem);
-    });
-}
-
-function openModal(index) {
-    currentIndex = index;
-    updateModal();
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-function updateModal() {
-    const item = galleryData[currentIndex];
-    modalContent.innerHTML = '';
-    
-    if (item.type === 'image') {
-        const img = document.createElement('img');
-        img.src = item.src;
-        modalContent.appendChild(img);
-    } else {
-        const video = document.createElement('video');
-        video.src = item.src;
-        video.controls = true;
-        video.autoplay = true;
-        modalContent.appendChild(video);
+function initAllGalleries() {
+    if (galleryData1.length > 0) {
+        new GalleryManager('1', galleryData1);
     }
-
-    counter.textContent = `${currentIndex + 1} / ${galleryData.length}`;
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex === galleryData.length - 1;
-}
-
-function nextItem() {
-    if (currentIndex < galleryData.length - 1) {
-        currentIndex++;
-        updateModal();
+    if (galleryData2.length > 0) {
+        new GalleryManager('2', galleryData2);
     }
 }
 
-function prevItem() {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateModal();
-    }
-}
-
-/* Gallery drag scrolling */
-galleryWrapper.addEventListener('mousedown', (e) => {
-    isDown = true;
-    hasDragged = false;
-    galleryWrapper.classList.add('dragging');
-    startX = e.pageX - galleryWrapper.offsetLeft;
-    scrollLeft = galleryWrapper.scrollLeft;
-});
-
-document.addEventListener('mouseup', () => {
-    isDown = false;
-    hasDragged = false;
-    galleryWrapper.classList.remove('dragging');
-});
-
-galleryWrapper.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - galleryWrapper.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    if (Math.abs(walk) > 5) {
-        hasDragged = true;
-    }
-    galleryWrapper.scrollLeft = scrollLeft - walk;
-});
-
-/* Mouse wheel scrolling */
-galleryWrapper.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    galleryWrapper.scrollLeft += e.deltaY * 3;
-});
-
-/* Modal controls */
-closeBtn.addEventListener('click', closeModal);
-nextBtn.addEventListener('click', nextItem);
-prevBtn.addEventListener('click', prevItem);
-
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        closeModal();
-    }
-});
-
-document.addEventListener('keydown', (e) => {
-    if (modal.classList.contains('active')) {
-        if (e.key === 'ArrowRight') nextItem();
-        if (e.key === 'ArrowLeft') prevItem();
-        if (e.key === 'Escape') closeModal();
-    }
-});
-
-/* Initialize gallery when DOM is ready */
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initGallery);
+    document.addEventListener('DOMContentLoaded', initAllGalleries);
 } else {
-    initGallery();
+    initAllGalleries();
 }
-
-
