@@ -166,7 +166,6 @@
     }
     .section img{
         width: 100%;
-        /* height: 100%; */
         object-fit: fill;
     }
 
@@ -196,6 +195,14 @@
 
     .section h2 {
         font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        align-self: flex-start;
+        margin-bottom: 1rem;
+    }
+
+     .section h3 {
+        font-size: 1.9rem;
         font-weight: 600;
         color: var(--text-primary);
         align-self: flex-start;
@@ -404,6 +411,10 @@
         width: 100%;
         height: 200px;
     }
+    .steam-embed{
+        width: 100%;
+        height: 300px;
+    }
     .documentation{
         width: 1200px !important; 
         transform: translate(0, 80px);
@@ -438,6 +449,14 @@
         justify-content: center;
         color: inherit;
     }
+
+    .list {
+        display: flex; 
+        flex-direction: row; 
+        width: 100%;
+    }
+
+
 
     
        

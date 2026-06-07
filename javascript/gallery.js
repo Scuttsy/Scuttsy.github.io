@@ -1,10 +1,21 @@
-const galleryData = [
-    { src: 'resources/images/ParaFauna/WallRestore_Ice02.gif', type: 'image' },
-    { src: 'resources/images/ParaFauna/Resto_02.gif', type: 'image' },
-    { src: 'resources/images/ParaFauna/Restore_Ice02_01.gif', type: 'image' },
+﻿const galleryData = [
     { src: 'resources/images/ParaFauna/Resto_01.mp4', type: 'video' },
+    { src: 'resources/images/ParaFauna/Resto_02.gif', type: 'image' },
+    { src: 'resources/images/ParaFauna/WallRestore_Ice02.gif', type: 'image' },
+    { src: 'resources/images/ParaFauna/Restore_Ice02_01.gif', type: 'image' },
     { src: 'resources/images/ParaFauna/RestoreVFX06.mp4', type: 'video' }
 ];
+
+const galleryData2 = [
+    {src: 'resources/images/ParaFauna/track01.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track02.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track03.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track04.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track05.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track06.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track07.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track08.png', type: 'image'},
+]
 
 let currentIndex = 0;
 let isDown = false;
@@ -107,7 +118,7 @@ galleryWrapper.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - galleryWrapper.offsetLeft;
-    const walk = (x - startX) * 2;
+    const walk = (x - startX) * 1.5;
     if (Math.abs(walk) > 5) {
         hasDragged = true;
     }
@@ -117,7 +128,7 @@ galleryWrapper.addEventListener('mousemove', (e) => {
 /* Mouse wheel scrolling */
 galleryWrapper.addEventListener('wheel', (e) => {
     e.preventDefault();
-    galleryWrapper.scrollLeft += e.deltaY * 2;
+    galleryWrapper.scrollLeft += e.deltaY * 3;
 });
 
 /* Modal controls */

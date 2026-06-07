@@ -43,7 +43,8 @@ function copyEmail() {
     });
 }
 
-function popOut() {
-    this.css('z-index', 10); 
-    this.toggleClass('open');    
+function popOut(event) {
+    const element = event.currentTarget;
+    element.style.zIndex = 10;
+    element.classList.toggle('open');
 }

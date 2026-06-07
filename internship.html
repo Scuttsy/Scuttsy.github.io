@@ -26,14 +26,14 @@
     </nav>
     <div class="main main-description" >
 
-    <section id="title" class="section section-title">
+        <section id="title" class="section section-title">
             <div>
                 <h1 style="font-size: 3.5rem;">Samuel Cutts</h1>
                 <h3 style="font-weight: 300; color: var(--text-secondary);">PARA FAUNA INTERNSHIP</h3>
             </div>
         </section>
         
-         <section class="section section-description">
+        <section class="section section-description">
                 <h2>Overview</h2>
                 <div class="section-blurb">
                     <p>
@@ -57,16 +57,18 @@
                     responsibilities. With only 2 artists and 2 programmers,
                     I often had to stretch beyond pure design work and take on
                     larger sections of the pipeline. I gained experience in:
-                    <ul>
-                        <li>Level Design</li>
-                        <li>Technical Art</li>
-                        <li>Playtesting and Iteration</li>
-                        <li>Writing scalable code</li>
-                        <li>Seeing a feature through from concept 
-                            to final implementation
-                        </li>
-                    </ul>
-                    
+
+                    <div class="list">
+                        <ul>
+                            <li>Level Design</li>
+                            <li>Technical Art</li>
+                            <li>Playtesting and Iteration</li>
+                            <li>Writing scalable code</li>
+                            <li>Seeing a feature through from concept 
+                                to final implementation
+                            </li>
+                        </ul>
+                    </div>
                 </p>
         </section>
 
@@ -77,36 +79,75 @@
                 than working within a defined project structure.   
             </p>
 
-            <ul>
-                <li>Task Creation and estimation</li>
-                <li></li>
-            </ul>
+            <div class="list">
+                <ul>
+                    <li>Task Creation and estimation</li>
+                    <li></li>
+                </ul>
+            </div>
         </section>
 
         <section class="section section-description">
+    
             <h2>Adapta Solva</h2>
-            <div>
-                <p>
-                    I had the opportunity to work on the flagship project at Para Fauna.
-                </p>
-            </div>
+            <p>
+                I had the opportunity to work on the flagship project at Para Fauna. My primary responsibilities were to solve two majour challenges players were currently experiencing. The first was a sense of continuity for playsessions. In other words, giving players a sense that the levels they are playing are part of a larger, connected world. The second challenge was communicating to the player their impact on the game world by the action of restoring a corrupted forest through their afforded actions.
+            </p>
+        
 
             <h3>Level Design</h3>
+            <p>
+                My solution to giving players a stronger sense of continuity was to adapt and flesh out a previous idea for a hub world with interconnected tracks leading to and away from the hub. Additionally, I furthered the player's connection to the puzzles by adding traversal sections between each of the main puzzles, to break up the pacing.
+            </p>
+
+            <h4>Hub World</h4>
+            <P>
+                I was inspired by the hub worlds of traditional puzzle platformers and aimed to create a hubworld that focused on tutorialisation, story and exploration with secrets. To this end I took inspiration from games such as Spyro and Super Mario Sunshine. My first blockout of the hub involved forcing the player to perform a simple, low stakes puzzle to unlock each door.
+            </P>
+
+            <img src="resources/images/ParaFauna/HubBlockout01.png" alt="Hub Blockout 01" style="object-fit: scale-down;">
+
+            <p>
+                We found after playtesting that the core idea of the hub worked, but the forced puzzles were causing players to view the hub as one large puzzle. So I retrofitted each of the puzzles into optional secret objectives to unlock collectables. As well as improved telegraphing for the player. This is what the final blockout looked like:
+            </p>
+
+            <img src="resources/images/ParaFauna/HubBlockout03.png" alt="Hub Blockout 3" style="object-fit: scale-down;">
+
+            <h4>Platforming sections</h4>
+            <p>
+                In addtion to the Hub world, I added traversal sections with light platforming as a way to flesh out the tracks and break up the pacing. Lastly, the platforming sections act as an important form of tutorialisation.
+            </p>
 
             <h3>Restoration Design</h3>
             <p>
                 One of the challenges that the project needed to overcome was 
                 delivering a sense of restoring the dead forest that you play 
                 and have that feel as satisfying as possible. To that end I pitched
-                a system of feedback that would be delivered to the player. I wanted
+                a system of feedback that would be delivered to the player. 
             </p>
-        </section>
 
-        <!-- ParaFauna Gallery Section -->
-        <section class="section section-description">
-            <h2>Visual Effects & Track Gallery</h2>
-            <p>Below is a gallery of some of the visual effects and restoration tracks from Adapta Solva. Click any image to expand.</p>
-            
+            <p>
+                We devised a system of feedback that would restore a corrupted forest to a lush green version of itself. I achieved this by creatinga a texture painter which paints onto a render target that can be sampled as a mask. I used this to achieve three modes of feedback:
+                <br>
+                <ul>
+                    <li>
+                        An environment shader that changes ground textures by sampling this mask.
+                    </li>
+                    <li>
+                        A vertex shader which grows vegetation within the painted area of the environment
+                    </li>
+                    <li>
+                        A subsystem of VFX and post processing to adapt to the changes in the level as the player interacts with the restoration system.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                The system paints to a render target, which I then sample. 
+            </p>
+
+            <p>
+                Here you can see the different iterations of the feature, from the intial test to the final implementation.
+            </p>
             <div class="gallery-wrapper">
                 <div class="gallery" id="gallery">
                     <!-- Gallery items will be inserted here by JavaScript -->
@@ -114,36 +155,89 @@
             </div>
 
             <div class="modal" id="modal">
-                <button class="modal-nav prev" id="prevBtn" style="display:none;">Γ¥«</button>
+                <button class="modal-nav prev" id="prevBtn" style="display:none;">«</button>
                 <div class="modal-content" id="modalContent">
                     <!-- Content will be inserted here -->
                 </div>
-                <button class="modal-nav next" id="nextBtn" style="display:none;">Γ¥»</button>
+                <button class="modal-nav next" id="nextBtn" style="display:none;">»</button>
                 <span class="modal-close" id="closeBtn">&times;</span>
                 <div class="modal-counter" id="counter"></div>
             </div>
+
         </section>
 
         <section class="section section-description">
-            <h2>Monkey Swing</h2>
-                
-        </section>
-
-        <section class="section section-description">
-            <h2>Laika Space Defense</h2>
+            <h2>Poki games</h2>
+            <p>
+                While with Para Fauna, I worked on 3 different projects for the web gaming platform Poki games. The key takeaways I had from working on these projects was how to structure a game for web platforms. I specifically took away how games need to simplified, with a focus on easy telegraphing and onboarding for the player. 
+            </p>
             
-            <h3>Steam Release</h3>
+
+            <h3>Laika Space Defense</h3>
+            <p>
+                The first project I worked on while with Para Fauna. I improved game feel for the upgrade system, level up and experience gaining moments by adding animations, making a slot machine interface for picking an upgrade and adding particles for gaining experience.
+            </p>
+            <img src="resources/images/ParaFauna/Slotmachine06.gif">
+           
+            <div style="padding-top: 2rem;">
+            
+                <h4>Steam Release</h4>
+                <p>
+                    I was fortunate to participate in the game's launch on Steam. The game achieved a postive rating. I am incredibly grateful to have been part of the team who worked on this game and contributed to its release.
+                </p>
+                
+                <div style="padding-top: 2rem; width: 100%;">
+                    <iframe src="https://store.steampowered.com/widget/4518350/" frameborder="0" class="steam-embed"></iframe>
+                </div>
+            </div>  
+
+            <div style="padding-top: 2rem;">
+                <h3>Monkey Swing</h3>
+                <p>
+                    The second project I worked on was a 2d platformer focusing on speedrunning through simple exotic levels. My contributions to the project were its initial pitch, designing and implementing the levels, creating and adding game feel to the level transitions and all environmental mechanics.
+                </p>
+    
+                <img src="resources/images/ParaFauna/LevelTransition_03.gif" style="padding-top: 2rem;">
+            </div>
+                
+            <div style="padding-top: 2rem;">
+                <h3>Coin Pusher Slayer</h3>
+                <p>
+                    The final Poki I worked on while with Para Fauna was an idle incremental game. For this game we wanted to focus on the most positive design elements that the Poki market was responding to in our previous projects. The elements we identified were ease of onboarding and a rapid and immediate sense of progression. 
+                    <br><br>
+                    I was responsible for creating and polishing the clicker, coins, coinpusher and incremental mechanics, including designing the upgrades. I also contributed to the UI implementation.
+                </p>
+                
+                <div style="display: flex; flex-direction: row; gap: 1rem; padding-top: 1rem;">
+                    <div style="flex: 1;">
+                        <h4>Early game</h4>
+                        <img src="resources/images/ParaFauna/CoinPusherSlayer.gif" style="width: 100%; height: auto; display: block;">
+                    </div> 
+                    <div style="flex: 1">
+                        <h4>End Game</h4>
+                        <img src="resources/images/ParaFauna/CoinPusherSlayer2.gif" style="width: 100%; height: auto; display: block;">
+                    </div>
+                </div>
+            </div>
+            
         </section>
 
         <section class="section section-description">
             <h2>Game Jams</h2>
-                
+            <p>
+                In the second half of the internship we took 3 days off of working on our main projects to participate in the 15th Planet Jam on itch.io. I created the virtual streamchat, donations and viewer count controller. The whole experience was a lot of fun and I'm grateful to my teammates for such a fluid and easy jamming process.
+            </p>
+
+            <iframe class="itch-embed" frameborder="0" src="https://itch.io/embed/4587936">
+                <a href="https://kayahx.itch.io/planet-mystery-cut-live-stream">
+                    Ultimate planet cutting - Mystery Edition (The creator Is Live) by Kayah, Jeroen Gesquiere, Scuttsy, Caramel
+                </a>
+            </iframe>
         </section>
 
     </div>
-    </div>
-    </div>
 
+    
     <script src="javascript/gallery.js"></script>
 
 </body>
