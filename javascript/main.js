@@ -42,3 +42,8 @@ function copyEmail() {
         console.error('Failed to copy email: ', err);
     });
 }
+
+function popOut() {
+    this.css('z-index', 10); 
+    this.toggleClass('open');    
+}
