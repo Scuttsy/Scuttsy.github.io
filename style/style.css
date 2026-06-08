@@ -215,8 +215,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
+
+    .section-content {
+        width: 100%;
+        color: var(--text-secondary);
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 
     .section ul{
         padding-left: 20px;
@@ -574,7 +583,7 @@
         font-size: 1.9rem;
         font-weight: 600;
         color: var(--text-primary);
-        align-self: cent;
+        align-self: center;
         margin-bottom: 1rem;
     }
    

@@ -52,6 +52,8 @@
             });
             this.gallery.appendChild(galleryItem);
         });
+
+        this.gallery.scrollTop = this.gallery.firstChild.offsetLeft;
     }
 
     openModal(index) {
