@@ -42,3 +42,9 @@ function copyEmail() {
         console.error('Failed to copy email: ', err);
     });
 }
+
+function popOut(event) {
+    const element = event.currentTarget;
+    element.style.zIndex = 10;
+    element.classList.toggle('open');
+}

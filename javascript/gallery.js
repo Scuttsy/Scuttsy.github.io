@@ -1,4 +1,4 @@
-class GalleryManager {
+﻿class GalleryManager {
     constructor(galleryId, galleryData) {
         this.galleryId = galleryId;
         this.galleryData = galleryData;
@@ -9,7 +9,7 @@ class GalleryManager {
         this.hasDragged = false;
 
         this.gallery = document.getElementById(`gallery-${galleryId}`);
-        this.galleryWrapper = document.querySelector(`[data-gallery-id="${galleryId}"] .gallery-wrapper`);
+        this.galleryWrapper = document.getElementById(`galleryWrapper-${galleryId}`);
         this.modal = document.getElementById(`modal-${galleryId}`);
         this.modalContent = document.getElementById(`modalContent-${galleryId}`);
         this.closeBtn = document.getElementById(`closeBtn-${galleryId}`);
@@ -17,8 +17,12 @@ class GalleryManager {
         this.nextBtn = document.getElementById(`nextBtn-${galleryId}`);
         this.counter = document.getElementById(`counter-${galleryId}`);
 
-        if (!this.gallery || !this.galleryWrapper) {
+        if (!this.gallery) {
             console.warn(`Gallery with ID "${galleryId}" not found in DOM`);
+            return;
+        }
+         if (!this.galleryWrapper) {
+            console.warn(`Gallerywrapper with ID "${galleryId}" not found in DOM`);
             return;
         }
 
@@ -98,7 +102,6 @@ class GalleryManager {
     }
 
     attachEventListeners() {
-        /* Gallery drag scrolling */
         this.galleryWrapper.addEventListener('mousedown', (e) => {
             this.isDown = true;
             this.hasDragged = false;
@@ -112,7 +115,7 @@ class GalleryManager {
             this.hasDragged = false;
             this.galleryWrapper.classList.remove('dragging');
         });
-
+ 
         this.galleryWrapper.addEventListener('mousemove', (e) => {
             if (!this.isDown) return;
             e.preventDefault();
@@ -124,13 +127,11 @@ class GalleryManager {
             this.galleryWrapper.scrollLeft = this.scrollLeft - walk;
         });
 
-        /* Mouse wheel scrolling */
         this.galleryWrapper.addEventListener('wheel', (e) => {
             e.preventDefault();
             this.galleryWrapper.scrollLeft += e.deltaY * 2;
         });
 
-        /* Modal controls */
         this.closeBtn.addEventListener('click', () => this.closeModal());
         this.nextBtn.addEventListener('click', () => this.nextItem());
         this.prevBtn.addEventListener('click', () => this.prevItem());
@@ -151,26 +152,40 @@ class GalleryManager {
     }
 }
 
-// Gallery data - define one for each gallery
 const galleryData1 = [
-    { src: 'resources/images/ParaFauna/WallRestore_Ice02.gif', type: 'image' },
+    { src: 'resources/images/ParaFauna/Resto_01.mp4', type: 'video' },
     { src: 'resources/images/ParaFauna/Resto_02.gif', type: 'image' },
     { src: 'resources/images/ParaFauna/Restore_Ice02_01.gif', type: 'image' },
-    { src: 'resources/images/ParaFauna/Resto_01.mp4', type: 'video' },
+    { src: 'resources/images/ParaFauna/WallRestore_Ice02.gif', type: 'image' },
     { src: 'resources/images/ParaFauna/RestoreVFX06.mp4', type: 'video' }
 ];
 
 const galleryData2 = [
-    // Add your second gallery items here
+    {src: 'resources/images/ParaFauna/track01.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track02.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track03.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track04.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track05.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track06.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track07.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track08.png', type: 'image'},
 ];
 
-// Initialize all galleries when DOM is ready
+const galleryData3 = [
+    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_01.png', type: 'image'},
+    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_02.png', type: 'image'},
+    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_03.png', type: 'image'},
+]
+
 function initAllGalleries() {
     if (galleryData1.length > 0) {
         new GalleryManager('1', galleryData1);
     }
     if (galleryData2.length > 0) {
         new GalleryManager('2', galleryData2);
+    }
+    if (galleryData3.length > 0 ){
+        new GalleryManager('3', galleryData3);
     }
 }
 
@@ -179,5 +194,3 @@ if (document.readyState === 'loading') {
 } else {
     initAllGalleries();
 }
-
-
