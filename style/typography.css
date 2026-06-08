@@ -30,6 +30,12 @@ p {
     display: block;
     font-size: 1.2rem;
     color: var(--text-secondary);
+    margin: .7rem auto;
+}
+
+li{
+    margin: .4rem auto;
+    font-size: 1rem;
 }
 
 .small p {

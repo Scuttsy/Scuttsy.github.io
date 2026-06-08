@@ -270,6 +270,10 @@
         display: block;
         justify-content: start;
     }
+
+    .button-text{
+        margin: 1rem;
+    }
     .hoverCard:hover{
         transform: translateY(-10px);
         box-shadow: 0 30px 60px rgba(0,0,0,0.15);       
@@ -372,8 +376,11 @@
         justify-content: center;
         background: var(--primary-color);
         color: white;
+        bottom:0;
+        position:absolute;
+        width: 100%;
         text-align: center;
-        padding: 2rem 0;
+        padding: 2rem ;
         border-top: 1px solid rgba(255,255,255,0.1);
     }
 
@@ -561,6 +568,14 @@
         margin-bottom: 10px;
     }
 
+    
+     .section h3 {
+        font-size: 1.9rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        align-self: cent;
+        margin-bottom: 1rem;
+    }
    
 
     .projects-grid {
@@ -626,6 +641,10 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .footer{
+        position: relative;
     }
 }
 

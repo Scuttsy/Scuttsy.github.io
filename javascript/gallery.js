@@ -9,7 +9,7 @@
         this.hasDragged = false;
 
         this.gallery = document.getElementById(`gallery-${galleryId}`);
-        this.galleryWrapper = document.querySelector(`[data-gallery-id="${galleryId}"] .gallery-wrapper`);
+        this.galleryWrapper = document.getElementById(`galleryWrapper-${galleryId}`);
         this.modal = document.getElementById(`modal-${galleryId}`);
         this.modalContent = document.getElementById(`modalContent-${galleryId}`);
         this.closeBtn = document.getElementById(`closeBtn-${galleryId}`);
@@ -17,8 +17,12 @@
         this.nextBtn = document.getElementById(`nextBtn-${galleryId}`);
         this.counter = document.getElementById(`counter-${galleryId}`);
 
-        if (!this.gallery || !this.galleryWrapper) {
+        if (!this.gallery) {
             console.warn(`Gallery with ID "${galleryId}" not found in DOM`);
+            return;
+        }
+         if (!this.galleryWrapper) {
+            console.warn(`Gallerywrapper with ID "${galleryId}" not found in DOM`);
             return;
         }
 
@@ -111,7 +115,7 @@
             this.hasDragged = false;
             this.galleryWrapper.classList.remove('dragging');
         });
-
+ 
         this.galleryWrapper.addEventListener('mousemove', (e) => {
             if (!this.isDown) return;
             e.preventDefault();
@@ -149,10 +153,10 @@
 }
 
 const galleryData1 = [
-    { src: 'resources/images/ParaFauna/WallRestore_Ice02.gif', type: 'image' },
+    { src: 'resources/images/ParaFauna/Resto_01.mp4', type: 'video' },
     { src: 'resources/images/ParaFauna/Resto_02.gif', type: 'image' },
     { src: 'resources/images/ParaFauna/Restore_Ice02_01.gif', type: 'image' },
-    { src: 'resources/images/ParaFauna/Resto_01.mp4', type: 'video' },
+    { src: 'resources/images/ParaFauna/WallRestore_Ice02.gif', type: 'image' },
     { src: 'resources/images/ParaFauna/RestoreVFX06.mp4', type: 'video' }
 ];
 
@@ -167,12 +171,21 @@ const galleryData2 = [
     {src: 'resources/images/ParaFauna/track08.png', type: 'image'},
 ];
 
+const galleryData3 = [
+    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_01.png', type: 'image'},
+    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_02.png', type: 'image'},
+    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_03.png', type: 'image'},
+]
+
 function initAllGalleries() {
     if (galleryData1.length > 0) {
         new GalleryManager('1', galleryData1);
     }
     if (galleryData2.length > 0) {
         new GalleryManager('2', galleryData2);
+    }
+    if (galleryData3.length > 0 ){
+        new GalleryManager('3', galleryData3);
     }
 }
 

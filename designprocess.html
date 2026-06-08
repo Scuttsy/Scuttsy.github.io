@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="style/typography.css">
     <link rel="stylesheet" href="style/navigation.css">   
     <link rel="stylesheet" href="style/aboutme.css">
+    <link rel="stylesheet" href="style/gallery.css">
     <link rel="script" href="javascript/main.js">
+    <link rel="script" href="javascript/gallery.js">
     <link rel="icon" type="image/x-icon" href="resources/images/icon.svg">
 
 </head>
@@ -31,7 +33,7 @@
             </div>
         </section>
 
-        <section class="section section-description">
+         <section class="section section-description">
             
             _______________________________
            
@@ -85,47 +87,84 @@
         </section>
         
 
-        <section class="section section-description">
-        <h2>habits and improvements</h2> <br>
+        <section class="section section-description" style="padding-top: 2rem;">
+        
+            <div style="margin: 1rem auto;">
+                _______________________________
+            </div>
+        <h2>habits and improvements</h2>
         <p>
             Some of the habits I have cultivated include keeping a journal for my personal and professinal projects. One of my biggest struggles with designing is <span class="highlight">tunnel vision</span>. I'll often hyperfocus on a single mechanic or element in lieu of the whole experience. Though with colleagues I'm constantly talking through my process and so this can be resolved fairly quickly. A majour goal I've set for myself is learning to define <span class="highlight">good enough</span> in the scope of a project. Re-evaluating myself often has been instrumental here.
         </p>
-        <br>
         _______________________________
-        <br>
-        <div class="section dection-description" style="flex-direction: column;">
 
-            <h2>Documentation</h2> <br>
+
+        <section class="section section-description">
+            <h2>Documentation</h2>
             <div>
-    
                 <p>
                     Documentation is an important part of keeping our process accountable and actionable. 
                     I make use of <span class="highlight">charts and diagrams</span> to visualize mechanics 
-                    and their interactions, while maintaining detailed lists of mechanics throughout
-                    the development process. Here is an excerpt from a game design document I built for 
-                    a recent project, <a href="ultraspring.html">ULTRASPRING</a>. 
-                    You can read the entire document 
-                    <a href="https://drive.google.com/uc?export=download&id=17wDlMnE_ILLm6ABPc3BjmN-CUnQSukSx" target="_blank">
-                    here</a>.
+                    and their interactions, while maintaining detailed lists of mechanics throughout the development process. 
                 </p>
-                <br>
-                <img src="resources/images/documentation_jumping.png" alt="Documentation example" style="width: 100%; height: auto;">
+                    
+                <p>
+                    It's important when writing and maintaining documentation that the thought process behind the mechanics and systems is as unambiguous as possible. Therefore where possible I explain my thought process with either diagrams, math formula or snippets of code to explain my process.
+                </p>
+                
+                <p>
+                    Here is an exerpt from a Game Design Document that I co-wrote for an underwater vr game actually played underwater. Alternatively the entire GDD can be read <a href="https://drive.google.com/uc?export=download&id=1i_PsMPaglX3TtiJStlbT5y5xm_e9ll_b" class="highlight" target="_blank">here</a>. My contribtion was the second chapter, regarding the game mechanics.
+                </p>
+
+                <!-- <img src="resources/images/ArrArrVr_GDD_01.png"> -->
+                <section class="section section-description">
+
+                    <div class="gallery-wrapper-tall" id="galleryWrapper-3">
+                        <div class="gallery" id="gallery-3">
+                            <!-- Gallery items will be inserted here by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="modal" id="modal-3">
+                        <button class="modal-nav prev" id="prevBtn-3" style="display:none;">«</button>
+                        <div class="modal-content" id="modalContent-3">
+                            <!-- Content will be inserted here -->
+                        </div>
+                        <button class="modal-nav next" id="nextBtn-3" style="display:none;">»</button>
+                        <span class="modal-close" id="closeBtn-3">&times;</span>
+                        <div class="modal-counter" id="counter-3"></div>
+                    </div>
+                    
+                    
+                    
+                    <p>
+                        Here is an additional excerpt from a game design document I built for 
+                        a previous project, <a href="ultraspring.html">ULTRASPRING</a>. 
+                        You can read the entire document 
+                        <a href="https://drive.google.com/uc?export=download&id=17wDlMnE_ILLm6ABPc3BjmN-CUnQSukSx" target="_blank">
+                        here</a>.
+                    <img src="resources/images/documentation_jumping.png" alt="Documentation example" style="width: 100%;">
+                    </p>
                 </section>
 
+            </div>
+        </section>
+            
+    </section>
 
                 <div class="button">
                     <a href="index.html" class="button-content hoverCard fade-in">
-                        <div class="project-content">
+                        <div class="button-text">
                             <h2>Back to Projects</h2>
                         </div>
                     </a>
                 </div>
             </div>
 
-            
-
         </div>
     </div>
+
+    <script src="javascript/gallery.js"></script>
 </body>
 
 <footer class="footer">

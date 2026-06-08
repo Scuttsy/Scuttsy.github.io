@@ -16,8 +16,8 @@
 
 
 <body class="background-tint">
-    <nav class="nav">
-        <div class="nav-container">
+ <nav class="nav">
+        <div class="nav-container" style="justify-content: center;">
             <ul class="nav-links">
                 <li><a href="index.html">Projects</a></li>
                 <li><a href="aboutme.html">About</a></li>
@@ -41,8 +41,8 @@
                         studios, a small indie studio based in Ghent, 
                         Belgium. During my time there, I worked on a 
                         variety of projects, including their flagship 
-                        project Adapta Solva, 2 small mobile/web games 
-                        for Poki andparticipated in a Steam Release. I 
+                        project Adapta Solva, 3 small mobile/web games 
+                        for Poki and participated in a Steam Release. I 
                         gained valuable experience in game design, 
                         playtesting, and iteration, and I had the 
                         opportunity to work with an awesome team.
@@ -82,7 +82,9 @@
             <div class="list">
                 <ul>
                     <li>Task Creation and estimation</li>
-                    <li></li>
+                    <li>Pitching and designing new features</li>
+                    <li>Implementing and polishing each feature</li>
+                    <li>Keeping the office lighthearted and fun</li>
                 </ul>
             </div>
         </section>
@@ -113,55 +115,87 @@
 
             <img src="resources/images/ParaFauna/HubBlockout03.png" alt="Hub Blockout 3" style="object-fit: scale-down;">
 
+            <p>
+                We found after testing this iteration with testers that players were motivated to explore the hub world and gather collectables before and after they played through one of the levels. By doing this the game achieve a stronger sense of continuity and kept players more motivated to continue playing for longer.
+            </p>
+
             <h4>Platforming sections</h4>
             <p>
                 In addtion to the Hub world, I added traversal sections with light platforming as a way to flesh out the tracks and break up the pacing. Lastly, the platforming sections act as an important form of tutorialisation.
             </p>
 
+            <p>
+                In one such platforming section, the environment is structured so that the player will engage with the key mechanics related to a specific element, slime, without previously understanding how these mechanics worked.
+
+                In the example, the player is shown a bridge of grates. At this point, the player is forced to have the slime element equipped, where if they were to stand on a grate, they would slip through. Thus when the player attempts to walk over the bridge, they will inevitably fall through the grate. However, the distance covered by the grates is easily jumpable. The idea here is to get the player to "accidentally" interact with an important mechanic that they will later exploit to solve puzzles in this level.
+            </p>
+            <p>
+                Another example is the slope later in this section. The slope is the only path forward, whereby if they move down it, they will be forced into water. Water in this case removes the equipped slime element. Here the environment again teaches the player another dynamic inherent to the slime element.
+            </p>
+            <div class="gallery-wrapper" id="galleryWrapper-2">
+                <div class="gallery" id="gallery-2">
+                    <!-- Gallery items will be inserted here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="modal" id="modal-2">
+                <button class="modal-nav prev" id="prevBtn-2" style="display:none;">«</button>
+                <div class="modal-content" id="modalContent-2">
+                    <!-- Content will be inserted here -->
+                </div>
+                <button class="modal-nav next" id="nextBtn-2" style="display:none;">»</button>
+                <span class="modal-close" id="closeBtn-2">&times;</span>
+                <div class="modal-counter" id="counter-2"></div>
+            </div>
+
             <h3>Restoration Design</h3>
             <p>
                 One of the challenges that the project needed to overcome was 
-                delivering a sense of restoring the dead forest that you play 
+                delivering a sense of restoring the dead forest in which you play 
                 and have that feel as satisfying as possible. To that end I pitched
                 a system of feedback that would be delivered to the player. 
             </p>
 
             <p>
-                We devised a system of feedback that would restore a corrupted forest to a lush green version of itself. I achieved this by creatinga a texture painter which paints onto a render target that can be sampled as a mask. I used this to achieve three modes of feedback:
+                In vague terms, the feedback comes together to turn a section of corrupted, dead forest into a lush, green variation of itself. More specifically, A texture painter paints onto a render target that can be sampled as a mask by several shaders and tweened animations, VFX and post processing. The channels of feedback were specifically:
+
                 <br>
                 <ul>
                     <li>
-                        An environment shader that changes ground textures by sampling this mask.
+                        An environment shader that changes ground textures by sampling this mask. In this case, swapping from brown/grey textures to Green.
                     </li>
                     <li>
-                        A vertex shader which grows vegetation within the painted area of the environment
+                        A vertex shader which grows vegetation within the painted area of the environment.
                     </li>
                     <li>
-                        A subsystem of VFX and post processing to adapt to the changes in the level as the player interacts with the restoration system.
+                        VFX of glowing green fireflies that burst out from the painted area.
+                    </li>
+                    <li>
+                        A post process volume with desaturation, lowered contrast and a black vignette, which has its weight reduced to 0 when the puzzle is solves and the forest is finally restored.
                     </li>
                 </ul>
             </p>
             <p>
-                The system paints to a render target, which I then sample. 
+                The system paints to a render target, which I then sample. I paint different values into each channel to different effects. The red channel is used for the texture painted materials, like the ground and walls. The blue channel is used for the vertex shaders and defines where the vegetation is grown and where it is hidden. The Green channel is used for overgrowth, in this case I cause the vegetation to gain some additional height in any section already defined as grown by the blue channel. I paint a ring into the green channel which dissipates over time. This adds some more life to the effect and sells the aesthetics of restoring the forest better.
             </p>
 
             <p>
-                Here you can see the different iterations of the feature, from the intial test to the final implementation.
+                Here you can see the different iterations of the feature, from the intial test to the final implementation. I overcame several challenges implementing this system and learned valuable skills in: writing HLSL shaders for the texure painter, 
             </p>
-            <div class="gallery-wrapper">
-                <div class="gallery" id="gallery">
+            <div class="gallery-wrapper" id="galleryWrapper-1">
+                <div class="gallery" id="gallery-1">
                     <!-- Gallery items will be inserted here by JavaScript -->
                 </div>
             </div>
 
-            <div class="modal" id="modal">
-                <button class="modal-nav prev" id="prevBtn" style="display:none;">«</button>
-                <div class="modal-content" id="modalContent">
+            <div class="modal" id="modal-1">
+                <button class="modal-nav prev" id="prevBtn-1" style="display:none;">«</button>
+                <div class="modal-content" id="modalContent-1">
                     <!-- Content will be inserted here -->
                 </div>
-                <button class="modal-nav next" id="nextBtn" style="display:none;">»</button>
-                <span class="modal-close" id="closeBtn">&times;</span>
-                <div class="modal-counter" id="counter"></div>
+                <button class="modal-nav next" id="nextBtn-1" style="display:none;">»</button>
+                <span class="modal-close" id="closeBtn-1">&times;</span>
+                <div class="modal-counter" id="counter-1"></div>
             </div>
 
         </section>
@@ -172,7 +206,6 @@
                 While with Para Fauna, I worked on 3 different projects for the web gaming platform Poki games. The key takeaways I had from working on these projects was how to structure a game for web platforms. I specifically took away how games need to simplified, with a focus on easy telegraphing and onboarding for the player. 
             </p>
             
-
             <h3>Laika Space Defense</h3>
             <p>
                 The first project I worked on while with Para Fauna. I improved game feel for the upgrade system, level up and experience gaining moments by adding animations, making a slot machine interface for picking an upgrade and adding particles for gaining experience.
@@ -234,6 +267,15 @@
                 </a>
             </iframe>
         </section>
+
+        <div class="button">
+            <a href="index.html" class="button-content hoverCard fade-in">
+                <div class="button-text">
+                    <h2>Back to Projects</h2>
+                </div>    
+            </a>
+        </div>
+
 
     </div>
 
