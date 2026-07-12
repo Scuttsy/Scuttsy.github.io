@@ -13,7 +13,6 @@
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
     border: 1px solid var(--text-secondary);
     display: block;
 
@@ -36,9 +35,7 @@
     
 }
 
-.skill-card:hover {
-    transform: translateY(-6px);     
-}
+
 
 @media (max-width: 800px) {
     .skills-grid {
