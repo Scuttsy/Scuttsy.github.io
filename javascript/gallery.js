@@ -1,4 +1,39 @@
-﻿class GalleryManager {
+﻿//1
+const restorationData = [
+    { src: 'resources/images/ParaFauna/Resto_01.mp4', type: 'video' },
+    { src: 'resources/images/ParaFauna/Resto_02.gif', type: 'image' },
+    { src: 'resources/images/ParaFauna/Restore_Ice02_01.gif', type: 'image' },
+    { src: 'resources/images/ParaFauna/WallRestore_Ice02.gif', type: 'image' },
+    { src: 'resources/images/ParaFauna/RestoreVFX06.mp4', type: 'video' }
+];
+
+//2
+const adaptaTrackData = [
+    {src: 'resources/images/ParaFauna/track01.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track02.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track03.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track04.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track05.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track06.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track07.png', type: 'image'},
+    {src: 'resources/images/ParaFauna/track08.png', type: 'image'},
+];
+
+//3
+const designProcessData = [
+    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_01.png', type: 'image'},
+    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_02.png', type: 'image'},
+    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_03.png', type: 'image'},
+]
+
+const galleryDataMaster =[
+    restorationData,
+    adaptaTrackData,
+    designProcessData,
+]
+
+
+class GalleryManager {
     constructor(galleryId, galleryData) {
         this.galleryId = galleryId;
         this.galleryData = galleryData;
@@ -182,57 +217,115 @@
     }
 }
 
-
-//1
-const restorationData = [
-    { src: 'resources/images/ParaFauna/Resto_01.mp4', type: 'video' },
-    { src: 'resources/images/ParaFauna/Resto_02.gif', type: 'image' },
-    { src: 'resources/images/ParaFauna/Restore_Ice02_01.gif', type: 'image' },
-    { src: 'resources/images/ParaFauna/WallRestore_Ice02.gif', type: 'image' },
-    { src: 'resources/images/ParaFauna/RestoreVFX06.mp4', type: 'video' }
-];
-
-//2
-const adaptaTrackData = [
-    {src: 'resources/images/ParaFauna/track01.png', type: 'image'},
-    {src: 'resources/images/ParaFauna/track02.png', type: 'image'},
-    {src: 'resources/images/ParaFauna/track03.png', type: 'image'},
-    {src: 'resources/images/ParaFauna/track04.png', type: 'image'},
-    {src: 'resources/images/ParaFauna/track05.png', type: 'image'},
-    {src: 'resources/images/ParaFauna/track06.png', type: 'image'},
-    {src: 'resources/images/ParaFauna/track07.png', type: 'image'},
-    {src: 'resources/images/ParaFauna/track08.png', type: 'image'},
-];
-
-//3
-const designProcessData = [
-    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_01.png', type: 'image'},
-    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_02.png', type: 'image'},
-    {src: 'resources/images/DesignProcess/ArrArrVr_GDD_03.png', type: 'image'},
-]
-
-
-const galleryDataMaster =[
-    restorationData,
-    adaptaTrackData,
-    designProcessData,
-]
-
 function initAllGalleries() {
     for (let index = 0; index < galleryDataMaster.length; index++) {
         if (galleryDataMaster[index].length > 0){
-            new GalleryManager(`${index+1}`, galleryDataMaster[index])
+            new GalleryManager(`${index + 1}`, galleryDataMaster[index])
         }
     }
 }
 
 function initAllImages(){
-    document.getElementsByTagName
+    initMasterModal();
+
+    document.addEventListener('click', (event) => {
+        const mediaElement = event.target.closest('img, video');
+        if (!mediaElement || !isModalEligible(mediaElement)) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+        openMasterModal(mediaElement);
+    });
 }
 
+function isModalEligible(element) {
+    if (element.closest('.gallery')) return false;
+    if (element.closest('.gallery-button')) return false;
+    if (element.closest('nav')) return false;
+    if (element.closest('footer')) return false;
+    if (element.closest('#ModalMaster')) return false;
+    return true;
+}
+
+let masterModal = null;
+
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAllGalleries);
+    document.addEventListener('DOMContentLoaded', () => {
+        initAllGalleries();
+        initAllImages();
+    });
 } else {
     initAllGalleries();
     initAllImages();
+}
+
+function initMasterModal() {
+    masterModal = document.getElementById('ModalMaster');
+    if (!masterModal) {
+        masterModal = document.createElement('section');
+        masterModal.id = 'ModalMaster';
+        document.body.appendChild(masterModal);
+    }
+
+    masterModal.classList.add('modal');
+
+    masterModal.addEventListener('click', (event) => {
+        if (event.target === masterModal || event.target.classList.contains('modal-close')) {
+            closeMasterModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (!masterModal.classList.contains('active')) return;
+        if (event.key === 'Escape') {
+            closeMasterModal();
+        }
+    });
+}
+
+function openMasterModal(mediaElement) {
+    const src = mediaElement.currentSrc || mediaElement.src || mediaElement.getAttribute('src');
+    if (!src || !masterModal) return;
+
+    const type = mediaElement.tagName.toLowerCase() === 'video' ? 'video' : 'image';
+    updateMasterModal({ src, type, alt: mediaElement.alt || '' });
+    masterModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMasterModal() {
+    if (!masterModal) return;
+    masterModal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function updateMasterModal({ src, type, alt }) {
+    if (!masterModal) return;
+
+    masterModal.innerHTML = '';
+
+    const modalContent = document.createElement('div');
+    modalContent.className = 'modal-content';
+
+    if (type === 'image') {
+        const img = document.createElement('img');
+        img.src = src;
+        if (alt) img.alt = alt;
+        modalContent.appendChild(img);
+    } else {
+        const video = document.createElement('video');
+        video.src = src;
+        video.controls = true;
+        video.autoplay = true;
+        video.playsInline = true;
+        modalContent.appendChild(video);
+    }
+
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'modal-close';
+    closeBtn.innerHTML = '&times;';
+
+    masterModal.appendChild(closeBtn);
+    masterModal.appendChild(modalContent);
 }
