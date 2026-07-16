@@ -150,8 +150,9 @@
 
 .modal-content {
     position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
+    min-width: 80vw;
+    max-width: 200vw;
+    max-height: 200vh;
     animation: slideIn 0.3s ease;
 }
 
