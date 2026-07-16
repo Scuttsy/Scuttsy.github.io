@@ -17,6 +17,10 @@
         this.nextBtn = document.getElementById(`nextBtn-${galleryId}`);
         this.counter = document.getElementById(`counter-${galleryId}`);
 
+        this.forwardBtn = document.getElementById(`gallery-forward-${galleryId}`);
+        this.backBtn = document.getElementById(`gallery-back-${galleryId}`);
+
+
         if (!this.gallery) {
             console.warn(`Gallery with ID "${galleryId}" not found in DOM`);
             return;
@@ -106,7 +110,12 @@
     attachEventListeners() {
         this.galleryWrapper.addEventListener('mousedown', (e) => {
             this.isDown = true;
-            this.hasDragged = false;
+
+            //fumble delay
+            setTimeout(() => {
+                this.hasDragged = false;
+            }, 750);
+
             this.galleryWrapper.classList.add('dragging');
             this.startX = e.pageX - this.galleryWrapper.offsetLeft;
             this.scrollLeft = this.galleryWrapper.scrollLeft;
@@ -114,7 +123,12 @@
 
         document.addEventListener('mouseup', () => {
             this.isDown = false;
-            this.hasDragged = false;
+            
+            //fumble delay
+            setTimeout(() => {
+                this.hasDragged = false;
+            }, 750);
+
             this.galleryWrapper.classList.remove('dragging');
         });
  
@@ -151,10 +165,26 @@
                 if (e.key === 'Escape') this.closeModal();
             }
         });
+
+
+        if (this.forwardBtn != null){
+            this.forwardBtn.addEventListener('click', () => 
+            {
+                this.galleryWrapper.scrollLeft += 500;
+            });
+        }
+         if (this.backBtn != null){
+            this.backBtn.addEventListener('click', () => 
+            {
+                this.galleryWrapper.scrollLeft -= 500;
+            });
+        }
     }
 }
 
-const galleryData1 = [
+
+//1
+const restorationData = [
     { src: 'resources/images/ParaFauna/Resto_01.mp4', type: 'video' },
     { src: 'resources/images/ParaFauna/Resto_02.gif', type: 'image' },
     { src: 'resources/images/ParaFauna/Restore_Ice02_01.gif', type: 'image' },
@@ -162,7 +192,8 @@ const galleryData1 = [
     { src: 'resources/images/ParaFauna/RestoreVFX06.mp4', type: 'video' }
 ];
 
-const galleryData2 = [
+//2
+const adaptaTrackData = [
     {src: 'resources/images/ParaFauna/track01.png', type: 'image'},
     {src: 'resources/images/ParaFauna/track02.png', type: 'image'},
     {src: 'resources/images/ParaFauna/track03.png', type: 'image'},
@@ -173,26 +204,35 @@ const galleryData2 = [
     {src: 'resources/images/ParaFauna/track08.png', type: 'image'},
 ];
 
-const galleryData3 = [
+//3
+const designProcessData = [
     {src: 'resources/images/DesignProcess/ArrArrVr_GDD_01.png', type: 'image'},
     {src: 'resources/images/DesignProcess/ArrArrVr_GDD_02.png', type: 'image'},
     {src: 'resources/images/DesignProcess/ArrArrVr_GDD_03.png', type: 'image'},
 ]
 
+
+const galleryDataMaster =[
+    restorationData,
+    adaptaTrackData,
+    designProcessData,
+]
+
 function initAllGalleries() {
-    if (galleryData1.length > 0) {
-        new GalleryManager('1', galleryData1);
+    for (let index = 0; index < galleryDataMaster.length; index++) {
+        if (galleryDataMaster[index].length > 0){
+            new GalleryManager(`${index+1}`, galleryDataMaster[index])
+        }
     }
-    if (galleryData2.length > 0) {
-        new GalleryManager('2', galleryData2);
-    }
-    if (galleryData3.length > 0 ){
-        new GalleryManager('3', galleryData3);
-    }
+}
+
+function initAllImages(){
+    document.getElementsByTagName
 }
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initAllGalleries);
 } else {
     initAllGalleries();
+    initAllImages();
 }
