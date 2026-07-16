@@ -9,8 +9,8 @@
         --secondary-color: #111113c2;
         --accent-color: #CCA43B;
         --text-primary: #EFF1F3;
-        --text-secondary: #8d9192;
-        --gradient: linear-gradient(135deg, #009FB7 0%, #0e2462 100%);
+        --text-secondary: #d3dbdd;
+        --gradient: linear-gradient(135deg, #040813 0%, #030508 100%);
         --shadow: 0 20px 40px rgba(0,0,0,0.1);
     }
 
@@ -26,24 +26,12 @@
     body {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         line-height: 1;
-        background-image: url("/resources/images/background.gif");
+        /* background-image: url("/resources/images/background.gif"); */
         overflow-x: hidden;
         align-items: center;
-    }
-    
-    .background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background: var(--gradient);
-        z-index: -1;
-    }
-    .background-tint
-    {
-        background-color: var(--secondary-color);
-        background-blend-mode: multiply;
+        min-height: 100vh;
+        max-height: 1000vh;
     }
 
     .main {
@@ -64,6 +52,12 @@
         align-items: center;
     }
 
+    .icon-small {
+        height: 100%;
+        object-fit: fill;
+        padding: 10px 5px 10px 10px;
+    }
+
     /* About Section */
     .about-section {
         position: relative;
@@ -82,7 +76,7 @@
         border-radius: 25px;
         padding: 3rem;
         box-shadow: var(--shadow);
-            border: 2px solid rgba(216, 212, 221, 0.05);
+        border: 2px solid rgba(216, 212, 221, 0.05);
         max-width: 1000px;
         margin: 0 auto;
     }
@@ -247,7 +241,6 @@
     }
 
     .project-card {
-        
         max-width: 350px;
         background: var(--secondary-color);
         background-size: cover;
@@ -377,17 +370,14 @@
 
     /* Footer */
     .footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        background: var(--primary-color);
-        color: white;
+        z-index: 1;
+        color: var(--text-primary);
+        background: var(--secondary-color);
+        display:grid;
         position: relative;
-        align-self: flex-end;
-        width: 100%;
+        grid-area: footer;
         text-align: center;
-        padding-bottom: 3rem;
-        padding-top: 3rem;
+        padding: 3rem 0px;
         border-top: 1px solid rgba(255,255,255,0.1);
     }
 
