@@ -15,13 +15,41 @@
 </head>
 
 
-<body class="background-tint">
+<body>
  <nav class="nav">
+        <div class="nav-container" style="flex-direction: column; align-items: start">
+            <div style="display: flex; height:50%; width: 100%; align-items: center;">
+                <img src="resources/images/icon.svg" class="icon-small">
+                <p style="margin: 5px 0px;">Samuel Cutts</p>
+            </div>
+            <p style="margin: 0px 0px 10px 10px;">Kortrijk, Belgium</p>
+        </div>
         <div class="nav-container" style="justify-content: center;">
             <ul class="nav-links">
-                <li><a href="index.html">Projects</a></li>
+                <li><a href="#about">Projects</a></li>
                 <li><a href="aboutme.html">About</a></li>
             </ul>
+        </div>
+        <div class="nav-container" style="justify-content: end;">
+            <div class="social-icons">
+                <div class="about-tags">
+                        <a onclick="copyEmail()" class="about-tag" style="cursor: pointer;">
+                            <img src="resources/images/email.png" alt="email" class="icon">
+                        </a>
+                        <a href="https://www.youtube.com/@Scuttsy" target="_blank" class="about-tag">
+                            <img src="resources/images/youtube.png" alt="youtube" class="icon">
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/samuel-cutts-02a096296/" target="_blank" class="about-tag">
+                            <img src="resources/images/linkedin.png" alt="linkedin" class="icon">
+                        </a>
+                        
+                        <a href="https://drive.google.com/uc?export=download&id=1lIUAza6jhN02VE3Hs9L0eYje8xfcCHTz" target="_blank" class="about-tag">
+                            <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
+                            <p>CV</p>
+                        </a>
+                    </div>
+            </div>
         </div>
     </nav>
     <div class="main main-description" >
@@ -148,11 +176,23 @@
                 <p>
                     Another example is the slope later in this section. The slope is the only path forward, whereby if they move down it, they will be forced into water. Water in this case removes the equipped slime element. Here the environment again teaches the player another dynamic inherent to the slime element.
                 </p>
-                <div class="gallery-wrapper" id="galleryWrapper-2">
-                    <div class="gallery" id="gallery-2">
-                        <!-- Gallery items will be inserted here by JavaScript -->
+                
+                <!-- gallery-2: Tracks -->
+                <div class="gallery-parent" id="galleryParent-2">
+                    <div class="gallery-wrapper" id="galleryWrapper-2">
+                        <div class="gallery" id="gallery-2">
+                            <!-- Gallery items will be inserted here by JavaScript -->
+                        </div>
                     </div>
-                 </div>
+                    <div class="gallery-buttons">
+                        <div class="gallery-button" id="gallery-back-2">
+                            <img src="resources/images/button.svg" class="back">
+                        </div>
+                        <div class="gallery-button" id="gallery-forward-2">
+                            <img src="resources/images/button.svg">
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="modal" id="modal-2">
@@ -200,11 +240,23 @@
             <p>
                 Here you can see the different <span class="highlight">iterations</span> of the feature, from the intial test to the final implementation. I overcame several challenges implementing this system and learned valuable skills in: writing <span class="highlight">HLSL</span> shaders for the texure painter, 
             </p>
-            <div class="gallery-wrapper" id="galleryWrapper-1">
-                <div class="gallery" id="gallery-1">
-                    <!-- Gallery items will be inserted here by JavaScript -->
+            <!-- gallery-1: restoration -->
+                <div class="gallery-parent" id="galleryParent-1">
+                    <div class="gallery-wrapper" id="galleryWrapper-1">
+                        <div class="gallery" id="gallery-1">
+                            <!-- Gallery items will be inserted here by JavaScript -->
+                        </div>
+                    </div>
+                     <div class="gallery-buttons">
+                        <div class="gallery-button" id="gallery-back-2">
+                            <img src="resources/images/button.svg" class="back">
+                        </div>
+                        <div class="gallery-button" id="gallery-forward-2">
+                            <img src="resources/images/button.svg">
+                        </div>
+                    </div>
                 </div>
-            </div>
+           
 
             <div class="modal" id="modal-1">
                 <button class="modal-nav prev" id="prevBtn-1">«</button>
@@ -293,17 +345,15 @@
                 </div>    
             </a>
         </div>
-
-
+        
+        
     </div>
-
     
     <script src="javascript/gallery.js"></script>
-
-    
 
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2026 Samuel Cutts. All rights reserved.</p>
     </footer>
+    
 </body>

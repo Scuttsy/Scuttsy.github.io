@@ -15,14 +15,42 @@
 
 </head>
 
-<body class="background-tint">
+<body >
 
  <nav class="nav">
+        <div class="nav-container" style="flex-direction: column; align-items: start">
+            <div style="display: flex; height:50%; width: 100%; align-items: center;">
+                <img src="resources/images/icon.svg" class="icon-small">
+                <p style="margin: 5px 0px;">Samuel Cutts</p>
+            </div>
+            <p style="margin: 0px 0px 10px 10px;">Kortrijk, Belgium</p>
+        </div>
         <div class="nav-container" style="justify-content: center;">
             <ul class="nav-links">
-                <li><a href="index.html">Projects</a></li>
+                <li><a href="#about">Projects</a></li>
                 <li><a href="aboutme.html">About</a></li>
             </ul>
+        </div>
+        <div class="nav-container" style="justify-content: end;">
+            <div class="social-icons">
+                <div class="about-tags">
+                        <a onclick="copyEmail()" class="about-tag" style="cursor: pointer;">
+                            <img src="resources/images/email.png" alt="email" class="icon">
+                        </a>
+                        <a href="https://www.youtube.com/@Scuttsy" target="_blank" class="about-tag">
+                            <img src="resources/images/youtube.png" alt="youtube" class="icon">
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/samuel-cutts-02a096296/" target="_blank" class="about-tag">
+                            <img src="resources/images/linkedin.png" alt="linkedin" class="icon">
+                        </a>
+                        
+                        <a href="https://drive.google.com/uc?export=download&id=1lIUAza6jhN02VE3Hs9L0eYje8xfcCHTz" target="_blank" class="about-tag">
+                            <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
+                            <p>CV</p>
+                        </a>
+                    </div>
+            </div>
         </div>
     </nav>
     <div class="main main-description" >
@@ -89,7 +117,7 @@
 
         <section class="section section-description" style="padding-top: 2rem;">
         
-        <h2>habits and improvements</h2>
+        <h2>Habits and improvements</h2>
         <p>
             Some of the habits I have cultivated include keeping a journal for my personal and professinal projects. One of my biggest struggles with designing is <span class="highlight">tunnel vision</span>. I'll often hyperfocus on a single mechanic or element in lieu of the whole experience. Though with colleagues I'm constantly talking through my process and so this can be resolved fairly quickly. A major goal I've set for myself is learning to define <span class="highlight">good enough</span> in the scope of a project. Re-evaluating myself often has been instrumental here.
         </p>
@@ -125,11 +153,22 @@
                 <!-- <img src="resources/images/ArrArrVr_GDD_01.png"> -->
                 <section class="section section-description">
 
-                    <div class="gallery-wrapper-tall" id="galleryWrapper-3">
-                        <div class="gallery" id="gallery-3">
-                            <!-- Gallery items will be inserted here by JavaScript -->
+                    <div class="gallery-parent-tall" id="galleryParent-3">
+                        <div class="gallery-wrapper-tall" id="galleryWrapper-3">
+                            <div class="gallery" id="gallery-3">
+                                <!-- Gallery items will be inserted here by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="gallery-buttons">
+                            <div class="gallery-button" id="gallery-back-3">
+                                <img src="resources/images/button.svg" class="back">
+                            </div>
+                            <div class="gallery-button" id="gallery-forward-3">
+                                <img src="resources/images/button.svg">
+                            </div>
                         </div>
                     </div>
+
 
                     <div class="modal" id="modal-3">
                         <button class="modal-nav prev" id="prevBtn-3" style="display:none;">«</button>
@@ -140,7 +179,6 @@
                         <span class="modal-close" id="closeBtn-3">&times;</span>
                         <div class="modal-counter" id="counter-3"></div>
                     </div>
-                    
                 </section>
 
         </section>
