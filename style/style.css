@@ -7,8 +7,8 @@
 /* #region Base */
     :root {
         --primary-color: #242F40;
-        --secondary-color: #111113c2;
-        --accent-color: #CCA43B;
+        --secondary-color: #212124c2;
+        --accent-color: #cc9e3b;
         --text-primary: #EFF1F3;
         --text-secondary: #d3dbdd;
         --gradient: linear-gradient(135deg, #040813 0%, #030508 100%);
