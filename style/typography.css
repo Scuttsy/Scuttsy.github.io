@@ -76,6 +76,25 @@ a {
     font-weight: 600;
 }
 
+.uppercase{
+    text-transform: uppercase;
+}
+
+.font-bold{
+    font-weight: 700;
+}
+
+.text-xs{
+    font-size: .75rem;
+    line-height: 1rem;
+}
+
+.text-left{
+    text-align: left;
+}
+
+
+
 @media (max-width: 800px) {
     h1 {
         font-size: 1.5rem;
