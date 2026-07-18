@@ -2,12 +2,14 @@
     position: relative;
     margin: 30px 0;
     height: 22rem;
+    width: 100%;
 }
 
 .gallery-parent-tall{
     position: relative;
     margin: 30px 0;
     height: 50rem;
+    width: 100%;
 }
 
 

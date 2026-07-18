@@ -30,7 +30,7 @@ p {
     display: block;
     font-size: 1.2rem;
     color: var(--text-secondary);
-    margin: .7rem auto;
+    /* margin: .7rem auto; */
 }
 
 li{
@@ -91,6 +91,11 @@ a {
 
 .text-left{
     text-align: left;
+}
+
+.text-xl{
+    font-size: 1.5rem;
+    line-height: 1.75rem;
 }
 
 
