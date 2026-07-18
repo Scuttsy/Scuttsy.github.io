@@ -2,16 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* #region Base */
 :root {
   --primary-color: #242f40;
   --secondary-color: #212124c2;
+  --tertiary-color: #040310;
   --accent-color: #cc9e3b;
   --text-primary: #eff1f3;
-  --text-secondary: #b3b9bb;
-  --gradient: linear-gradient(135deg, #009fb7 0%, #0e2462 100%);
+  --text-secondary: #d3dbdd;
+  --gradient: linear-gradient(135deg, #040813 0%, #030508 100%);
   --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   --nav-padding: 80px;
 }
@@ -21,11 +25,35 @@ html {
   overflow-x: hidden;
   height: 100%;
 }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: 100%;
+}
 
 keywords {
   display: none;
 }
+keywords {
+  display: none;
+}
 
+body {
+  height: 100%;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  line-height: 1;
+  overflow-x: hidden;
+  background: var(--gradient);
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
 body {
   height: 100%;
   font-family:
@@ -52,6 +80,15 @@ main {
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
+main {
+  flex-direction: column;
+  margin: var(--nav-padding) auto 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
 
 .main-description {
   height: 100%;
@@ -60,10 +97,36 @@ main {
   margin: 30px auto 0;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+* ::before,
+::after {
+  border-width: 0;
+}
+
+/* #endregion */
+
+/* #region Sizing */
+
+.w-full {
+  width: 101%;
+}
+
+.h-full {
+  height: 101%;
+}
+
 /* #endregion */
 
 /* #region SidePanel */
 
+.sidepanel {
+  background: var(--primary-color);
+  width: 200px;
+  height: 100%;
 .sidepanel {
   background: var(--primary-color);
   width: 200px;
@@ -75,6 +138,11 @@ main {
 /* #region About */
 
 .about-section {
+  position: relative;
+  display: flex;
+  /* align-self: start; */
+  padding-bottom: 2rem;
+  gap: 2rem;
   position: relative;
   display: flex;
   /* align-self: start; */
@@ -94,9 +162,23 @@ main {
   border: 2px solid rgba(216, 212, 221, 0.05);
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 300px 1fr;
+  align-items: start;
+  background: var(--secondary-color);
+  border-radius: 25px;
+  padding: 3rem;
+  box-shadow: var(--shadow);
+  border: 2px solid rgba(216, 212, 221, 0.05);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-secondary);
@@ -107,9 +189,16 @@ main {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
+  color: var(--text-primary);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 .about-text h3 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--text-primary);
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -120,9 +209,23 @@ main {
   line-height: 1.8;
   color: var(--text-secondary);
   margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
 }
 
 .about-image {
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow);
   width: 100%;
   height: 400px;
   border-radius: 20px;
@@ -142,16 +245,22 @@ main {
   padding: auto 20px;
   gap: 0.9rem;
   text-decoration: none;
+.about-tags {
+  position: relative;
+  display: flex;
+  align-items: start;
+  padding: auto 20px;
+  gap: 0.9rem;
+  text-decoration: none;
 }
 .about-tag {
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: var(--text-primary);
   padding: 6px 12px;
-  border: 1px solid var(--text-secondary);
   border-radius: 20px;
   font-size: 1.2rem;
   font-weight: 600;
@@ -159,10 +268,13 @@ main {
 }
 
 .about-tag:hover {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   transform: translateY(-2px);
 }
 .about-tag P {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-primary);
   text-align: center;
   font-size: 1.2rem;
   color: var(--text-primary);
@@ -173,13 +285,23 @@ main {
   justify-content: center;
   display: flex;
   flex-direction: row;
-}
-.section img {
-  width: 100%;
-  object-fit: fill;
+  max-width: 1080px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .section-title {
+  width: 100%;
+  position: relative;
+  display: flex;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: start;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
   width: 100%;
   position: relative;
   display: flex;
@@ -201,9 +323,22 @@ main {
   margin-bottom: 1.3rem;
   border-left: 0.5rem solid var(--accent-color);
   padding: 0.6rem 0 0.6rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.3rem;
+  border-left: 0.5rem solid var(--accent-color);
+  padding: 0.6rem 0 0.6rem 2rem;
 }
 
 .section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  align-self: flex-start;
+  margin-bottom: 1rem;
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -217,8 +352,20 @@ main {
   color: var(--text-primary);
   align-self: flex-start;
   margin-bottom: 1rem;
+.section h3 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  align-self: flex-start;
+  margin-bottom: 1rem;
 }
 .section-description {
+  width: 100%;
+  color: var(--text-secondary);
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   color: var(--text-secondary);
   margin-bottom: 80px;
@@ -234,8 +381,16 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  color: var(--text-secondary);
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.section ul {
+  padding-left: 20px;
 .section ul {
   padding-left: 20px;
 }
@@ -243,6 +398,11 @@ main {
 /* #endregion */
 
 /* #region Button */
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 .button {
   width: 100%;
   display: flex;
@@ -265,8 +425,24 @@ main {
   color: inherit;
   display: block;
   justify-content: start;
+  max-width: 350px;
+  background: var(--primary-color);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(216, 212, 221, 0.05);
+  object-fit: contain;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  justify-content: start;
 }
 
+.button-text {
+  margin: 1rem;
 .button-text {
   margin: 1rem;
 }
@@ -276,6 +452,9 @@ main {
 /* #region Chips */
 
 .icon-small {
+  height: 100%;
+  object-fit: fill;
+  padding: 10px 5px 10px 10px;
   height: 100%;
   object-fit: fill;
   padding: 10px 5px 10px 10px;
@@ -289,16 +468,25 @@ main {
   text-decoration: none;
   object-fit: contain;
   color: inherit;
+.hoverCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  background-size: cover;
+  background-position: center center;
+  text-decoration: none;
+  object-fit: contain;
+  color: inherit;
 }
 
 .tag {
   text-decoration: none;
-  background: var(--primary-color);
-  color: var(--accent-color);
+  background: var(--tertiary-color);
+  color: var(--text-primary);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
+  box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.3);
 }
 /* #endregion */
 
@@ -306,9 +494,16 @@ main {
 .projects {
   background: none;
   width: 100%;
+  background: none;
+  width: 100%;
 }
 
 .projects-grid {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  justify-content: right;
+  flex-direction: row-reverse;
   display: flex;
   gap: 30px;
   width: 100%;
@@ -326,30 +521,18 @@ main {
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
   border: 2px solid rgba(216, 212, 221, 0.05);
-  object-fit: contain;
   text-decoration: none;
   color: inherit;
-  display: block;
-  justify-content: start;
 }
 
 .project-image {
-  width: 100%;
-  height: 300px;
-
-  background: var(--gradient);
-  background-position: center center;
-  background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  object-fit: contain;
-  align-items: end;
-  color: white;
-  font-size: 1.1rem;
+  background-position: center center;
+  object-fit: cover;
 }
 
 .project-content {
+  padding: 0px 15px 15px 15px;
   padding: 0px 15px 15px 15px;
 }
 
@@ -357,13 +540,22 @@ main {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--text-primary);
 }
 
 .project-content p {
   color: var(--text-secondary);
+  color: var(--text-secondary);
 }
 
 .project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  gap: 0.9rem;
+  text-decoration: none;
   display: flex;
   flex-wrap: wrap;
   padding: 10px 20px;
@@ -377,7 +569,7 @@ main {
 .gameJam {
   height: 80px;
   margin: 10px 0;
-  background: rgb(26, 26, 27);
+  background: var(--secondary-color);
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -387,8 +579,14 @@ main {
   transform: translateY(-6px);
   box-shadow: var(--shadow);
   cursor: pointer;
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  cursor: pointer;
 }
 .gameJam img {
+  width: 28%;
+  height: 100%;
+  object-fit: fill;
   width: 28%;
   height: 100%;
   object-fit: fill;
@@ -398,8 +596,16 @@ main {
   font-size: 1.2rem;
   margin-bottom: 6px !important;
   color: var(--text-primary);
+  padding-left: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 6px !important;
+  color: var(--text-primary);
 }
 .gameJam p {
+  padding-left: 10px;
+  padding-right: 5px;
+  font-size: 1rem;
+  line-height: 1.2;
   padding-left: 10px;
   padding-right: 5px;
   font-size: 1rem;
@@ -417,11 +623,23 @@ main {
   padding: 3rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
+  z-index: 1;
+  color: var(--text-primary);
+  background: var(--secondary-color);
+  text-align: center;
+  padding: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
 }
 /*#endregion */
 
 /* #region Arrow */
 .arrow {
+  height: 4rem;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 4rem;
   margin-top: 10px;
   display: flex;
@@ -434,9 +652,15 @@ main {
   display: flex;
   align-items: center;
   object-fit: fill;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  object-fit: fill;
 }
 
 .arrow_curved {
+  height: 70% !important;
+  width: auto !important;
   height: 70% !important;
   width: auto !important;
 }
@@ -447,7 +671,28 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+.profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.profile-card {
+  width: 15rem;
+  height: 15rem;
+  width: 15rem;
+  height: 15rem;
+  background: var(--secondary-color);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 5px solid rgba(216, 212, 221, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
 
 .profile-card {
   width: 15rem;
@@ -473,8 +718,13 @@ main {
 .gif {
   width: 100%;
   margin-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
+.outside-link {
+  width: 700px;
+  height: 400px;
 .outside-link {
   width: 700px;
   height: 400px;
@@ -482,11 +732,20 @@ main {
 .itch-embed {
   width: 100%;
   height: 200px;
+.itch-embed {
+  width: 100%;
+  height: 200px;
 }
 .steam-embed {
   width: 100%;
   height: 300px;
+.steam-embed {
+  width: 100%;
+  height: 300px;
 }
+.documentation {
+  width: 1200px !important;
+  transform: translate(0, 80px);
 .documentation {
   width: 1200px !important;
   transform: translate(0, 80px);
@@ -496,20 +755,31 @@ main {
   display: flex;
   flex-direction: row;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
+.flex {
+  display: flex;
 .flex {
   display: flex;
 }
 
 .relative {
   display: relative;
+.relative {
+  display: relative;
 }
 
 .justify-start {
   justify-content: start;
+.justify-start {
+  justify-content: start;
 }
 
+.items-center {
+  align-items: center;
 .items-center {
   align-items: center;
 }
@@ -518,24 +788,36 @@ main {
 
 .w-2 {
   width: 0.5rem;
+.w-2 {
+  width: 0.5rem;
 }
 
+.w-4 {
+  width: 1rem;
 .w-4 {
   width: 1rem;
 }
 
 .w-6 {
   width: 1.5rem;
+.w-6 {
+  width: 1.5rem;
 }
 
+.w-8 {
+  width: 2rem;
 .w-8 {
   width: 2rem;
 }
 
 .w-10 {
   width: 2.5rem;
+.w-10 {
+  width: 2.5rem;
 }
 
+.w-20 {
+  width: 5rem;
 .w-20 {
   width: 5rem;
 }
@@ -543,17 +825,66 @@ main {
 .w-fit {
   width: fit-content;
   width: -moz-fit-content;
+.w-fit {
+  width: fit-content;
+  width: -moz-fit-content;
 }
 /* #endregion */
+
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-30\% {
+  height: 30%;
+}
+
+.h-50\% {
+  height: 50%;
+}
+
+.h-60\% {
+  height: 60%;
+}
 
 .h-\[2px\] {
   height: 2px;
 }
+.min-h-\[100px\] {
+  min-height: 100px;
+}
+.max-h-\[400px\] {
+  max-height: 400px;
+}
 
+.bg-current {
+  background-color: currentColor;
 .bg-current {
   background-color: currentColor;
 }
 
+.grid {
+  display: grid;
 .grid {
   display: grid;
 }
@@ -562,55 +893,104 @@ main {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .gap {
   gap: 1rem;
 }
 
 .gap-2 {
   gap: 0.5rem;
+.gap-2 {
+  gap: 0.5rem;
 }
 
+.mb {
+  margin-bottom: 0.5rem;
 .mb {
   margin-bottom: 0.5rem;
 }
 
 .mb-2 {
   margin-bottom: 1rem;
+.mb-2 {
+  margin-bottom: 1rem;
 }
+.mb-3 {
+  margin-bottom: 1.5rem;
 .mb-3 {
   margin-bottom: 1.5rem;
 }
 .mb-12 {
   margin-bottom: 3rem;
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .mt {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .mt-2 {
-  margin-top: 0.5rem;
-}
-.mt-3 {
   margin-top: 1rem;
 }
+.mt-3 {
+  margin-top: 2rem;
+}
 .mt-12 {
-  margin-top: 3rem;
+  margin-top: 8rem;
 }
 
+.row {
+  flex-direction: row;
 .row {
   flex-direction: row;
 }
 
 .col {
   flex-direction: column;
+.col {
+  flex-direction: column;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+/* #endregion */
+
+/* #region aspects */
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
 }
 
 /* #endregion */
 
 /* #region Media */
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 800px) {
   .media-hide {
     display: none !important;
   }
@@ -640,7 +1020,25 @@ main {
     align-items: left;
     padding-top: 20px;
   }
+  .section-description ul {
+    align-items: left;
+    padding-top: 20px;
+  }
 
+  .section-description li {
+    text-align: left;
+  }
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem 1.5rem 1rem;
+    gap: 1rem;
+  }
+  .about-card {
+    padding: 1.2rem;
+    max-width: 100%;
+    text-align: center;
+  }
   .section-description li {
     text-align: left;
   }
@@ -663,11 +1061,25 @@ main {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
   }
+  .about-image {
+    height: 300px;
+  }
+  .about-text h1 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
 
   .about-text h2 {
     font-size: 1.8rem;
   }
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
 
+  .about-text h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
   .about-text h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
@@ -677,7 +1089,14 @@ main {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
+  .about-text p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
 
+  .about-tags {
+    gap: 0.6rem;
+  }
   .about-tags {
     gap: 0.6rem;
   }
@@ -687,7 +1106,15 @@ main {
     font-size: 0.95rem;
     border-radius: 18px;
   }
+  .about-tag {
+    padding: 5px 10px;
+    font-size: 0.95rem;
+    border-radius: 18px;
+  }
 
+  .about-tag P {
+    font-size: 0.95rem;
+  }
   .about-tag P {
     font-size: 0.95rem;
   }
@@ -697,7 +1124,19 @@ main {
     max-width: 400px;
     margin-bottom: auto;
   }
+  .section {
+    padding: 1rem 1rem;
+    max-width: 400px;
+    margin-bottom: auto;
+  }
 
+  .section-title {
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
   .section-title {
     font-size: 1rem;
     justify-content: center;
@@ -721,7 +1160,27 @@ main {
     align-self: center;
     margin-bottom: 1rem;
   }
+  .section h2 {
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 10px;
+  }
 
+  .section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
   .projects-grid {
     flex-direction: column;
     align-items: center;
@@ -732,11 +1191,22 @@ main {
     max-width: 100%;
     width: 100%;
   }
-
-  .project-image {
-    height: 150px;
+  .project-card {
+    max-width: 100%;
+    width: 100%;
   }
 
+  .project-image {
+    /* height: 150px; */
+  }
+
+  .project-content {
+    padding: 0.7rem;
+  }
+  .project-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
   .project-content {
     padding: 0.7rem;
   }
@@ -748,20 +1218,32 @@ main {
   .project-content p {
     margin-bottom: 0.5rem;
   }
+  .project-content p {
+    margin-bottom: 0.5rem;
+  }
 
   .project-tags {
     padding: 8px 15px;
     gap: 0.7rem;
   }
 
-  .tag {
-    font-size: 0.8rem;
+  .arrow_curved_container {
+    display: none;
   }
-
   .arrow_curved_container {
     display: none;
   }
 
+  .arrow_curved {
+    display: none;
+  }
+  .button {
+    width: 300px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
   .arrow_curved {
     display: none;
   }
@@ -780,13 +1262,28 @@ main {
     align-items: center;
     justify-content: space-between;
   }
+  .profile-card {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .profile-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  .profile-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
+  .footer {
+    position: relative;
+  }
   .footer {
     position: relative;
   }
