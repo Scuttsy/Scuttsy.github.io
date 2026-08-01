@@ -42,6 +42,12 @@ body {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
+  background-image: url("/resources/images/background_space.png");
+  background-repeat: round;
+  background-position:  center;
+  background-attachment: fixed;
+  background-color: #707070;
+  background-blend-mode: multiply;
 }
 
 main {
@@ -100,7 +106,7 @@ img {
 .about-section {
   position: relative;
   display: flex;
-  /* align-self: start; */
+  align-self: start;
   padding-bottom: 2rem;
   gap: 2rem;
 }
@@ -115,7 +121,7 @@ img {
   padding: 3rem;
   box-shadow: var(--shadow);
   border: 2px solid rgba(216, 212, 221, 0.05);
-  max-width: 1000px;
+  max-width: 730px;
   margin: 0 auto;
 }
 
@@ -195,7 +201,7 @@ img {
 /* #region Sections */
 
 .section {
-  max-width: 1080px;
+  max-width: 1200px;
   justify-content: center;
   display: flex;
   flex-direction: row;
@@ -447,7 +453,6 @@ img {
 }
 
 .arrow_curved {
-  height: 70% !important;
   width: auto !important;
 }
 /*#endregion */
