@@ -7,7 +7,7 @@
 /* #region Base */
 :root {
   --primary-color: #242f40;
-  --secondary-color: #212124c2;
+  --secondary-color: #0f0f11c2;
   --tertiary-color: #040310;
   --accent-color: #cc9e3b;
   --text-primary: #eff1f3;
@@ -44,7 +44,7 @@ body {
   flex-direction: column;
   background-image: url("/resources/images/background_space.png");
   background-repeat: round;
-  background-position:  center;
+  background-position: center;
   background-attachment: fixed;
   background-color: #707070;
   background-blend-mode: multiply;
@@ -329,6 +329,17 @@ img {
   font-weight: 500;
   box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.3);
 }
+
+.tag-2 {
+  text-decoration: none;
+  background: var(--secondary-color);
+  color: var(--text-primary);
+  padding: 0.3rem 0.8rem;
+  width: 100%;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
 /* #endregion */
 
 /* #region Projects  */
@@ -420,6 +431,19 @@ img {
   padding-right: 5px;
   font-size: 1rem;
   line-height: 1.2;
+}
+
+/* #endregion */
+
+/* #region Cards */
+
+.card {
+  background: var(--secondary-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(216, 212, 221, 0.05);
 }
 
 /* #endregion */
@@ -686,6 +710,18 @@ img {
 .z-20 {
   z-index: 20;
 }
+/* #endregion */
+
+/* #region Padding */
+
+.pad {
+  padding: 0.5rem;
+}
+
+.pad-2 {
+  padding: 2rem;
+}
+
 /* #endregion */
 
 /* #region aspects */
