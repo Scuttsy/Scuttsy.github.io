@@ -728,6 +728,7 @@ img {
 }
 
 .list {
+  padding-left: 1rem;
   display: flex;
   flex-direction: row;
   width: 100%;
