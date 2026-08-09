@@ -57,72 +57,70 @@
     </nav>
 
     <main>
-        <header id="Header" class="w-full jutify-center items-center col">
-            <div class="relative">
-                <img src="resources/images/Ultraspring/ULTRASPRING_Final.gif" class="object-cover h-50% w-full tint z-10">
-    
-                <section id="title" class="header-title z-20">
-                    <h1>ULTRA SPRING</h1>
-                    <p class="font-bold">
-                        Spring based runner at blistering speeds
-                    </p>
-                </section>
-            </div>
-            
-            <!-- project overview -->
-            <section class="overview-grid pad-2">
-                <div class="overview-item">
-                    <div class="overview-label">Overview</div>
-                    <div class="overview-content">
-                        <p>
-                            Ultraspring is high paced runner / platformer where you time your jumps to gain ridiculous speeds, weaving your way through obstacles to get the best possible times. Ultraspring is all about getting and maintaining as much momentum as you can while trying not to crash! 
-                        </p>
-                    </div>
-                </div>
+        <header id="Header" class="w-full jutify-center relative items-center col h-60">
+            <img src="resources/images/Ultraspring/ULTRASPRING_Final.gif" class="object-cover h-full w-full tint z-10">
 
-                <div class="overview-item">
-                    <div class="overview-label">Goals</div>
-                    <div class="overview-content">
-                            Design and iterate on a single mechanic to make the player feel as fast as possible,
-                            while still lending a feeling of control to encourage speedrunning. 
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="overview-item">
-                    <div class="overview-label">Engine</div>
-                    <div class="overview-content">
-                        Unity
-                    </div>
-                </div>
-
-                <div class="overview-item">
-                    <div class="overview-label">Genre</div>
-                    <div class="overview-content">
-                        Platformer / Runner
-                    </div>
-                </div>
-
-                <div class="overview-item">
-                    <div class="overview-label">Project Duration</div>
-                    <div class="overview-content">
-                        40 hours
-                    </div>
-                </div>
-
-                <div class="overview-item">
-                    <div class="overview-label">Team & production</div>
-                    <div class="overview-content">
-                        Solo Developer (minus sound assets)
-                    </div>
-                </div>
+            <section id="title" class="header-title z-20">
+                <h1>ULTRA SPRING</h1>
+                <p class="font-bold">
+                    Spring based runner at blistering speeds
+                </p>
             </section>
-
         </header>
 
+        <!-- project overview -->
+        <section class="overview-grid pad-2">
+
+            <div class="overview-item">
+                <div class="overview-label">Engine</div>
+                <div class="overview-content">
+                    Unity
+                </div>
+            </div>
+
+            <div class="overview-item">
+                <div class="overview-label">Genre</div>
+                <div class="overview-content">
+                    Platformer / Runner
+                </div>
+            </div>
+
+            <div class="overview-item">
+                <div class="overview-label">Project Duration</div>
+                <div class="overview-content">
+                    40 hours
+                </div>
+            </div>
+
+            <div class="overview-item">
+                <div class="overview-label">Team & production</div>
+                <div class="overview-content">
+                    Solo Developer (minus sound assets)
+                </div>
+            </div>
+
+            <div class="overview-item">
+                <div class="overview-label">Overview</div>
+                <div class="overview-content">
+                    <p>
+                        Ultraspring is high paced runner / platformer where you time your jumps to gain ridiculous speeds, weaving your way through obstacles to get the best possible times. Ultraspring is all about getting and maintaining as much momentum as you can while trying not to crash! 
+                    </p>
+                </div>
+            </div>
+
+            <div class="overview-item">
+                <div class="overview-label">Goals</div>
+                <div class="overview-content">
+                        Design and iterate on a single mechanic to make the player feel as fast as possible,
+                        while still lending a feeling of control to encourage speedrunning. 
+                    </ul>
+                </div>
+            </div>
+        </section>                
+
         <div class="main-description">
-            <div style="height: 40rem;">
-                <h2>Trailer</h2>
+            <div id="trailer" style="height: 40rem;">
+                <h1 style="text-align: center;">Trailer</h1>
                 <div class="h-full" style="margin-top: 30px;">
                     <iframe class="w-full h-full" src="https://www.youtube.com/embed/qNHrM5zMWhY?si=2PvPM_zQRo8tdEdQ"
                         frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen
@@ -134,7 +132,7 @@
             <!-- project Descrption -->
             <div class="grid grid-cols-2 mt-12 mb-12">
                 <section class="section section-description">
-                    <h2>Project Descrption</h2>
+                    <h1>Project Descrption</h1>
     
                     <div class="about-section">
                         <p>
@@ -154,12 +152,12 @@
                 </div>
                 <!-- my role -->
                 <section class="section section-description">
-                    <h2>My Role</h2>
+                    <h1>My Role</h1>
                     <p>
                         As a solo developer, I was responsible for everything in the game. Most importantly, the
                         planning
                         and time management. The prototyping stage was done in about 20 hours. After that I restarted,
-                        reimagining the the project from scratch and programmed the game / made the art and effects in
+                        reimagining the project from scratch and programmed the game / made the art and effects in
                         another 20 hours.
                     </p>
                 </section>
@@ -170,12 +168,13 @@
             
             <!-- Iteration 0 -->
             <section class="section section-description mb-3">
-                <h2>Starting point</h2>
+                <h1>Starting point</h1>
                 <div class="flex row space-between">
-                    <div class="flex col w-50% mr-2">
+                    <div class="col w-50% mr-2 text-center">
                         <p>
-                            The very first iteration was a intended to be a simple platformer, formed around the core idea of charging and aiming a individual jumps. Reception to this initial iteration was simply poor. Timing your jump distance was unintuitive, players lost felt frustrated when they missed a few jumps in a row and there was very little taking advantage of how difficult the game accidentally became. For example, there was no intrinsic reward for interacting with the mechanic skillfully 
+                            The very first iteration was intended to be a simple platformer, formed around the core idea of charging and aiming a individual jumps. Reception to this initial iteration was simply poor. Timing your jump distance was unintuitive and players felt frustrated when they missed a few jumps in a row. There was very little taking advantage of how difficult the game accidentally became. For example, there was no intrinsic reward for interacting with the mechanic skillfully.
                         </p>
+                        <h3>Challenges</h3>
                         <div class="grid grid-cols-2 gap mt-2">
                             <div class="about-tag">
                                 Unintuitive
@@ -197,7 +196,7 @@
 
             <!-- Iteration 1 -->
             <section class="section section-description mt-12">
-                <h2>Iterations</h2>
+                <h1>Iterations</h1>
                 
                 <div class="flex row-rev space-between end">
                     <div class="flex col w-50% ml-2">
@@ -266,24 +265,24 @@
                             mechanic was satisfying and began adding polish:
                         </p>
 
-                        <div class="grid gap mt">
+                        <div class="grid grid-cols-2 gap mt-2">
                             <div class="round-box flex col items-center">
-                                FOV sliding
+                                FOV Sliding
                             </div>
                             <div class="round-box flex col items-center">
-                                Chromatic abberation
+                                Chromatic Abberation
                             </div>
                             <div class="round-box flex col items-center">
-                                Speed lines
+                                Speed Lines
                             </div>
                             <div class="round-box flex col items-center">
-                                Camera sliding backwards at high speeds
+                                Dual Forward Focus
                             </div>
                             <div class="round-box flex col items-center">
-                                Camera shake
+                                Camera Shake
                             </div>
                              <div class="round-box flex col items-center">
-                                Speed trails
+                                Speed Trails
                             </div>
                         </div>
                     </div>
@@ -306,7 +305,7 @@
 
             <!-- Post mortem -->
             <section class="section section-description mt-12 mb-12">
-                <h2>post-mortem</h2>
+                <h1>post-mortem</h1>
                 <div class="flex row w-full">
                     <p class="mr-2" style="margin-top: 30px;">
                         Looking back I think it's a decent game. More importantly I managed to turn a boring concept
@@ -352,21 +351,21 @@
 
             <!-- game design process -->
             <section class="section section-description mt-12  mb-12">
-                <h2>Game Design Process</h2>
-                <section class="section about-section">
-                    <iframe class="w-50%" height="250"
+                <h1>Game Design Process</h1>
+                <section class="section flex col">
+                    <p>
+                        My game design process for Ultra Spring was focused on speed and rapid prototyping. You
+                        can
+                        see my design process through the embed on the left.
+                        The game design document can be read here:
+                        <a href="https://drive.google.com/file/d/1pJZJ-MJe_pSAPud1g1ptT6vfh0iAtCId/view?usp=sharing"
+                            target="_blank">ULTRASPRING GDD</a>
+                    </p>
+                    <iframe class="w-full" height="250"
                         src="https://miro.com/app/live-embed/uXjVIt77rCM=/?embedMode=view_only_without_ui&amp;moveToViewport=-19871,-1992,28725,4352&amp;embedId=958097416686"
                         frameborder="" scrolling="no" allowfullscreen
                         sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
                     <div class="about" style="width: 70%;">
-                        <p>
-                            My game design process for Ultra Spring was focused on speed and rapid prototyping. You
-                            can
-                            see my design process through the embed on the left.
-                            The game design document can be read here:
-                            <a href="https://drive.google.com/file/d/1pJZJ-MJe_pSAPud1g1ptT6vfh0iAtCId/view?usp=sharing"
-                                target="_blank">ULTRASPRING GDD</a>
-                        </p>
                     </div>
                 </section>
             </section>
