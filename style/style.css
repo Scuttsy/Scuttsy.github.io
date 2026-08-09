@@ -317,7 +317,7 @@ img {
 
 .hoverCard:hover {
   transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 5px 8px var(--accent-color);
   background-size: cover;
   background-position: center center;
   text-decoration: none;
