@@ -69,7 +69,7 @@ main {
 img {
   max-width: 100%;
   display: block;
-  border-radius: 10 px;
+  border-radius: 10px;
 }
 
 * ::before,
@@ -708,8 +708,6 @@ img {
 }
 
 .gif {
-  width: 100%;
-  background-size: fill;
   background-position: center center;
   object-fit: scale-down;
 }
