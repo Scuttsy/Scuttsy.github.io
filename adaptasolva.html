@@ -1,81 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sam Cutts - Design</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/typography.css">
-    <link rel="stylesheet" href="style/navigation.css">   
-    <link rel="stylesheet" href="style/aboutme.css">
-    <link rel="stylesheet" href="style/gallery.css">
-    <link rel="script" href="javascript/main.js">
-    <link rel="script" href="javascript/gallery.js">
-    <link rel="icon" type="image/x-icon" href="resources/images/icon.svg">
-
-</head>
-
-<body >
-
- <nav class="nav">
-        <div class="nav-container" style="flex-direction: column; align-items: start">
-            <div style="display: flex; height:50%; width: 100%; align-items: center;">
-                <img src="resources/images/icon.svg" class="icon-small">
-                <p style="margin: 5px 0px;">Samuel Cutts</p>
-            </div>
-            <p style="margin: 0px 0px 10px 10px;">Kortrijk, Belgium</p>
-        </div>
-        <div class="nav-container" style="justify-content: center;">
-            <ul class="nav-links">
-                <li><a href="index.html">Projects</a></li>
-                <li><a href="aboutme.html">About</a></li>
-            </ul>
-        </div>
-        <div class="nav-container" style="justify-content: end;">
-            <div class="social-icons">
-                <div class="about-tags">
-                        <a onclick="copyEmail()" class="about-tag" style="cursor: pointer;">
-                            <img src="resources/images/email.png" alt="email" class="icon">
-                        </a>
-                        <a href="https://www.youtube.com/@Scuttsy" target="_blank" class="about-tag">
-                            <img src="resources/images/youtube.png" alt="youtube" class="icon">
-                        </a>
-                        
-                        <a href="https://www.linkedin.com/in/samuel-cutts-02a096296/" target="_blank" class="about-tag">
-                            <img src="resources/images/linkedin.png" alt="linkedin" class="icon">
-                        </a>
-                        
-                        <a href="https://drive.google.com/uc?export=download&id=1lIUAza6jhN02VE3Hs9L0eYje8xfcCHTz" target="_blank" class="about-tag">
-                            <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
-                            <p>CV</p>
-                        </a>
-                    </div>
-            </div>
-        </div>
-    </nav>
-    <main>
-
-       
-                
-            </section>
-    
-                    <div class="button">
-                        <a href="index.html" class="button-content hoverCard fade-in">
-                            <div class="button-text">
-                                <h2>Back to Projects</h2>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-    
-            </div>
-        </div>
-    </main>
-
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/typography.css" />
+    <link rel="stylesheet" href="style/navigation.css" />
+    <link rel="stylesheet" href="style/aboutme.css" />
+    <link rel="stylesheet" href="style/gallery.css" />
+    <link rel="icon" type="image/x-icon" href="resources/images/icon.svg" />
+    <script src="javascript/main.js"></script>
     <script src="javascript/gallery.js"></script>
-</body>
+  </head>
 
-<footer class="footer">
-    <p>&copy; 2025 Samuel Cutts. All rights reserved.</p>
-</footer>
+  <body>
+    <nav class="nav">
+      <div
+        class="nav-container"
+        style="flex-direction: column; align-items: start"
+      >
+        <div
+          style="display: flex; height: 50%; width: 100%; align-items: center"
+        >
+          <img src="resources/images/icon.svg" class="icon-small" />
+          <p style="margin: 5px 0px">Samuel Cutts</p>
+        </div>
+        <p style="margin: 0px 0px 10px 10px">Kortrijk, Belgium</p>
+      </div>
+      <div class="nav-container" style="justify-content: center">
+        <ul class="nav-links">
+          <li><a href="index.html">Projects</a></li>
+          <li><a href="aboutme.html">About</a></li>
+        </ul>
+      </div>
+      <div class="nav-container" style="justify-content: end">
+        <div class="social-icons">
+          <div class="about-tags">
+            <a onclick="copyEmail()" class="about-tag" style="cursor: pointer">
+              <img src="resources/images/email.png" alt="email" class="icon" />
+            </a>
+            <a
+              href="https://www.youtube.com/@Scuttsy"
+              target="_blank"
+              class="about-tag"
+            >
+              <img
+                src="resources/images/youtube.png"
+                alt="youtube"
+                class="icon"
+              />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/samuel-cutts-02a096296/"
+              target="_blank"
+              class="about-tag"
+            >
+              <img
+                src="resources/images/linkedin.png"
+                alt="linkedin"
+                class="icon"
+              />
+            </a>
+
+            <a
+              href="https://drive.google.com/uc?export=download&id=1lIUAza6jhN02VE3Hs9L0eYje8xfcCHTz"
+              target="_blank"
+              class="about-tag"
+            >
+              <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
+              <p>CV</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="h-full">
+      <div class="h-50%"></div>
+
+      <div class="button">
+        <a href="index.html" class="button-content hoverCard fade-in">
+          <div class="button-text">
+            <h2>Back to Projects</h2>
+          </div>
+        </a>
+      </div>
+    </main>
+    <footer id="main-footer" class="footer">
+      <p>&copy; 2026 Samuel Cutts. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
