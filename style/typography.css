@@ -1,128 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
 
-
-h1, h2, h3 {
-    font-family: Roboto, sans-serif;
-    color: var(--text-primary);
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3 {
+  font-family: Roboto, sans-serif;
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-align: left;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 h3 {
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.3;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3;
 }
 
 p {
-    display: block;
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    /* margin: .7rem auto; */
+  display: block;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  /* margin: .7rem auto; */
 }
 
-li{
-    margin: .4rem auto;
-    font-size: 1rem;
+li {
+  margin: 0.4rem auto;
+  font-size: 1rem;
 }
 
 .small p {
-    display: block;
-    font-size: 1rem;
-    color: var(--text-secondary);
-    margin: 10px;
+  display: block;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 10px;
 }
 .small ol {
-    margin-left: 1.2rem;
+  margin-left: 1.2rem;
 }
 
 b {
-    display: block;
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    
+  display: block;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
 }
 
-
 li {
-    text-decoration: none;
-    color: var(--text-secondary);
+  text-decoration: none;
+  color: var(--text-secondary);
 }
 
 a {
-    text-decoration: none;
-    color: var(--text-primary);
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
 }
 
 .highlight {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
-.highlight-white{
-    color: var(--text-primary); 
-    font-weight: 600;
+.highlight-white {
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
-.uppercase{
-    text-transform: uppercase;
+.uppercase {
+  text-transform: uppercase;
 }
 
-.font-bold{
-    font-weight: 700;
+.font-bold {
+  font-weight: 700;
 }
 
-.text-xs{
-    font-size: .75rem;
-    line-height: 1rem;
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
-.text-left{
-    text-align: left;
+.text-left {
+  text-align: left;
 }
 
-.text-xl{
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+.text-xl {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
 }
-
-
 
 @media (max-width: 800px) {
-    h1 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-    h2 {
-        font-size: 2rem;
-        text-align: center;
-    }
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
 
-    h3 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
+  h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-    p {
-        font-size: 1rem;
-        text-align: center;
-    }
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
 
-    b {
-        font-size: 1rem;
-        text-align: center;
-    }
+  b {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
