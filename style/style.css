@@ -195,7 +195,7 @@ img {
 
 .about-tag:hover {
   background: var(--primary-color);
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
 }
 .about-tag P {
   text-align: center;
@@ -440,11 +440,13 @@ img {
 /* #region Overview Grid */
 
 .overview-grid {
+  /* position: absolute;
+  top: 100%;
+  transform: translateY(-100%); */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   width: 100%;
-  margin-bottom: 2rem;
   background-color: var(--tertiary-color);
   border-top: 2px solid var(--primary-color);
 }
@@ -707,7 +709,9 @@ img {
 
 .gif {
   width: 100%;
-  margin-bottom: 1rem;
+  background-size: fill;
+  background-position: center center;
+  object-fit: scale-down;
 }
 
 .itch-embed {
@@ -844,6 +848,10 @@ img {
 
 .h-\[2px\] {
   height: 2px;
+}
+
+.h-60 {
+  height: 60vh;
 }
 .min-h-\[100px\] {
   min-height: 100px;
@@ -1010,7 +1018,6 @@ img {
 
   .main-description {
     width: 100%;
-    margin-top: 100px;
     flex-direction: column;
     text-align: center;
     overflow: hidden;

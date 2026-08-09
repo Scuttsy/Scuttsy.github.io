@@ -14,6 +14,7 @@ h1 {
   font-weight: 900;
   text-transform: uppercase;
   text-align: left;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -31,7 +32,8 @@ p {
   display: block;
   font-size: 1.1rem;
   color: var(--text-secondary);
-  /* margin: .7rem auto; */
+  margin: 0.7rem auto;
+  line-height: 1.7rem;
 }
 
 li {
@@ -90,6 +92,10 @@ a {
 
 .text-left {
   text-align: left;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-xl {
