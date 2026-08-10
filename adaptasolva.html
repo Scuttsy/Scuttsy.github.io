@@ -74,7 +74,6 @@
               target="_blank"
               class="w-full h-full flex items-center font-bold"
             >
-              <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
               <p>CV</p>
             </a>
           </div>
@@ -194,97 +193,231 @@
             </section>
           </div>
 
-          <div class="section-content">
-            <h3>Level Design</h3>
+          <!-- Level Design -->
+          <section id="Level Design" class="section section-description mb-12">
+            <h1>Level Design</h1>
 
-            <h4>Hub World</h4>
+            <!-- Hub World -->
+            <div class="w-full flex row justify-center mt-3">
+              <h3>Hub World</h3>
+            </div>
+
+            <!-- Iteration 1 -->
+            <div class="flex row space-between">
+              <div class="col w-50% mr-2 text-center">
+                <p>
+                  I was inspired by the hub worlds of traditional puzzle
+                  platformers and aimed to create a hubworld that focused on
+                  <span class="highlight">tutorialisation</span>, story and
+                  <span class="highlight">exploration</span> with
+                  <span class="highlight">secrets</span>. To this end I took
+                  inspiration from games such as Spyro and Super Mario Sunshine.
+                  My first blockout of the hub involved forcing the player to
+                  perform a simple,
+                  <span class="highlight">low stakes puzzle</span> to unlock
+                  each door.
+                </p>
+              </div>
+              <img
+                src="resources/images/ParaFauna/HubBlockout01.png"
+                alt="Hub Blockout 01"
+                class="w-50%"
+                style="object-fit: scale-down"
+              />
+            </div>
+
+            <!-- Iteration 2 -->
+            <div class="section section-description mt-2">
+              <div class="flex row-rev space-between">
+                <div class="col w-50% ml-2 text-center">
+                  <p>
+                    We found after playtesting that the core idea of the
+                    <span class="highlight">hub worked</span>, but the forced
+                    puzzles were causing players to view the hub as one large
+                    puzzle. So I <span class="highlight">retrofitted</span> each
+                    of the puzzles into
+                    <span class="highlight">optional secret objectives</span> to
+                    unlock collectables. As well as
+                    <span class="highlight">improved telegraphing</span> for the
+                    player. This is what the final blockout looked like:
+                  </p>
+                  <p>
+                    We found after testing this iteration with testers that
+                    players were motivated to explore the hub world and gather
+                    collectables before and after they played through one of the
+                    levels. By doing this the game achieve a stronger sense of
+                    continuity and
+                    <span class="highlight">kept players more motivated</span>
+                    to continue playing for longer.
+                  </p>
+                </div>
+
+                <img
+                  src="resources/images/ParaFauna/HubBlockout03.png"
+                  alt="Hub Blockout 3"
+                  class="w-50%"
+                  style="object-fit: scale-down"
+                />
+              </div>
+            </div>
+
+            <!-- platforming sections -->
+            <div id="platforming" class="section-content">
+              <h2>Platforming sections</h2>
+              <div class="section section-description mt-2">
+                <div class="flex row gap space-between">
+                  <div class="col w-50% mr-2 text-center">
+                    <p>
+                      In addtion to the Hub world, I added traversal sections
+                      with
+                      <span class="highlight">light platforming</span> as a way
+                      to flesh out the tracks and break up the pacing. Lastly,
+                      the platforming sections act as an important form of
+                      <span class="highlight">tutorialisation</span>.
+                    </p>
+
+                    <p>
+                      In one such platforming section, the environment is
+                      structured so that the player is
+                      <span class="highlight">forced to engage</span> with the
+                      key mechanics related to a specific element, slime,
+                      without previously understanding how these mechanics
+                      worked. In the example, the player is shown a bridge of
+                      grates. At this point, the player is forced to have the
+                      <span class="highlight">slime element equipped</span>,
+                      where if they were to stand on a grate, they would slip
+                      through. Thus when the player attempts to walk over the
+                      bridge, they will inevitably
+                      <span class="highlight">fall through the grate</span>.
+                      However, the distance covered by the grates is
+                      <span class="highlight">easily jumpable</span>. The idea
+                      here is to get the player to "accidentally" interact with
+                      an important mechanic that they will later
+                      <span class="highlight">exploit</span> to solve puzzles in
+                      this level.
+                    </p>
+                  </div>
+                  <img
+                    class="w-50%"
+                    src="resources/images/ParaFauna/CoinPusherSlayer.gif"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <p>
+                Another example is the slope later in this section. The slope is
+                the only path forward, whereby if they move down it, they will
+                be forced into water. Water in this case removes the equipped
+                slime element. Here the environment again teaches the player
+                another dynamic inherent to the slime element.
+              </p>
+
+              <!-- gallery-2: Tracks -->
+              <div class="gallery-parent" id="galleryParent-2">
+                <div class="gallery-wrapper" id="galleryWrapper-2">
+                  <div class="gallery" id="gallery-2">
+                    <!-- Gallery items will be inserted here by JavaScript -->
+                  </div>
+                </div>
+                <div class="gallery-buttons">
+                  <div class="gallery-button" id="gallery-back-2">
+                    <img src="resources/images/button.svg" class="back" />
+                  </div>
+                  <div class="gallery-button" id="gallery-forward-2">
+                    <img src="resources/images/button.svg" />
+                  </div>
+                </div>
+              </div>
+              <div class="modal" id="modal-2">
+                <button class="modal-nav prev" id="prevBtn-2">«</button>
+                <div class="modal-content" id="modalContent-2">
+                  <!-- Content will be inserted here -->
+                </div>
+                <button class="modal-nav next" id="nextBtn-2">»</button>
+                <span class="modal-close" id="closeBtn-2">&times;</span>
+                <div class="modal-counter" id="counter-2"></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="Restoration" class="section-content">
+            <h2>Restoration Design</h2>
             <p>
-              I was inspired by the hub worlds of traditional puzzle platformers
-              and aimed to create a hubworld that focused on
-              <span class="highlight">tutorialisation</span>, story and
-              <span class="highlight">exploration</span> with
-              <span class="highlight">secrets</span>. To this end I took
-              inspiration from games such as Spyro and Super Mario Sunshine. My
-              first blockout of the hub involved forcing the player to perform a
-              simple, <span class="highlight">low stakes puzzle</span> to unlock
-              each door.
-            </p>
-            <img
-              src="resources/images/ParaFauna/HubBlockout01.png"
-              alt="Hub Blockout 01"
-              style="object-fit: scale-down"
-            />
-          </div>
-
-          <div class="section-content">
-            <p>
-              We found after playtesting that the core idea of the
-              <span class="highlight">hub worked</span>, but the forced puzzles
-              were causing players to view the hub as one large puzzle. So I
-              <span class="highlight">retrofitted</span> each of the puzzles
-              into <span class="highlight">optional secret objectives</span> to
-              unlock collectables. As well as
-              <span class="highlight">improved telegraphing</span> for the
-              player. This is what the final blockout looked like:
-            </p>
-
-            <img
-              src="resources/images/ParaFauna/HubBlockout03.png"
-              alt="Hub Blockout 3"
-              style="object-fit: scale-down"
-            />
-
-            <p>
-              We found after testing this iteration with testers that players
-              were motivated to explore the hub world and gather collectables
-              before and after they played through one of the levels. By doing
-              this the game achieve a stronger sense of continuity and
-              <span class="highlight">kept players more motivated</span> to
-              continue playing for longer.
-            </p>
-          </div>
-
-          <div class="section-content">
-            <h4>Platforming sections</h4>
-            <p>
-              In addtion to the Hub world, I added traversal sections with
-              <span class="highlight">light platforming</span> as a way to flesh
-              out the tracks and break up the pacing. Lastly, the platforming
-              sections act as an important form of
-              <span class="highlight">tutorialisation</span>.
+              One of the challenges that the project needed to overcome was
+              delivering a sense of
+              <span class="highlight">restoring the dead forest</span> in which
+              you play and have that feel as satisfying as possible. To that end
+              I pitched a system of feedback that would be delivered to the
+              player.
             </p>
 
             <p>
-              In one such platforming section, the environment is structured so
-              that the player is
-              <span class="highlight">forced to engage</span> with the key
-              mechanics related to a specific element, slime, without previously
-              understanding how these mechanics worked. In the example, the
-              player is shown a bridge of grates. At this point, the player is
-              forced to have the
-              <span class="highlight">slime element equipped</span>, where if
-              they were to stand on a grate, they would slip through. Thus when
-              the player attempts to walk over the bridge, they will inevitably
-              <span class="highlight">fall through the grate</span>. However,
-              the distance covered by the grates is
-              <span class="highlight">easily jumpable</span>. The idea here is
-              to get the player to "accidentally" interact with an important
-              mechanic that they will later
-              <span class="highlight">exploit</span> to solve puzzles in this
-              level.
+              In vague terms, the feedback comes together to turn a section of
+              corrupted, dead forest into a lush, green variation of itself.
+              More specifically, A
+              <span class="highlight">texture painter</span> paints onto a
+              <span class="highlight">render target</span> that can be sampled
+              as a mask by several shaders and tweened animations, VFX and post
+              processing. The
+              <span class="highlight">channels of feedback</span> were
+              specifically:
             </p>
+            <ul>
+              <li>
+                <span class="highlight"> An environment shader</span> that
+                changes ground textures by sampling this mask. In this case,
+                swapping from brown/grey textures to Green.
+              </li>
+              <li>
+                A vertex shader which
+                <span class="highlight"
+                  >grows vegetation within the painted area</span
+                >
+                of the environment.
+              </li>
+              <li>
+                <span class="highlight">VFX</span> of glowing green fireflies
+                that burst out from the painted area.
+              </li>
+              <li>
+                A post process volume with
+                <span class="highlight">desaturation</span>,
+                <span class="highlight">lowered contrast</span> and a
+                <span class="highlight">black vignette</span>, which has its
+                weight reduced to 0 when the puzzle is solves and the forest is
+                finally restored.
+              </li>
+            </ul>
             <p>
-              Another example is the slope later in this section. The slope is
-              the only path forward, whereby if they move down it, they will be
-              forced into water. Water in this case removes the equipped slime
-              element. Here the environment again teaches the player another
-              dynamic inherent to the slime element.
+              The system paints to a
+              <span class="highlight">render target</span>, which I then sample.
+              I paint different values into each channel to different effects.
+              The <span class="highlight">red channel</span> is used for the
+              texture painted materials, like the ground and walls.
+              <span class="highlight">The blue channel</span> is used for the
+              vertex shaders and defines where the vegetation is grown and where
+              it is hidden. <span class="highlight">The green channel</span> is
+              used for overgrowth, in this case I cause the vegetation to gain
+              some additional height in any section already defined as grown by
+              the blue channel. I paint a ring into the green channel which
+              <span class="highlight">dissipates over time</span>. This adds
+              some more life to the effect and sells the aesthetics of restoring
+              the forest better.
             </p>
 
-            <!-- gallery-2: Tracks -->
-            <div class="gallery-parent" id="galleryParent-2">
-              <div class="gallery-wrapper" id="galleryWrapper-2">
-                <div class="gallery" id="gallery-2">
+            <p>
+              Here you can see the different
+              <span class="highlight">iterations</span> of the feature, from the
+              intial test to the final implementation. I overcame several
+              challenges implementing this system and learned valuable skills
+              in: writing <span class="highlight">HLSL</span> shaders for the
+              texure painter,
+            </p>
+            <!-- gallery-1: restoration -->
+            <div class="gallery-parent" id="galleryParent-1">
+              <div class="gallery-wrapper" id="galleryWrapper-1">
+                <div class="gallery" id="gallery-1">
                   <!-- Gallery items will be inserted here by JavaScript -->
                 </div>
               </div>
@@ -297,117 +430,20 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="modal" id="modal-2">
-            <button class="modal-nav prev" id="prevBtn-2">«</button>
-            <div class="modal-content" id="modalContent-2">
-              <!-- Content will be inserted here -->
-            </div>
-            <button class="modal-nav next" id="nextBtn-2">»</button>
-            <span class="modal-close" id="closeBtn-2">&times;</span>
-            <div class="modal-counter" id="counter-2"></div>
-          </div>
-
-          <h3>Restoration Design</h3>
-          <p>
-            One of the challenges that the project needed to overcome was
-            delivering a sense of
-            <span class="highlight">restoring the dead forest</span> in which
-            you play and have that feel as satisfying as possible. To that end I
-            pitched a system of feedback that would be delivered to the player.
-          </p>
-
-          <p>
-            In vague terms, the feedback comes together to turn a section of
-            corrupted, dead forest into a lush, green variation of itself. More
-            specifically, A
-            <span class="highlight">texture painter</span> paints onto a
-            <span class="highlight">render target</span> that can be sampled as
-            a mask by several shaders and tweened animations, VFX and post
-            processing. The
-            <span class="highlight">channels of feedback</span> were
-            specifically:
-          </p>
-          <ul>
-            <li>
-              <span class="highlight"> An environment shader</span> that changes
-              ground textures by sampling this mask. In this case, swapping from
-              brown/grey textures to Green.
-            </li>
-            <li>
-              A vertex shader which
-              <span class="highlight"
-                >grows vegetation within the painted area</span
-              >
-              of the environment.
-            </li>
-            <li>
-              <span class="highlight">VFX</span> of glowing green fireflies that
-              burst out from the painted area.
-            </li>
-            <li>
-              A post process volume with
-              <span class="highlight">desaturation</span>,
-              <span class="highlight">lowered contrast</span> and a
-              <span class="highlight">black vignette</span>, which has its
-              weight reduced to 0 when the puzzle is solves and the forest is
-              finally restored.
-            </li>
-          </ul>
-          <p>
-            The system paints to a <span class="highlight">render target</span>,
-            which I then sample. I paint different values into each channel to
-            different effects. The <span class="highlight">red channel</span> is
-            used for the texture painted materials, like the ground and walls.
-            <span class="highlight">The blue channel</span> is used for the
-            vertex shaders and defines where the vegetation is grown and where
-            it is hidden. <span class="highlight">The green channel</span> is
-            used for overgrowth, in this case I cause the vegetation to gain
-            some additional height in any section already defined as grown by
-            the blue channel. I paint a ring into the green channel which
-            <span class="highlight">dissipates over time</span>. This adds some
-            more life to the effect and sells the aesthetics of restoring the
-            forest better.
-          </p>
-
-          <p>
-            Here you can see the different
-            <span class="highlight">iterations</span> of the feature, from the
-            intial test to the final implementation. I overcame several
-            challenges implementing this system and learned valuable skills in:
-            writing <span class="highlight">HLSL</span> shaders for the texure
-            painter,
-          </p>
-          <!-- gallery-1: restoration -->
-          <div class="gallery-parent" id="galleryParent-1">
-            <div class="gallery-wrapper" id="galleryWrapper-1">
-              <div class="gallery" id="gallery-1">
-                <!-- Gallery items will be inserted here by JavaScript -->
+            <div class="modal" id="modal-1">
+              <button class="modal-nav prev" id="prevBtn-1">«</button>
+              <div class="modal-content" id="modalContent-1">
+                <!-- Content will be inserted here -->
               </div>
+              <button class="modal-nav next" id="nextBtn-1">»</button>
+              <span class="modal-close" id="closeBtn-1">&times;</span>
+              <div class="modal-counter" id="counter-1"></div>
             </div>
-            <div class="gallery-buttons">
-              <div class="gallery-button" id="gallery-back-2">
-                <img src="resources/images/button.svg" class="back" />
-              </div>
-              <div class="gallery-button" id="gallery-forward-2">
-                <img src="resources/images/button.svg" />
-              </div>
-            </div>
-          </div>
-
-          <div class="modal" id="modal-1">
-            <button class="modal-nav prev" id="prevBtn-1">«</button>
-            <div class="modal-content" id="modalContent-1">
-              <!-- Content will be inserted here -->
-            </div>
-            <button class="modal-nav next" id="nextBtn-1">»</button>
-            <span class="modal-close" id="closeBtn-1">&times;</span>
-            <div class="modal-counter" id="counter-1"></div>
-          </div>
+          </section>
         </section>
 
-        <!-- <section class="section section-description">
+        <section class="section section-description">
           <h2>Looking back</h2>
           <div class="flex row w-full">
             <p class="w-50%">
@@ -415,9 +451,12 @@
               my time working at Para Fauna studios during my internship there
               more or less.
             </p>
-            <img class="w-50%" src="resources/images/ParaFauna/parafauna_logo.png">
+            <img
+              class="w-50%"
+              src="resources/images/ParaFauna/parafauna_logo.png"
+            />
           </div>
-        </section> -->
+        </section>
 
         <div class="button">
           <a href="index.html" class="button-content hoverCard fade-in">
