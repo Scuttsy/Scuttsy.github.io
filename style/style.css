@@ -313,7 +313,7 @@ img {
 
 .hoverCard:hover {
   transform: translateY(-10px);
-  box-shadow: 1px 5px 8px var(--accent-color);
+  box-shadow: 0px 3px 3px var(--accent-color);
   background-size: cover;
   background-position: center center;
   text-decoration: none;
@@ -351,7 +351,9 @@ img {
 }
 
 .projects-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-auto-rows: minmax(300px, 400px);
   gap: 30px;
   width: 100%;
   justify-content: right;
@@ -378,18 +380,36 @@ img {
   object-fit: cover;
 }
 
+.project-title {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  transform: translateY(-100%);
+  width: 100%;
+  height: 40px;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.705);
+}
+
+.project-status {
+  position: absolute;
+  width: 50%;
+  height: 25px;
+  top: 35%;
+  left: 100%;
+  transform: translate(-100%, -100%);
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 20px;
+}
+
 .project-content {
-  padding: 0px 15px 15px 15px;
+  padding: 5px 15px 15px 15px;
 }
 
 .project-content h3 {
-  font-size: 1.5rem;
   margin-bottom: 15px;
   color: var(--text-primary);
-}
-
-.project-content p {
-  color: var(--text-secondary);
 }
 
 .project-tags {
