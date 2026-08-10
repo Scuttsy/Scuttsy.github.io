@@ -1,388 +1,448 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sam Cutts - ULTRASPRING</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/typography.css">
-    <link rel="stylesheet" href="style/navigation.css">
-    <link rel="stylesheet" href="style/gallery.css">
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/typography.css" />
+    <link rel="stylesheet" href="style/navigation.css" />
+    <link rel="stylesheet" href="style/gallery.css" />
 
-    <link rel="icon" type="image/x-icon" href="resources/images/icon.svg">
+    <link rel="icon" type="image/x-icon" href="resources/images/icon.svg" />
     <script src="javascript/main.js"></script>
     <script src="javascript/comparison-slider.js"></script>
     <script src="javascript/gallery.js"></script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <nav class="nav">
-        <div class="nav-container" style="flex-direction: column; align-items: start">
-            <div style="display: flex; height:50%; width: 100%; align-items: center;">
-                <img src="resources/images/icon.svg" class="icon-small">
-                <p style="margin: 5px 0px;">Samuel Cutts</p>
-            </div>
-            <p style="margin: 0px 0px 10px 10px;">Kortrijk, Belgium</p>
+      <div
+        class="nav-container"
+        style="flex-direction: column; align-items: start"
+      >
+        <div
+          style="display: flex; height: 50%; width: 100%; align-items: center"
+        >
+          <img src="resources/images/icon.svg" class="icon-small" />
+          <p style="margin: 5px 0px">Samuel Cutts</p>
         </div>
-        <div class="nav-container" style="justify-content: center;">
-            <ul class="nav-links">
-                <li><a href="index.html">Projects</a></li>
-                <li><a href="aboutme.html">About</a></li>
-            </ul>
-        </div>
-        <div class="nav-container" style="justify-content: end;">
-            <div class="social-icons">
-                <div class="about-tags">
-                    <a onclick="copyEmail()" class="w-full h-full flex items-center" style="cursor: pointer;">
-                        <img src="resources/images/email.png" alt="email" class="icon">
-                    </a>
-                    <a href="https://www.youtube.com/@Scuttsy" target="_blank" class="w-full h-full flex items-center">
-                        <img src="resources/images/youtube.png" alt="youtube" class="icon">
-                    </a>
+        <p style="margin: 0px 0px 10px 10px">Kortrijk, Belgium</p>
+      </div>
+      <div class="nav-container" style="justify-content: center">
+        <ul class="nav-links">
+          <li><a href="index.html">Projects</a></li>
+          <li><a href="aboutme.html">About</a></li>
+        </ul>
+      </div>
+      <div class="nav-container" style="justify-content: end">
+        <div class="social-icons">
+          <div class="about-tags">
+            <a
+              onclick="copyEmail()"
+              class="w-full h-full flex items-center"
+              style="cursor: pointer"
+            >
+              <img src="resources/images/email.png" alt="email" class="icon" />
+            </a>
+            <a
+              href="https://www.youtube.com/@Scuttsy"
+              target="_blank"
+              class="w-full h-full flex items-center"
+            >
+              <img
+                src="resources/images/youtube.png"
+                alt="youtube"
+                class="icon"
+              />
+            </a>
 
-                    <a href="https://www.linkedin.com/in/samuel-cutts-02a096296/" target="_blank" class="w-full h-full flex items-center">
-                        <img src="resources/images/linkedin.png" alt="linkedin" class="icon">
-                    </a>
+            <a
+              href="https://www.linkedin.com/in/samuel-cutts-02a096296/"
+              target="_blank"
+              class="w-full h-full flex items-center"
+            >
+              <img
+                src="resources/images/linkedin.png"
+                alt="linkedin"
+                class="icon"
+              />
+            </a>
 
-                    <a href="https://drive.google.com/uc?export=download&id=1lIUAza6jhN02VE3Hs9L0eYje8xfcCHTz"
-                        target="_blank" class="w-full h-full flex items-center font-bold">
-                        <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
-                        <p>CV</p>
-                    </a>
-                </div>
-            </div>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1lIUAza6jhN02VE3Hs9L0eYje8xfcCHTz"
+              target="_blank"
+              class="w-full h-full flex items-center font-bold"
+            >
+              <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
+              <p>CV</p>
+            </a>
+          </div>
         </div>
+      </div>
     </nav>
 
     <main>
-        <header id="Header" class="w-full jutify-center relative items-center col h-60">
-            <img src="resources/images/Ultraspring/ULTRASPRING_Final.gif" class="object-cover h-full w-full tint z-10">
+      <header
+        id="Header"
+        class="w-full jutify-center relative items-center col h-60"
+      >
+        <img
+          src="resources/images/Ultraspring/ULTRASPRING_Final.gif"
+          class="object-cover h-full w-full tint z-10"
+        />
 
-            <section id="title" class="header-title z-20">
-                <h1>ULTRA SPRING</h1>
-                <p class="font-bold">
-                    Spring based runner at blistering speeds
+        <section id="title" class="header-title z-20">
+          <h1>ULTRA SPRING</h1>
+          <p class="font-bold">Spring based runner at blistering speeds</p>
+        </section>
+      </header>
+
+      <!-- project overview -->
+      <section class="overview-grid pad-2">
+        <div class="overview-item">
+          <div class="overview-label">Engine</div>
+          <div class="overview-content">Unity</div>
+        </div>
+
+        <div class="overview-item">
+          <div class="overview-label">Genre</div>
+          <div class="overview-content">Platformer / Runner</div>
+        </div>
+
+        <div class="overview-item">
+          <div class="overview-label">Project Duration</div>
+          <div class="overview-content">40 hours</div>
+        </div>
+
+        <div class="overview-item">
+          <div class="overview-label">Team & production</div>
+          <div class="overview-content">
+            Solo Developer (minus sound assets)
+          </div>
+        </div>
+
+        <div class="overview-item">
+          <div class="overview-label">Overview</div>
+          <div class="overview-content">
+            <p>
+              Ultraspring is high paced runner / platformer where you time your
+              jumps to gain ridiculous speeds, weaving your way through
+              obstacles to get the best possible times. Ultraspring is all about
+              getting and maintaining as much momentum as you can while trying
+              not to crash!
+            </p>
+          </div>
+        </div>
+
+        <div class="overview-item">
+          <div class="overview-label">Goals</div>
+          <div class="overview-content">
+            Design and iterate on a single mechanic to make the player feel as
+            fast as possible, while still lending a feeling of control to
+            encourage speedrunning.
+          </div>
+        </div>
+      </section>
+
+      <div class="main-description">
+        <div id="trailer" style="height: 40rem">
+          <h1 style="text-align: center">Trailer</h1>
+          <div class="h-full" style="margin-top: 30px">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/qNHrM5zMWhY?si=2PvPM_zQRo8tdEdQ"
+              frameborder="0"
+              allow="autoplay; picture-in-picture"
+              allowfullscreen
+              sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups-to-escape-sandbox"
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <!-- project Descrption -->
+        <div class="grid grid-cols-2 mt-12 mb-12">
+          <section class="section section-description">
+            <h1>Project Descrption</h1>
+
+            <div class="about-section">
+              <p>
+                Initially I created a mechanic for a true platformer with a lot
+                of rough edges. For the final project I took the idea and
+                reworked it into a into a small polished prototype that instead
+                focused on fast gameplay and tons of momentum. I'm proud of this
+                project because of the increase in player engagement and the
+                production being very time efficient.
+              </p>
+            </div>
+          </section>
+          <div>
+            <iframe
+              class="w-full"
+              frameborder="0"
+              src="https://itch.io/embed/3651101"
+            >
+              <a href="https://scuttsy.itch.io/ultra-spring">
+                Ultra Spring by Scuttsy
+              </a>
+            </iframe>
+          </div>
+          <!-- my role -->
+          <section class="section section-description">
+            <h1>My Role</h1>
+            <p>
+              As a solo developer, I was responsible for everything in the game.
+              Most importantly, the planning and time management. The
+              prototyping stage was done in about 20 hours. After that I
+              restarted, reimagining the project from scratch and programmed the
+              game / made the art and effects in another 20 hours.
+            </p>
+          </section>
+        </div>
+
+        <!-- Iterations -->
+
+        <!-- Iteration 0 -->
+        <section class="section section-description mb-3">
+          <h1>Starting point</h1>
+          <div class="flex row space-between">
+            <div class="col w-50% mr-2 text-center">
+              <p>
+                The very first iteration was intended to be a simple platformer,
+                formed around the core idea of charging and aiming a individual
+                jumps. Reception to this initial iteration was simply poor.
+                Timing your jump distance was unintuitive and players felt
+                frustrated when they missed a few jumps in a row. There was very
+                little taking advantage of how difficult the game accidentally
+                became. For example, there was no intrinsic reward for
+                interacting with the mechanic skillfully.
+              </p>
+              <h3>Challenges</h3>
+              <div class="grid grid-cols-2 gap mt-2">
+                <div class="about-tag">Unintuitive</div>
+                <div class="about-tag">Frustrating</div>
+                <div class="about-tag">Slow</div>
+                <div class="about-tag">Low Intrinsic Reward</div>
+              </div>
+            </div>
+            <img
+              class="gif w-50%"
+              src="resources/images/Ultraspring/Ultraspring_00_HighQuality.gif"
+              alt="Iteration 1 of Ultra Spring"
+            />
+          </div>
+        </section>
+
+        <!-- Iteration 1 -->
+        <section class="section section-description mt-12">
+          <h1>Iterations</h1>
+
+          <div class="flex row-rev space-between end">
+            <div class="flex col w-50% ml-2">
+              <p class="mb">
+                I made the decision to fully pivot the idea after noticing some
+                players using the mechanic to launch themselves at the maximum
+                afforded velocity. I decided to fully lean into that excessive
+                velocity and centre the entire mechanic around gaining as much
+                velocity from the jump mechanic as possible.
+              </p>
+
+              <p class="mb">
+                After I had settled on the design pillars and core mechanic, I
+                blocked out a level in Unity that focused on traversing great
+                distances linearly. After blocking out the level I implemented
+                the core mechanic of jumping and boosting.
+              </p>
+
+              <p>
+                At this point I subjected the prototype to playtesting. Feedback
+                showed some positive interaction with the jumping mechanic, but
+                players struggled universally with controlling the character and
+                traversing sloped surfaces. As a result, players didn't
+                experience the sense of growing momentum and speed that I had
+                hoped for.
+              </p>
+            </div>
+            <img
+              class="gif w-50%"
+              src="resources/images/Ultraspring/Ultraspring_01_HighQuality.gif"
+              alt="Iteration 1 of Ultra Spring"
+            />
+          </div>
+        </section>
+
+        <!-- Iteration 2 -->
+        <section class="section section-description">
+          <div class="flex row space-between">
+            <div class="col w-50% mr-2">
+              <p class="mb-3">
+                I then brainstormed solutions to these issues and decided to
+                implement the following changes:
+              </p>
+
+              <ul>
+                <p class="mb-2 border-l">
+                  Distribute the controls more evenly across the controller and
+                  allow the player to manoeuvre with both sticks
                 </p>
-            </section>
-        </header>
 
-        <!-- project overview -->
-        <section class="overview-grid pad-2">
+                <p class="mb-2 border-l">
+                  Implement a UI that more clearly indicates speed and boost and
+                  the difference between the two
+                </p>
 
-            <div class="overview-item">
-                <div class="overview-label">Engine</div>
-                <div class="overview-content">
-                    Unity
-                </div>
+                <p class="mb-2 border-l">
+                  Increase gravity and overall "springiness"
+                </p>
+
+                <p class="mb-3 border-l">
+                  Added a timer to encourage speedrunning
+                </p>
+              </ul>
+
+              <p>
+                Reception to this iteration was much better. Players were able
+                to grasp the control schemes without any guidance and reported
+                that the game felt fast and exciting. I was especially
+                encouraged by seeing some players play the level repeatedly to
+                get a faster time.
+              </p>
             </div>
+            <img
+              class="gif w-50%"
+              src="resources/images/Ultraspring/Ultraspring_02_HighQuality.gif"
+              alt="Iteration 2 of Ultra Spring"
+            />
+          </div>
+        </section>
 
-            <div class="overview-item">
-                <div class="overview-label">Genre</div>
-                <div class="overview-content">
-                    Platformer / Runner
+        <!-- Iteration 3 -->
+        <section class="section section-description">
+          <div class="flex row-rev space-between">
+            <div class="col w-50% ml-2">
+              <p>
+                After implementing these changes I playtested the game again and
+                found that the controls were much more intuitive and players
+                were able to traverse the level with ease. I now felt happy that
+                the core mechanic was satisfying and began adding polish:
+              </p>
+
+              <div class="grid grid-cols-2 gap mt-2">
+                <div class="round-box flex col items-center">FOV Sliding</div>
+                <div class="round-box flex col items-center">
+                  Chromatic Abberation
                 </div>
+                <div class="round-box flex col items-center">Speed Lines</div>
+                <div class="round-box flex col items-center">
+                  Dual Forward Focus
+                </div>
+                <div class="round-box flex col items-center">Camera Shake</div>
+                <div class="round-box flex col items-center">Speed Trails</div>
+              </div>
             </div>
-
-            <div class="overview-item">
-                <div class="overview-label">Project Duration</div>
-                <div class="overview-content">
-                    40 hours
+            <div class="w-50%">
+              <div class="comparison-slider">
+                <div class="comparison-before">
+                  <img
+                    src="resources/images/Ultraspring/Ultraspring_BAD2.gif"
+                    alt="Before"
+                  />
                 </div>
+                <div class="comparison-after">
+                  <img
+                    src="resources/images/Ultraspring/Ultraspring_GOOD.gif"
+                    alt="After"
+                  />
+                </div>
+                <div class="comparison-handle"></div>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <div class="overview-item">
-                <div class="overview-label">Team & production</div>
-                <div class="overview-content">
-                    Solo Developer (minus sound assets)
+        <!-- Post mortem -->
+        <section class="section section-description mt-12 mb-12">
+          <h1>post-mortem</h1>
+          <div class="flex row w-full">
+            <p class="mr-2" style="margin-top: 30px">
+              Looking back I think it's a decent game. More importantly I
+              managed to turn a boring concept into a fun prototype very
+              quickly. I believe this was likely due to restricting myself to a
+              tight schedule and only spending a predetermined amount of time on
+              it. The whole process was loads of fun and people seemed to
+              earnestly enjoy the end product.
+            </p>
+
+            <div class="w-50%">
+              <!-- gallery-4: Ultraspring -->
+              <div class="gallery-parent" id="galleryParent-4">
+                <div class="gallery-wrapper" id="galleryWrapper-4">
+                  <div class="gallery" id="gallery-4">
+                    <!-- Gallery items will be inserted here by JavaScript -->
+                  </div>
                 </div>
+                <div class="gallery-buttons">
+                  <div class="gallery-button" id="gallery-back-4">
+                    <img src="resources/images/button.svg" class="back" />
+                  </div>
+                  <div class="gallery-button" id="gallery-forward-4">
+                    <img src="resources/images/button.svg" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal" id="modal-4">
+                <button class="modal-nav prev" id="prevBtn-4">«</button>
+                <div class="modal-content" id="modalContent-4">
+                  <!-- Content will be inserted here -->
+                </div>
+                <button class="modal-nav next" id="nextBtn-4">»</button>
+                <span class="modal-close" id="closeBtn-4">&times;</span>
+                <div class="modal-counter" id="counter-4"></div>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <div class="overview-item">
-                <div class="overview-label">Overview</div>
-                <div class="overview-content">
-                    <p>
-                        Ultraspring is high paced runner / platformer where you time your jumps to gain ridiculous speeds, weaving your way through obstacles to get the best possible times. Ultraspring is all about getting and maintaining as much momentum as you can while trying not to crash! 
-                    </p>
-                </div>
+        <!-- game design process -->
+        <section class="section section-description mt-12 mb-12">
+          <h1>Game Design Process</h1>
+          <section class="section flex col">
+            <p>
+              My game design process for Ultra Spring was focused on speed and
+              rapid prototyping. You can see my design process through the embed
+              on the left. The game design document can be read here:
+              <a
+                href="https://drive.google.com/file/d/1pJZJ-MJe_pSAPud1g1ptT6vfh0iAtCId/view?usp=sharing"
+                target="_blank"
+                >ULTRASPRING GDD</a
+              >
+            </p>
+            <iframe
+              class="w-full"
+              height="250"
+              src="https://miro.com/app/live-embed/uXjVIt77rCM=/?embedMode=view_only_without_ui&amp;moveToViewport=-19871,-1992,28725,4352&amp;embedId=958097416686"
+              frameborder=""
+              scrolling="no"
+              allowfullscreen
+              sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"
+            ></iframe>
+            <div class="about" style="width: 70%"></div>
+          </section>
+        </section>
+        <div class="button">
+          <a href="index.html" class="button-content hoverCard fade-in">
+            <div class="button-text">
+              <h2>Back to Projects</h2>
             </div>
-
-            <div class="overview-item">
-                <div class="overview-label">Goals</div>
-                <div class="overview-content">
-                        Design and iterate on a single mechanic to make the player feel as fast as possible,
-                        while still lending a feeling of control to encourage speedrunning. 
-                    </ul>
-                </div>
-            </div>
-        </section>                
-
-        <div class="main-description">
-            <div id="trailer" style="height: 40rem;">
-                <h1 style="text-align: center;">Trailer</h1>
-                <div class="h-full" style="margin-top: 30px;">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/qNHrM5zMWhY?si=2PvPM_zQRo8tdEdQ"
-                        frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen
-                        sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups-to-escape-sandbox">
-                    </iframe>
-            </div>
-            </div>
-
-            <!-- project Descrption -->
-            <div class="grid grid-cols-2 mt-12 mb-12">
-                <section class="section section-description">
-                    <h1>Project Descrption</h1>
-    
-                    <div class="about-section">
-                        <p>
-                            Initially I created a mechanic for a true platformer with a lot of rough edges. For the final project I took the idea and reworked it into a 
-                            into a small polished prototype that instead focused on fast gameplay and tons of momentum. I'm proud of this project because of the increase in player
-                            engagement and the production being very time efficient.
-                        </p>
-                        
-                    </div>
-                </section>
-                <div>
-                    <iframe class="w-full" frameborder="0" src="https://itch.io/embed/3651101">
-                        <a href="https://scuttsy.itch.io/ultra-spring">
-                            Ultra Spring by Scuttsy
-                        </a>
-                    </iframe>
-                </div>
-                <!-- my role -->
-                <section class="section section-description">
-                    <h1>My Role</h1>
-                    <p>
-                        As a solo developer, I was responsible for everything in the game. Most importantly, the
-                        planning
-                        and time management. The prototyping stage was done in about 20 hours. After that I restarted,
-                        reimagining the project from scratch and programmed the game / made the art and effects in
-                        another 20 hours.
-                    </p>
-                </section>
-
-            </div>
-
-            <!-- Iterations -->
-            
-            <!-- Iteration 0 -->
-            <section class="section section-description mb-3">
-                <h1>Starting point</h1>
-                <div class="flex row space-between">
-                    <div class="col w-50% mr-2 text-center">
-                        <p>
-                            The very first iteration was intended to be a simple platformer, formed around the core idea of charging and aiming a individual jumps. Reception to this initial iteration was simply poor. Timing your jump distance was unintuitive and players felt frustrated when they missed a few jumps in a row. There was very little taking advantage of how difficult the game accidentally became. For example, there was no intrinsic reward for interacting with the mechanic skillfully.
-                        </p>
-                        <h3>Challenges</h3>
-                        <div class="grid grid-cols-2 gap mt-2">
-                            <div class="about-tag">
-                                Unintuitive
-                            </div>
-                            <div class="about-tag">
-                                Frustrating
-                            </div>
-                            <div class="about-tag">
-                                Slow
-                            </div>
-                            <div class="about-tag">
-                                Low Intrinsic Reward
-                            </div>
-                        </div>
-                    </div>
-                    <img class="gif w-50%" src="resources/images/Ultraspring/Ultraspring_00_HighQuality.gif" alt="Iteration 1 of Ultra Spring">
-                </div>
-            </section>
-
-            <!-- Iteration 1 -->
-            <section class="section section-description mt-12">
-                <h1>Iterations</h1>
-                
-                <div class="flex row-rev space-between end">
-                    <div class="flex col w-50% ml-2">
-                        <p class="mb">
-                            I made the decision to fully pivot the idea after noticing some players using the mechanic to launch themselves at the maximum afforded velocity. I decided to fully lean into that excessive velocity and centre the entire mechanic around gaining as much velocity from the jump mechanic as possible.
-                        </p>
-
-                        <p class="mb">
-                          After I had settled on the design pillars and core mechanic, I blocked out a level in Unity that focused on traversing great distances linearly. After blocking out the level I implemented the core mechanic of jumping and boosting.
-                        </p>
-
-                        <p>
-                            At this point I subjected the prototype to playtesting. Feedback showed some positive interaction with the jumping mechanic, but players struggled universally with controlling the character and
-                            traversing sloped surfaces. As a result, players didn't experience the sense of growing momentum and speed that I had hoped for.
-                        </p>
-                    </div>
-                    <img class="gif w-50%" src="resources/images/Ultraspring/Ultraspring_01_HighQuality.gif" alt="Iteration 1 of Ultra Spring">
-                </div>
-
-            </section>
-
-            <!-- Iteration 2 -->
-            <section class="section section-description ">
-                <div class="flex row space-between">
-                    <div class="col w-50% mr-2">
-                        <p class="mb-3">
-                            I then brainstormed solutions to these issues and decided to implement the following changes:
-                        </p>
-
-                        <ul>
-                            <p class="mb-2 border-l">
-                                Distribute the controls more evenly across the controller and allow the player to manoeuvre with both sticks
-                            </p>
-    
-                            <p class="mb-2 border-l">
-                                Implement a UI that more clearly indicates speed and boost and the difference between the two
-                            </p>
-                               
-                            <p class="mb-2 border-l">
-                                Increase gravity and overall "springiness"
-                            </p> 
-    
-                            <p class="mb-3 border-l">
-                                Added a timer to encourage speedrunning
-                            </p>
-                        </ul>
-
-                        <p>
-                            Reception to this iteration was much better. Players were able to grasp the control schemes without any guidance and reported that the game felt fast and exciting. I was especially encouraged by seeing some players play the level repeatedly to get a faster time.
-                        </p>
-             
-                    </div>
-                    <img class="gif w-50%" src="resources/images/Ultraspring/Ultraspring_02_HighQuality.gif" alt="Iteration 2 of Ultra Spring">
-                </div>
-            </section>
-
-            <!-- Iteration 3 -->
-            <section class="section section-description ">
-                <div class="flex row-rev space-between">
-                    <div class="col w-50% ml-2">
-                        <p>
-                            After implementing these changes I playtested the game again and found that the controls were
-                            much
-                            more intuitive and players were able to traverse the level with ease. I now felt happy that the
-                            core
-                            mechanic was satisfying and began adding polish:
-                        </p>
-
-                        <div class="grid grid-cols-2 gap mt-2">
-                            <div class="round-box flex col items-center">
-                                FOV Sliding
-                            </div>
-                            <div class="round-box flex col items-center">
-                                Chromatic Abberation
-                            </div>
-                            <div class="round-box flex col items-center">
-                                Speed Lines
-                            </div>
-                            <div class="round-box flex col items-center">
-                                Dual Forward Focus
-                            </div>
-                            <div class="round-box flex col items-center">
-                                Camera Shake
-                            </div>
-                             <div class="round-box flex col items-center">
-                                Speed Trails
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-50%">
-                        <div class="comparison-slider">
-                          <div class="comparison-before">
-                              <img src="resources/images/Ultraspring/Ultraspring_BAD2.gif" alt="Before">
-                          </div>
-                          <div class="comparison-after">
-                              <img src="resources/images/Ultraspring/Ultraspring_GOOD.gif" alt="After">
-                          </div>
-                          <div class="comparison-handle">
-                            
-                          </div>
-                      </div>
-                    </div>
-                </div>
-
-            </section>
-
-            <!-- Post mortem -->
-            <section class="section section-description mt-12 mb-12">
-                <h1>post-mortem</h1>
-                <div class="flex row w-full">
-                    <p class="mr-2" style="margin-top: 30px;">
-                        Looking back I think it's a decent game. More importantly I managed to turn a boring concept
-                        into a
-                        fun prototype very quickly. I believe this was likely due to restricting myself to a tight
-                        schedule
-                        and only spending a predetermined amount of time on it. The whole process was loads of fun and
-                        people seemed to earnestly enjoy the end product.
-                    </p>
-
-                    <div class="w-50%">
-                         <!-- gallery-4: Ultraspring -->
-                        <div class="gallery-parent" id="galleryParent-4">
-                            <div class="gallery-wrapper" id="galleryWrapper-4">
-                                <div class="gallery" id="gallery-4">
-                                    <!-- Gallery items will be inserted here by JavaScript -->
-                                </div>
-                            </div>
-                            <div class="gallery-buttons">
-                                <div class="gallery-button" id="gallery-back-4">
-                                    <img src="resources/images/button.svg" class="back">
-                                </div>
-                                <div class="gallery-button" id="gallery-forward-4">
-                                    <img src="resources/images/button.svg">
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="modal" id="modal-4">
-                        <button class="modal-nav prev" id="prevBtn-4">«</button>
-                        <div class="modal-content" id="modalContent-4">
-                            <!-- Content will be inserted here -->
-                        </div>
-                        <button class="modal-nav next" id="nextBtn-4">»</button>
-                        <span class="modal-close" id="closeBtn-4">&times;</span>
-                        <div class="modal-counter" id="counter-4"></div>
-                    </div>
-        
-                    </div>
-                </div>
-
-            </section>
-
-            <!-- game design process -->
-            <section class="section section-description mt-12  mb-12">
-                <h1>Game Design Process</h1>
-                <section class="section flex col">
-                    <p>
-                        My game design process for Ultra Spring was focused on speed and rapid prototyping. You
-                        can
-                        see my design process through the embed on the left.
-                        The game design document can be read here:
-                        <a href="https://drive.google.com/file/d/1pJZJ-MJe_pSAPud1g1ptT6vfh0iAtCId/view?usp=sharing"
-                            target="_blank">ULTRASPRING GDD</a>
-                    </p>
-                    <iframe class="w-full" height="250"
-                        src="https://miro.com/app/live-embed/uXjVIt77rCM=/?embedMode=view_only_without_ui&amp;moveToViewport=-19871,-1992,28725,4352&amp;embedId=958097416686"
-                        frameborder="" scrolling="no" allowfullscreen
-                        sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
-                    <div class="about" style="width: 70%;">
-                    </div>
-                </section>
-            </section>
-            <div class="button">
-                <a href="index.html" class="button-content hoverCard fade-in">
-                    <div class="button-text">
-                        <h2>Back to Projects</h2>
-                    </div>
-                </a>
-            </div>
+          </a>
         </div>
-        </div>
+      </div>
     </main>
+    
     <footer id="main-footer" class="footer">
-         <p>&copy; 2026 Samuel Cutts. All rights reserved.</p>
-
-     </footer>
-</body>
-
+      <p>&copy; 2026 Samuel Cutts. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
