@@ -36,6 +36,29 @@
   color: var(--text-primary);
 }
 
+.arrow-box {
+  position: absolute;
+  width: 50px;
+  height: 70%;
+  top: 15%;
+  left: 100%;
+}
+
+.arrow-length {
+  height: 100%;
+  border-radius: 15px;
+  border: 9px solid var(--accent-color);
+  clip-path: rect(0% 100% 100% 26%);
+}
+
+.arrow-img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: scale(-0.5) translate(50%, 87%);
+  overflow: visible;
+}
+
 @media (max-width: 800px) {
   .skills-grid {
     display: grid;
@@ -54,5 +77,20 @@
   .skill-text {
     font-size: 1rem;
     padding: 0.5rem;
+  }
+
+  .arrow-box {
+    position: absolute;
+    width: 30px;
+    height: 70%;
+    top: 15%;
+    left: 97%;
+  }
+
+  .arrow-length {
+    height: 100%;
+    border-radius: 10px;
+    border: 6px solid var(--accent-color);
+    clip-path: rect(0% 100% 100% 26%);
   }
 }

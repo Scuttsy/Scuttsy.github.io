@@ -1,159 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sam Cutts - Design</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/typography.css">
-    <link rel="stylesheet" href="style/navigation.css">   
-    <link rel="stylesheet" href="style/aboutme.css">
-    <link rel="script" href="javascript/main.js">
-    
-    <link rel="icon" type="image/x-icon" href="resources/images/icon.svg">
-</head>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/typography.css" />
+    <link rel="stylesheet" href="style/navigation.css" />
+    <link rel="stylesheet" href="style/aboutme.css" />
+    <link rel="script" href="javascript/main.js" />
 
-<body >
+    <link rel="icon" type="image/x-icon" href="resources/images/icon.svg" />
+  </head>
 
- <nav class="nav">
-        <div class="nav-container" style="flex-direction: column; align-items: start">
-            <div style="display: flex; height:50%; width: 100%; align-items: center;">
-                <img src="resources/images/icon.svg" class="icon-small">
-                <p style="margin: 5px 0px;">Samuel Cutts</p>
-            </div>
-            <p style="margin: 0px 0px 10px 10px;">Kortrijk, Belgium</p>
+  <body>
+    <nav class="nav">
+      <div
+        class="nav-container"
+        style="flex-direction: column; align-items: start"
+      >
+        <div
+          style="display: flex; height: 50%; width: 100%; align-items: center"
+        >
+          <img src="resources/images/icon.svg" class="icon-small" />
+          <p style="margin: 5px 0px">Samuel Cutts</p>
         </div>
-        <div class="nav-container" style="justify-content: center;">
-            <ul class="nav-links">
-                <li><a href="index.html">Projects</a></li>
-                <li><a href="aboutme.html">About</a></li>
-            </ul>
+        <p style="margin: 0px 0px 10px 10px">Kortrijk, Belgium</p>
+      </div>
+      <div class="nav-container" style="justify-content: center">
+        <ul class="nav-links">
+          <li><a href="index.html">Projects</a></li>
+          <li><a href="aboutme.html">About</a></li>
+        </ul>
+      </div>
+      <div class="nav-container" style="justify-content: end">
+        <div class="social-icons">
+          <div class="about-tags">
+            <a onclick="copyEmail()" class="about-tag" style="cursor: pointer">
+              <img src="resources/images/email.png" alt="email" class="icon" />
+            </a>
+            <a
+              href="https://www.youtube.com/@Scuttsy"
+              target="_blank"
+              class="about-tag"
+            >
+              <img
+                src="resources/images/youtube.png"
+                alt="youtube"
+                class="icon"
+              />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/samuel-cutts-02a096296/"
+              target="_blank"
+              class="about-tag"
+            >
+              <img
+                src="resources/images/linkedin.png"
+                alt="linkedin"
+                class="icon"
+              />
+            </a>
+
+            <a
+              href="https://drive.google.com/uc?export=download&id=1lIUAza6jhN02VE3Hs9L0eYje8xfcCHTz"
+              target="_blank"
+              class="about-tag"
+            >
+              <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
+              <p>CV</p>
+            </a>
+          </div>
         </div>
-        <div class="nav-container" style="justify-content: end;">
-            <div class="social-icons">
-                <div class="about-tags">
-                        <a onclick="copyEmail()" class="about-tag" style="cursor: pointer;">
-                            <img src="resources/images/email.png" alt="email" class="icon">
-                        </a>
-                        <a href="https://www.youtube.com/@Scuttsy" target="_blank" class="about-tag">
-                            <img src="resources/images/youtube.png" alt="youtube" class="icon">
-                        </a>
-                        
-                        <a href="https://www.linkedin.com/in/samuel-cutts-02a096296/" target="_blank" class="about-tag">
-                            <img src="resources/images/linkedin.png" alt="linkedin" class="icon">
-                        </a>
-                        
-                        <a href="https://drive.google.com/uc?export=download&id=1lIUAza6jhN02VE3Hs9L0eYje8xfcCHTz" target="_blank" class="about-tag">
-                            <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
-                            <p>CV</p>
-                        </a>
-                    </div>
-            </div>
-        </div>
+      </div>
     </nav>
 
     <main>
-        <div id="content" class="main-description" >
-            <section id="title" class="section section-title">
-                <section>
-                    <div>
-                        <h1 style="font-size: 3rem;">Samuel Cutts</h1>
-                        <h3 style="font-weight: 300; color: var(--text-secondary);">TECHNICAL DESIGNER</h3>
-                    </div>
-                </section>
-                <section class="profile profile-card">
-                        <img src="resources/images/profile.png" alt="profile" class="profile">
-                </section>
-            </section>
-    
-             <section class="section section-description">
-                
-                <section>
-                    <div class="section-blurb">
-                        <b>
-                            I've always firmly believed that gaming is the most powerful medium for telling stories and moving people, <span class="highlight"> creating unforgettable experiences that evoke deep emotions.</span> This is what I strive to do whenever I design a game or a mechanic!
-                        </b>
-                    </div>
-                </section>
-             
-                <div >
-                    <p>
-                        I'm <span class="highlight-white">Sam</span>, a passionate technical designer who thrives on creating awesome experiences. <span class="highlight-white">Playtesting</span> and the <span class="highlight-white">iterative method</span> are my ethos. I have experience in multiple areas of game design, a broad track record of student projects, and a six-month internship at a small indie studio under my belt. I bring <span class="highlight-white">passion, lighthearted energy</span>, and a <span class="highlight-white">burning earnestness</span> for making fun experiences.
-                    </p>
-                </div>    
-                _______________________________
-                <section id="skills" class="skills-grid">
-                    <div class="skill-card fade-in">
-                        <a class="skill-text">Iteration</a>
-                    </div>
-                    <div class="skill-card fade">
-                        <a class="skill-text">Playtesting</a>
-                    </div>
-                    <div class="skill-card fade-in">
-                         <a class="skill-text">C# & SOLID</a>
-                    </div>
-                    
-                    <div class="skill-card fade-in">
-                         <a class="skill-text">Game Design</a>
-                    </div>
-                    
-                    <div class="skill-card fade-in">
-                         <a class="skill-text">Documenting</a>
-                    </div>
-                    
-                    <div class="skill-card fade-in">
-                         <a class="skill-text">High Poly</a>
-                    </div>
-                    
-                    <div class="skill-card fade-in">
-                         <a class="skill-text">Brainstorming</a>
-                    </div>
-                    <div class="skill-card fade-in">
-                         <a class="skill-text">Git</a>
-                    </div>
-                </section>
-                _______________________________
-                <div style="margin-top: 1.3rem;">
-                    <iframe class="outside-link" src="https://www.youtube.com/embed/qNHrM5zMWhY?si=2PvPM_zQRo8tdEdQ" frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox">
-                    </iframe>
-                </div>
-            </section>
-            
-    
-            <section class="section section-description" style="transform: translate(0, -80px);">
-                _______________________________
-                <h2>Other interests</h2>
-                <section id="skills" class="skills-grid">
-                    <div class="skill-card fade-in">
-                        <a class="skill-text">Weird Music</a>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <a class="skill-text">Gym</a>
-                    </div>
-                    <div class="skill-card fade-in">
-                         <a class="skill-text">Cars</a>
-                    </div>
-                    
-                    <div class="skill-card fade-in">
-                         <a class="skill-text">Backpacking</a>
-                    </div>  
-                </section>
-            </section>
-    
-            <div class="button">
-                <a href="index.html" class="button-content hoverCard fade-in">
-                    <div class="button-text">
-                        <h2>Back to Projects</h2>
-                    </div>    
-                </a>
+      <div id="content" class="main-description">
+        <section id="title" class="section section-title">
+          <section>
+            <div>
+              <h1 style="font-size: 3rem">Samuel Cutts</h1>
+              <h3 style="font-weight: 300; color: var(--text-secondary)">
+                TECHNICAL DESIGNER
+              </h3>
             </div>
-    
-    
-        </div>
-    </main>
-</body>
+          </section>
+        </section>
 
-<footer class="footer">
+        <section class="section section-description">
+          <section>
+            <div class="section-blurb">
+              <b>
+                I've always firmly believed that gaming is the most powerful
+                medium for telling stories and moving people,
+                <span class="highlight">
+                  creating unforgettable experiences that evoke deep
+                  emotions.</span
+                >
+                This is what I strive to do whenever I design a game or a
+                mechanic!
+              </b>
+            </div>
+          </section>
+
+          <div>
+            <p>
+              I'm <span class="highlight-white">Sam</span>, a junior technical
+              designer who thrives on creating awesome experiences.
+              <span class="highlight-white">Playtesting</span> and the
+              <span class="highlight-white">iterative method</span> are my
+              ethos. I have experience in multiple areas of game design, a broad
+              track record of student projects, and a six-month internship at a
+              small indie studio under my belt. I bring
+              <span class="highlight-white">passion, lighthearted energy</span>,
+              and a <span class="highlight-white">burning earnestness</span> for
+              making fun experiences.
+            </p>
+          </div>
+          _______________________________
+          <section id="skills" class="skills-grid">
+            <div class="skill-card fade-in">
+              <a class="skill-text">Iteration</a>
+            </div>
+
+            <div class="skill-card fade">
+              <a class="skill-text">Playtesting</a>
+            </div>
+
+            <div class="skill-card fade-in">
+              <a class="skill-text">C# & SOLID</a>
+            </div>
+
+            <div class="skill-card fade-in">
+              <a class="skill-text">Game Design</a>
+            </div>
+
+            <div class="skill-card fade-in">
+              <a class="skill-text">Documenting</a>
+            </div>
+
+            <div class="skill-card fade-in">
+              <a class="skill-text">Brainstorming</a>
+            </div>
+            <div class="skill-card fade-in">
+              <a class="skill-text">Git</a>
+            </div>
+          </section>
+          _______________________________
+          <div class="w-full mt-2 mb-12" >
+            <div id="trailer" style="height: 40rem;">
+                    <h1 style="text-align: center;">Ultraspring Trailer</h1>
+                    <div class="h-full" style="margin-top: 30px;">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/qNHrM5zMWhY?si=2PvPM_zQRo8tdEdQ"
+                            frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen
+                            sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups-to-escape-sandbox">
+                        </iframe>
+                </div>
+          </div>
+        </section>
+
+        <section
+          class="section section-description mt-12"
+          style="transform: translate(0, -80px)"
+        >
+          _______________________________
+          <h2>Other interests</h2>
+          <section id="skills" class="grid grid-cols-2 gap">
+            <div class="skill-card fade-in">
+              <a class="skill-text">Weird Music</a>
+            </div>
+            <div class="skill-card fade-in">
+              <a class="skill-text">Gym</a>
+            </div>
+            <div class="skill-card fade-in">
+              <a class="skill-text">Cars</a>
+            </div>
+
+            <div class="skill-card fade-in">
+              <a class="skill-text">Backpacking</a>
+            </div>
+          </section>
+        </section>
+
+        <div class="button">
+          <a href="index.html" class="button-content hoverCard fade-in">
+            <div class="button-text">
+              <h2>Back to Projects</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <footer class="footer">
     <p>&copy; 2025 Samuel Cutts. All rights reserved.</p>
-</footer>
+  </footer>
 </html>

@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="style/navigation.css">   
     <link rel="stylesheet" href="style/aboutme.css">
     <link rel="stylesheet" href="style/gallery.css">
-    <link rel="script" href="javascript/main.js">
-    <link rel="script" href="javascript/gallery.js">
+    <script src="javascript/main.js"></script>
+    <script src="javascript/gallery.js"></script>
     <link rel="icon" type="image/x-icon" href="resources/images/icon.svg">
 
 </head>
@@ -63,7 +63,7 @@
                 </div>
             </section>
     
-            <section class="section section-description">    
+            <section id="pipeline" class="section section-description">    
                 _______________________________
                 <div style="display: flex; flex-direction: row; gap: 1.5rem; margin-top: 1.5rem;">
                     <div>
@@ -75,8 +75,8 @@
                     </div>
             </section>
     
-            <section class="section section-description">
-                <div style="display: flex; flex-direction: r;">
+            <section id="iteration" class="section section-description">
+                <div class="relative" style="display: flex; flex-direction: r;">
                     <div style="display: flex; flex-direction: column; gap: 2rem; margin-top: 1.5rem; align-items: center;">
                         <div>
                             <div>
@@ -107,9 +107,12 @@
                         </div>
                         _______________________________
                     </div>
-    
-                    <div class="arrow_curved_container h-full">
-                        <img src="resources/images/arrow_curved.svg" class="arrow_curved h-full" alt="curved arrow">
+
+                    <div class="arrow-box">
+                        <div class="relative w-full h-full">
+                            <div class="arrow-length" id="arrow length"></div>
+                            <img class="arrow-img" src="resources/images/arrow_simple.svg">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -185,20 +188,17 @@
                 
             </section>
     
-                    <div class="button">
-                        <a href="index.html" class="button-content hoverCard fade-in">
-                            <div class="button-text">
-                                <h2>Back to Projects</h2>
-                            </div>
-                        </a>
+            <div class="button">
+                <a href="index.html" class="button-content hoverCard fade-in">
+                    <div class="button-text">
+                        <h2>Back to Projects</h2>
                     </div>
-                </div>
-    
+                </a>
             </div>
+                
         </div>
     </main>
 
-    <script src="javascript/gallery.js"></script>
 </body>
 
 <footer class="footer">
