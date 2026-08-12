@@ -16,8 +16,8 @@ const adaptaTrackData = [
   { src: "resources/images/ParaFauna/track05.png", type: "image" },
   { src: "resources/images/ParaFauna/track06.png", type: "image" },
   { src: "resources/images/ParaFauna/track07.png", type: "image" },
-  { src: "resources/images/ParaFauna/track08.jpg", type: "image" },
-  { src: "resources/images/ParaFauna/track09.jpg", type: "image" },
+  { src: "resources/images/ParaFauna/track08.png", type: "image" },
+  { src: "resources/images/ParaFauna/track09.png", type: "image" },
 ];
 
 //3
