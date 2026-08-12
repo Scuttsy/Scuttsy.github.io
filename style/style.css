@@ -520,6 +520,10 @@ img {
   margin-bottom: 0;
 }
 
+.overview-content p {
+  margin: 0.7rem 0.7rem;
+}
+
 /* #endregion */
 
 /* #region Comparison Slider */
@@ -728,6 +732,10 @@ img {
 
 /* #region Misc */
 
+.o-hide {
+  overflow: hidden;
+}
+
 .border-l {
   border-left: 0.5rem solid var(--accent-color);
   padding: 0 0.3rem;
@@ -823,8 +831,17 @@ img {
   width: 5rem;
 }
 
+
+.w-40\% {
+  width: 40%;
+}
+
 .w-50\% {
   width: 50%;
+}
+
+.w-60\% {
+  width: 60%;
 }
 
 .w-fit {
@@ -914,6 +931,10 @@ img {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 2rem;
 }
 
 .mb {
@@ -1040,6 +1061,9 @@ img {
     font-size: 0.95rem;
   }
 
+  .overview-content p {
+    margin: 0.7rem auto;
+  }
   .main-description {
     width: 100%;
     flex-direction: column;

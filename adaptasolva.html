@@ -13,6 +13,7 @@
     <link rel="icon" type="image/x-icon" href="resources/images/icon.svg" />
     <script src="javascript/main.js"></script>
     <script src="javascript/gallery.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sunburst"></script>
   </head>
 
   <body>
@@ -24,7 +25,11 @@
         <div
           style="display: flex; height: 50%; width: 100%; align-items: center"
         >
-          <img src="resources/images/icon.svg" class="icon-small" />
+          <img
+            src="resources/images/icon.svg"
+            class="icon-small"
+            alt="profile"
+          />
           <p style="margin: 5px 0px">Samuel Cutts</p>
         </div>
         <p style="margin: 0px 0px 10px 10px">Kortrijk, Belgium</p>
@@ -89,6 +94,7 @@
         <img
           src="resources/images/ParaFauna/WallRestore_Ice02.gif"
           class="object-cover h-full w-full tint z-10"
+          alt="banner"
         />
 
         <section id="title" class="header-title z-20">
@@ -104,22 +110,35 @@
       <section class="overview-grid pad-2">
         <div class="overview-item">
           <div class="overview-label">Engine</div>
-          <div class="overview-content">Unity</div>
+          <div class="overview-content">
+            <p>Unity</p>
+          </div>
         </div>
 
         <div class="overview-item">
-          <div class="overview-label">Genre</div>
-          <div class="overview-content">Puzzle Platformer</div>
+          <div class="overview-label">Role</div>
+          <div class="overview-content">
+            <p>Designer / Programmer</p>
+          </div>
         </div>
 
         <div class="overview-item">
           <div class="overview-label">Project Duration</div>
-          <div class="overview-content">3 Months</div>
+          <div class="overview-content">
+            <p>3 Months</p>
+          </div>
         </div>
 
         <div class="overview-item">
           <div class="overview-label">Team & production</div>
-          <div class="overview-content">5 (Programmer / Designer)</div>
+          <div class="overview-content flex row">
+            <p>
+              Internship at
+              <a href="https://parafauna.be/">
+                <span class="highlight">Para Fauna Studios</span>
+              </a>
+            </p>
+          </div>
         </div>
 
         <div class="overview-item">
@@ -137,17 +156,22 @@
         <div class="overview-item">
           <div class="overview-label">Goals</div>
           <div class="overview-content">
-            Design new mechanics and levels and implement them into the existing
-            project. Designed and implemented a Hub world and 11 traversal
-            sections. Designed and implemented a new forest restoration mechanic
-            with dynamic VFX to enhance the experience.
+            <p>
+              Design new mechanics and levels and implement them into the
+              existing project. Designed and implemented a Hub world and 11
+              traversal sections. Designed and implemented a new forest
+              restoration mechanic with dynamic VFX to enhance the experience.
+            </p>
           </div>
         </div>
       </section>
 
       <div class="main-description">
         <section class="section section-description">
-          <div class="grid grid-cols-2 gap-2 mt-12 mb-12">
+          <div
+            id="project-description"
+            class="grid grid-cols-2 gap-2 mt-12 mb-12"
+          >
             <section class="section section-description mr">
               <h1>Project Descrption</h1>
 
@@ -181,20 +205,285 @@
             <section class="section section-description">
               <h1>My Role</h1>
               <p>
-                My solution to giving players a stronger sense of
-                <span class="highlight">continuity</span> was to adapt and flesh
-                out a previous idea for a
-                <span class="highlight">hub world</span> with interconnected
-                tracks leading to and away from the hub. Additionally, I
-                furthered the player's connection to the puzzles by
+                My solution was to give players a stronger sense of
+                <span class="highlight">continuity</span>. Which I did by
+                adapting and fleshing out a previous idea for a
+                <span class="highlight">hub world</span>,
                 <span class="highlight">adding traversal sections</span> between
-                each of the main puzzles, to break up the pacing.
+                each of the main puzzles and adding gamefeel to solving the
+                puzzles with new layers of player feedback.
               </p>
             </section>
           </div>
 
+          <!-- Restoration -->
+          <section id="Restoration" class="section-content mt-12">
+            <h1>Restoration Design</h1>
+            <div>
+              <p>
+                One of the challenges that the project needed to overcome was
+                delivering a sense of
+                <span class="highlight">restoring the dead forest</span> in
+                which you play and have that feel as satisfying as possible. To
+                that end I pitched a system of feedback that would be delivered
+                to the player.
+              </p>
+            </div>
+            <div class="flex row-rev gap-3 space-between mb-3 mt-3">
+              <div class="col w-50%">
+                <p>
+                  In vague terms, the feedback comes together to turn a section
+                  of corrupted, dead forest into a lush, green variation of
+                  itself. More specifically, A
+                  <span class="highlight">texture painter</span> paints onto a
+                  <span class="highlight">render target</span> that can be
+                  sampled as a mask by several shaders and tweened animations,
+                  VFX and post processing. The
+                  <span class="highlight">channels of feedback</span> were
+                  specifically:
+                </p>
+
+                <ul class="mt-3">
+                  <li>
+                    <span class="highlight"> An environment shader</span> that
+                    changes ground textures by sampling this mask. In this case,
+                    swapping from brown/grey textures to Green.
+                  </li>
+                  <li>
+                    A vertex shader which
+                    <span class="highlight"
+                      >grows vegetation within the painted area</span
+                    >
+                    of the environment.
+                  </li>
+                  <li>
+                    <span class="highlight">VFX</span> of glowing green
+                    fireflies that burst out from the painted area.
+                  </li>
+                  <li>
+                    A post process volume with
+                    <span class="highlight">desaturation</span>,
+                    <span class="highlight">lowered contrast</span> and a
+                    <span class="highlight">black vignette</span>, which has its
+                    weight reduced to 0 when the puzzle is solves and the forest
+                    is finally restored.
+                  </li>
+                </ul>
+
+                <div class="w-full mt-3">
+                  <h3 style="text-align: center">Why?</h3>
+                  <div class="grid grid-cols-2 gap">
+                    <div class="round-box flex col items-center">
+                      <p>Artist friendly</p>
+                    </div>
+                    <div class="round-box flex col items-center">
+                      <p>More Dynamic</p>
+                    </div>
+                    <div class="round-box flex col items-center">
+                      <p>Highly scalable</p>
+                    </div>
+                    <div class="round-box flex col items-center">
+                      <p>Visually interesting</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img
+                  src="resources/images/ParaFauna/Restoration_Ice02_03.gif"
+                />
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <h2>HLSL</h2>
+              <div class="flex row space-between w-full">
+                <div class="col w-60%">
+                  <p>
+                    The system paints to a
+                    <span class="highlight">render target</span>, which I then
+                    sample. I take the world coordinate of a painted position on
+                    a canvas within the game world. I then paint to a
+                    correspondiing position on the mask which can be sampled
+                    later by various shaders.
+                  </p>
+                  <div class="round-box" style="font-size: small">
+                    <h4 style="text-align: center">Texture paint shader:</h4>
+                    <pre class="prettyprint">
+        fixed4 frag (v2f i) : SV_Target{   
+            if(_PrepareUV > 0 ){
+                return float4(0, 0, 1, 1);
+            }         
+        
+            float4 col = tex2D(_MainTex, i.uv);
+            float4 res = float4(0,0,0,1);
+        
+            float f = 0;
+        
+            //R: Ground
+            if (_PainterColor.r > 0.0){
+                f = mask(i.worldPos, _PainterPosition, _Radius, _Hardness);
+                res.r = lerp(col.r, _PainterColor.r, f * _Strength);
+                }
+        
+            //G: Overgrowth
+            if (_PainterColor.g > 0.0){
+                float d = anCircle(i.worldPos, _PainterPosition, _Radius, _Width);
+                float ringmask = d &lt; 0.0 ? 1.0 : 0.0;
+                float edgefade = 1 - exp((-6 * _Hardness) * abs(d)); // my smoothstep
+                
+                _PainterColor.g = saturate(_PainterColor.g);
+        
+                res.g = _PainterColor.g * ringmask * edgefade;
+        
+                }
+        
+            //B: Foliage
+            if (_PainterColor.b > 0.0){
+                res.b = lerp(col.b, _PainterColor.b, f * _Strength);
+                }
+        
+          
+            return res;
+        
+        }
+        
+                    </pre>
+                  </div>
+                </div>
+                <div class="col w-50%">
+                  <img
+                    src="resources/images/ParaFauna/Restoration_Mask_RGB.gif"
+                    alt="mask_rgb"
+                  />
+                </div>
+              </div>
+
+              <div class="col w-full">
+                <div class="w-full">
+                  <p>
+                    The <span class="highlight">red channel</span> is used for
+                    the texture painted materials, like the ground and
+                    walls.<span class="highlight">The blue channel</span>
+                    is used for the vertex shaders and defines where the
+                    vegetation is grown and where it is hidden.
+                    <span class="highlight">The green channel</span> is used for
+                    overgrowth, in this case I cause the vegetation to gain some
+                    additional height in any section already defined as grown by
+                    the blue channel. I paint a ring into the green channel
+                    which <span class="highlight">dissipates over time</span>.
+                    This adds some more life to the effect and sells the
+                    aesthetics of restoring the forest better.
+                  </p>
+                </div>
+                <div class="flex row space-between w-full o-hide">
+                  <div id="mask_r">
+                    <img
+                      class="gif"
+                      src="resources/images/ParaFauna/Restoration_Mask_R.gif"
+                      alt="mask_r"
+                    />
+                  </div>
+                  <div id="mask_g">
+                    <img
+                      class="gif"
+                      src="resources/images/ParaFauna/Restoration_Mask_G.gif"
+                      alt="mask_g"
+                    />
+                  </div>
+                  <div id="mask_b">
+                    <img
+                      class="gif"
+                      src="resources/images/ParaFauna/Restoration_Mask_B.gif"
+                      alt="mask_b"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-12">
+              <h2>Shadergraph</h2>
+              <div class="flex row gap-3">
+                <div class="w-60%">
+                  <img
+                    src="resources/images/ParaFauna/AdaptaSolva_GrassShader.jpg"
+                  />
+                </div>
+                <div class="w-40%">
+                  <h4>Grass vertex shader</h4>
+                  <p>
+                    Here is the shadergraph for the vertex shader which controls
+                    the foliage. It samples the mask twice, once at world vertex
+                    position and once at object pivot position. I then perform
+                    some calculations to either show or hide the mesh.
+                  </p>
+                </div>
+              </div>
+              <div class="flex row-rev mt-3 gap-3">
+                <div class="w-60%">
+                  <img
+                    src="resources/images/ParaFauna/AdaptaSolva_GroundShader.jpg"
+                  />
+                </div>
+                <div class="w-40%">
+                  <h4>Ground fragment shader</h4>
+                  <p>
+                    Here's the shadergraph for the ground objects. Here I sample
+                    the world position of the object once and transform its
+                    coordinates based on the transform of the canvas to which
+                    the texture painter is painting. I then lerp between two
+                    sets textures based on the mask and some vertex painting.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-12 w-full">
+              <h2>Iterations</h2>
+              <p>
+                Here you can see the different
+                <span class="highlight">iterations</span> of the feature, from
+                the intial test to the final implementation. I overcame several
+                challenges implementing this system and learned valuable skills
+                in: writing <span class="highlight">HLSL</span> shaders for the
+                texure painter,
+              </p>
+              <!-- gallery-1: restoration -->
+              <div class="gallery-parent" id="galleryParent-1">
+                <div class="gallery-wrapper" id="galleryWrapper-1">
+                  <div class="gallery" id="gallery-1">
+                    <!-- Gallery items will be inserted here by JavaScript -->
+                  </div>
+                </div>
+                <div class="gallery-buttons">
+                  <div class="gallery-button" id="gallery-back-1">
+                    <img
+                      src="resources/images/button.svg"
+                      class="back"
+                      alt="btn_bck"
+                    />
+                  </div>
+                  <div class="gallery-button" id="gallery-forward-1">
+                    <img src="resources/images/button.svg" alt="btn_fwd" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal" id="modal-1">
+                <button class="modal-nav prev" id="prevBtn-1">«</button>
+                <div class="modal-content" id="modalContent-1">
+                  <!-- Content will be inserted here -->
+                </div>
+                <button class="modal-nav next" id="nextBtn-1">»</button>
+                <span class="modal-close" id="closeBtn-1">&times;</span>
+                <div class="modal-counter" id="counter-1"></div>
+              </div>
+            </div>
+          </section>
+
           <!-- Level Design -->
-          <section id="Level Design" class="section section-description mb-12">
+          <section id="level-design" class="section section-description mb-12">
             <h1>Level Design</h1>
 
             <!-- Hub World -->
@@ -298,9 +587,10 @@
                     </p>
                   </div>
                   <img
-                    class="w-50%"
-                    src="resources/images/ParaFauna/CoinPusherSlayer.gif"
+                    class="gif w-50%"
+                    src="resources/images/ParaFauna/Platforming_slime_0-1.gif"
                     loading="lazy"
+                    alt="platforming-slime_01"
                   />
                 </div>
               </div>
@@ -322,10 +612,14 @@
                 </div>
                 <div class="gallery-buttons">
                   <div class="gallery-button" id="gallery-back-2">
-                    <img src="resources/images/button.svg" class="back" />
+                    <img
+                      src="resources/images/button.svg"
+                      class="back"
+                      alt="btn_back"
+                    />
                   </div>
                   <div class="gallery-button" id="gallery-forward-2">
-                    <img src="resources/images/button.svg" />
+                    <img src="resources/images/button.svg" alt="btn_fwd" />
                   </div>
                 </div>
               </div>
@@ -341,130 +635,29 @@
             </div>
           </section>
 
-          <section id="Restoration" class="section-content">
-            <h2>Restoration Design</h2>
-            <p>
-              One of the challenges that the project needed to overcome was
-              delivering a sense of
-              <span class="highlight">restoring the dead forest</span> in which
-              you play and have that feel as satisfying as possible. To that end
-              I pitched a system of feedback that would be delivered to the
-              player.
-            </p>
-
-            <p>
-              In vague terms, the feedback comes together to turn a section of
-              corrupted, dead forest into a lush, green variation of itself.
-              More specifically, A
-              <span class="highlight">texture painter</span> paints onto a
-              <span class="highlight">render target</span> that can be sampled
-              as a mask by several shaders and tweened animations, VFX and post
-              processing. The
-              <span class="highlight">channels of feedback</span> were
-              specifically:
-            </p>
-            <ul>
-              <li>
-                <span class="highlight"> An environment shader</span> that
-                changes ground textures by sampling this mask. In this case,
-                swapping from brown/grey textures to Green.
-              </li>
-              <li>
-                A vertex shader which
-                <span class="highlight"
-                  >grows vegetation within the painted area</span
-                >
-                of the environment.
-              </li>
-              <li>
-                <span class="highlight">VFX</span> of glowing green fireflies
-                that burst out from the painted area.
-              </li>
-              <li>
-                A post process volume with
-                <span class="highlight">desaturation</span>,
-                <span class="highlight">lowered contrast</span> and a
-                <span class="highlight">black vignette</span>, which has its
-                weight reduced to 0 when the puzzle is solves and the forest is
-                finally restored.
-              </li>
-            </ul>
-            <p>
-              The system paints to a
-              <span class="highlight">render target</span>, which I then sample.
-              I paint different values into each channel to different effects.
-              The <span class="highlight">red channel</span> is used for the
-              texture painted materials, like the ground and walls.
-              <span class="highlight">The blue channel</span> is used for the
-              vertex shaders and defines where the vegetation is grown and where
-              it is hidden. <span class="highlight">The green channel</span> is
-              used for overgrowth, in this case I cause the vegetation to gain
-              some additional height in any section already defined as grown by
-              the blue channel. I paint a ring into the green channel which
-              <span class="highlight">dissipates over time</span>. This adds
-              some more life to the effect and sells the aesthetics of restoring
-              the forest better.
-            </p>
-
-            <p>
-              Here you can see the different
-              <span class="highlight">iterations</span> of the feature, from the
-              intial test to the final implementation. I overcame several
-              challenges implementing this system and learned valuable skills
-              in: writing <span class="highlight">HLSL</span> shaders for the
-              texure painter,
-            </p>
-            <!-- gallery-1: restoration -->
-            <div class="gallery-parent" id="galleryParent-1">
-              <div class="gallery-wrapper" id="galleryWrapper-1">
-                <div class="gallery" id="gallery-1">
-                  <!-- Gallery items will be inserted here by JavaScript -->
-                </div>
-              </div>
-              <div class="gallery-buttons">
-                <div class="gallery-button" id="gallery-back-2">
-                  <img src="resources/images/button.svg" class="back" />
-                </div>
-                <div class="gallery-button" id="gallery-forward-2">
-                  <img src="resources/images/button.svg" />
-                </div>
-              </div>
-            </div>
-
-            <div class="modal" id="modal-1">
-              <button class="modal-nav prev" id="prevBtn-1">«</button>
-              <div class="modal-content" id="modalContent-1">
-                <!-- Content will be inserted here -->
-              </div>
-              <button class="modal-nav next" id="nextBtn-1">»</button>
-              <span class="modal-close" id="closeBtn-1">&times;</span>
-              <div class="modal-counter" id="counter-1"></div>
+          <section class="section section-description mt-12">
+            <h2>Looking back</h2>
+            <div class="flex row w-full">
+              <p class="w-50%">
+                This is how I felt about my contributions to Adapta Solva during
+                my time working at Para Fauna studios during my internship there
+                more or less.
+              </p>
+              <img
+                class="w-50%"
+                src="resources/images/ParaFauna/parafauna_logo.png"
+              />
             </div>
           </section>
-        </section>
 
-        <section class="section section-description">
-          <h2>Looking back</h2>
-          <div class="flex row w-full">
-            <p class="w-50%">
-              This is how I felt about my contributions to Adapta Solva during
-              my time working at Para Fauna studios during my internship there
-              more or less.
-            </p>
-            <img
-              class="w-50%"
-              src="resources/images/ParaFauna/parafauna_logo.png"
-            />
+          <div class="button">
+            <a href="index.html" class="button-content hoverCard fade-in">
+              <div class="button-text">
+                <h2>Back to Projects</h2>
+              </div>
+            </a>
           </div>
         </section>
-
-        <div class="button">
-          <a href="index.html" class="button-content hoverCard fade-in">
-            <div class="button-text">
-              <h2>Back to Projects</h2>
-            </div>
-          </a>
-        </div>
       </div>
     </main>
 

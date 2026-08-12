@@ -1,6 +1,6 @@
 ﻿//1
 const restorationData = [
-  { src: "resources/images/ParaFauna/Resto_01.mp4", type: "video" },
+  { src: "resources/images/ParaFauna/Restoration_test.webm", type: "video" },
   { src: "resources/images/ParaFauna/Resto_02.gif", type: "image" },
   { src: "resources/images/ParaFauna/Restore_Ice02_01.gif", type: "image" },
   { src: "resources/images/ParaFauna/WallRestore_Ice02.gif", type: "image" },
@@ -16,7 +16,8 @@ const adaptaTrackData = [
   { src: "resources/images/ParaFauna/track05.png", type: "image" },
   { src: "resources/images/ParaFauna/track06.png", type: "image" },
   { src: "resources/images/ParaFauna/track07.png", type: "image" },
-  { src: "resources/images/ParaFauna/track08.png", type: "image" },
+  { src: "resources/images/ParaFauna/track08.jpg", type: "image" },
+  { src: "resources/images/ParaFauna/track09.jpg", type: "image" },
 ];
 
 //3
