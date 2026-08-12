@@ -172,7 +172,7 @@
             id="project-description"
             class="grid grid-cols-2 gap-2 mt-12 mb-12"
           >
-            <section class="section section-description mr">
+            <section class="section section-description">
               <h1>Project Descrption</h1>
 
               <div class="about-section">
@@ -204,7 +204,7 @@
             <!-- my role -->
             <section class="section section-description">
               <h1>My Role</h1>
-              <p>
+              <p style="text-align: center">
                 My solution was to give players a stronger sense of
                 <span class="highlight">continuity</span>. Which I did by
                 adapting and fleshing out a previous idea for a
@@ -244,30 +244,33 @@
                 </p>
 
                 <ul class="mt-3">
-                  <li>
-                    <span class="highlight"> An environment shader</span> that
-                    changes ground textures by sampling this mask. In this case,
-                    swapping from brown/grey textures to Green.
-                  </li>
-                  <li>
+                  <div class="mb-2 border-l">
+                    <p>
+                      <span class="highlight"> An environment shader</span> that
+                      changes ground textures by sampling this mask. In this
+                      case, swapping from brown/grey textures to Green.
+                    </p>
+                  </div>
+                  <div class="mb-2 border-l">
                     A vertex shader which
                     <span class="highlight"
                       >grows vegetation within the painted area</span
                     >
                     of the environment.
-                  </li>
-                  <li>
+                  </div>
+                  <div class="mb-2 border-l">
                     <span class="highlight">VFX</span> of glowing green
                     fireflies that burst out from the painted area.
-                  </li>
-                  <li>
+                  </div>
+
+                  <div class="mb-2 border-l">
                     A post process volume with
                     <span class="highlight">desaturation</span>,
                     <span class="highlight">lowered contrast</span> and a
                     <span class="highlight">black vignette</span>, which has its
                     weight reduced to 0 when the puzzle is solves and the forest
                     is finally restored.
-                  </li>
+                  </div>
                 </ul>
 
                 <div class="w-full mt-3">
