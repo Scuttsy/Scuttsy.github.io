@@ -2,9 +2,12 @@
 const restorationData = [
   { src: "resources/images/ParaFauna/Restoration_test.webm", type: "video" },
   { src: "resources/images/ParaFauna/Resto_02.gif", type: "image" },
-  { src: "resources/images/ParaFauna/Restore_Ice02_01.gif", type: "image" },
-  { src: "resources/images/ParaFauna/WallRestore_Ice02.gif", type: "image" },
-  { src: "resources/images/ParaFauna/RestoreVFX06.mp4", type: "video" },
+  { src: "resources/images/ParaFauna/Restoration_Ice02_03.gif", type: "image" },
+  { src: "resources/images/ParaFauna/Restoration_Ice02_02.gif", type: "image" },
+  {
+    src: "resources/images/ParaFauna/Restoration_Ice02_Final.webm",
+    type: "video",
+  },
 ];
 
 //2

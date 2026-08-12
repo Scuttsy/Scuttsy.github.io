@@ -35,7 +35,6 @@ class ComparisonSlider {
 
   startDrag() {
     this.isActive = true;
-    this.handle.style.opacity = "1";
   }
 
   stopDrag() {
