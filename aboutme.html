@@ -15,17 +15,16 @@
 
   <body>
     <nav class="nav">
-      <div
-        class="nav-container"
-        style="flex-direction: column; align-items: start"
-      >
-        <div
-          style="display: flex; height: 50%; width: 100%; align-items: center"
-        >
-          <img src="resources/images/icon.svg" class="icon-small" />
-          <p style="margin: 5px 0px">Samuel Cutts</p>
+      <div class="nav-container nav-profile">
+        <img
+          src="resources/images/icon.svg"
+          class="nav-profile-avatar"
+          alt="Samuel Cutts"
+        />
+        <div class="nav-profile-info">
+          <p class="nav-profile-name">Samuel Cutts</p>
+          <p class="nav-profile-location">Kortrijk, Belgium</p>
         </div>
-        <p style="margin: 0px 0px 10px 10px">Kortrijk, Belgium</p>
       </div>
       <div class="nav-container" style="justify-content: center">
         <ul class="nav-links">
@@ -81,7 +80,7 @@
         <section id="title" class="section section-title">
           <section>
             <div>
-              <h1 style="font-size: 3rem">Samuel Cutts</h1>
+              <h1 class="page-title">Samuel Cutts</h1>
               <h3 style="font-weight: 300; color: var(--text-secondary)">
                 TECHNICAL DESIGNER
               </h3>
@@ -150,14 +149,15 @@
           </section>
           _______________________________
           <div class="w-full mt-2 mb-12" >
-            <div id="trailer" style="height: 40rem;">
+            <div id="trailer">
                     <h1 style="text-align: center;">Ultraspring Trailer</h1>
-                    <div class="h-full" style="margin-top: 30px;">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/qNHrM5zMWhY?si=2PvPM_zQRo8tdEdQ"
+                    <div class="video-embed" style="margin-top: 30px;">
+                        <iframe src="https://www.youtube.com/embed/qNHrM5zMWhY?si=2PvPM_zQRo8tdEdQ"
                             frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen
                             sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups-to-escape-sandbox">
                         </iframe>
                 </div>
+            </div>
           </div>
         </section>
 

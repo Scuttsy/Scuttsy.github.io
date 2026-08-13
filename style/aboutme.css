@@ -60,22 +60,22 @@
 
 @media (max-width: 800px) {
   .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
     width: 100%;
     margin-top: 1.3rem;
-    justify-items: center;
   }
 
   .skill-card {
-    width: 120px;
-    height: 40px;
+    width: auto;
+    height: auto;
   }
 
   .skill-text {
-    font-size: 1rem;
-    padding: 0.5rem;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
   }
 
   .arrow-box {

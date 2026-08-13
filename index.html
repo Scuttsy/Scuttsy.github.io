@@ -24,41 +24,33 @@
 
   <body>
     <nav class="nav">
-      <div
-        class="nav-container"
-        style="flex-direction: column; align-items: start"
-      >
-        <div
-          class="media-hide"
-          style="display: flex; height: 50%; width: 100%; align-items: center"
-        >
-          <img src="resources/images/icon.svg" class="icon-small" />
-          <p style="margin: 5px 0px">Samuel Cutts</p>
+      <div class="nav-container nav-profile">
+        <img
+          src="resources/images/icon.svg"
+          class="nav-profile-avatar"
+          alt="Samuel Cutts"
+        />
+        <div class="nav-profile-info">
+          <p class="nav-profile-name">Samuel Cutts</p>
+          <p class="nav-profile-location">Kortrijk, Belgium</p>
         </div>
-        <p class="media-hide" style="margin: 0px 0px 10px 10px">
-          Kortrijk, Belgium
-        </p>
       </div>
       <div class="nav-container" style="justify-content: center">
         <ul class="nav-links">
-          <li><a href="#about">Projects</a></li>
+          <li><a href="index.html">Projects</a></li>
           <li><a href="aboutme.html">About</a></li>
         </ul>
       </div>
       <div class="nav-container" style="justify-content: end">
-        <div class="social-icons media-hide">
+        <div class="social-icons">
           <div class="about-tags">
-            <a
-              onclick="copyEmail()"
-              class="about-tag hoverTag"
-              style="cursor: pointer"
-            >
+            <a onclick="copyEmail()" class="about-tag" style="cursor: pointer">
               <img src="resources/images/email.png" alt="email" class="icon" />
             </a>
             <a
               href="https://www.youtube.com/@Scuttsy"
               target="_blank"
-              class="about-tag hoverTag"
+              class="about-tag"
             >
               <img
                 src="resources/images/youtube.png"
@@ -70,7 +62,7 @@
             <a
               href="https://www.linkedin.com/in/samuel-cutts-02a096296/"
               target="_blank"
-              class="about-tag hoverTag"
+              class="about-tag"
             >
               <img
                 src="resources/images/linkedin.png"
@@ -80,22 +72,9 @@
             </a>
 
             <a
-              href="https://scuttsy.itch.io/"
-              target="_blank"
-              class="about-tag hoverTag"
-            >
-              <img
-                src="resources/images/itchio-textless-white.svg"
-                alt="itch.io"
-                height="25px"
-                class="icon"
-              />
-            </a>
-
-            <a
               href="https://drive.google.com/uc?export=download&id=1lIUAza6jhN02VE3Hs9L0eYje8xfcCHTz"
               target="_blank"
-              class="about-tag hoverTag"
+              class="about-tag"
             >
               <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
               <p>CV</p>
@@ -104,6 +83,7 @@
         </div>
       </div>
     </nav>
+
     <main>
       <section class="main-description mt-12" id="content">
         <section class="flex col">
@@ -113,7 +93,7 @@
                 <h1 style="line-height: 100% !important">
                   Hey, <span class="highlight">I'm Sam</span>
                 </h1>
-                <h2>TECHNICAL DESIGNER</h2>
+                <h3>TECHNICAL DESIGNER</h3>
               </div>
               <div class="about-text">
                 <h3>
@@ -176,8 +156,7 @@
                   target="_blank"
                   class="about-tag hoverTag"
                 >
-                  <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
-                  <p>SEE MY RESUME / CV</p>
+                  <p class="text-xs">SEE MY RESUME / CV</p>
                 </a>
               </div>
               <section id="skills" class="skills-grid">
@@ -238,7 +217,7 @@
 
           <!-- Projects Section -->
           <section class="mt-3 row justify-start" style="width: 100%">
-            <div class="mb-12 relative text-left">
+            <div class="mb-12 relative text-left pad-mobile">
               <h3
                 class="text-xs uppercase flex items-center gap-2 justify-start"
                 style="color: #cca43b"
@@ -347,7 +326,7 @@
 
           <!-- Game Jams -->
 
-          <section class="row justify-start" style="width: 100%">
+          <section class="row justify-start pad-mobile" style="width: 100%">
             <div class="mb-12 relative text-left">
               <h3
                 class="text-xs uppercase flex items-center gap-2 justify-start"
@@ -546,7 +525,10 @@
 
           <!-- Employment history -->
 
-          <section class="mt-12 row justify-start" style="width: 100%">
+          <section
+            class="mt-12 row justify-start pad-mobile"
+            style="width: 100%"
+          >
             <div class="mb-12 relative text-left">
               <h3
                 class="text-xs uppercase flex items-center gap-2 justify-start"
@@ -637,7 +619,10 @@
 
           <!-- Extras - MORE -->
 
-          <section class="mt-12 flex col justify-start" style="width: 100">
+          <section
+            class="mt-12 flex col justify-start pad-mobile"
+            style="width: 100%"
+          >
             <div class="mb-12 relative text-left">
               <h3
                 class="text-xs uppercase flex items-center gap-2 justify-start"

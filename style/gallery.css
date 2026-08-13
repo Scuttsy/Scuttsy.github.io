@@ -318,6 +318,14 @@
     overflow-x: scroll;
   }
 
+  .gallery-parent-tall {
+    height: 20rem;
+  }
+
+  .gallery-parent {
+    height: auto;
+  }
+
   .gallery-item img,
   .gallery-item video {
     width: 180px;
@@ -337,6 +345,18 @@
     height: 20rem;
     cursor: grab;
     user-select: none;
+  }
+
+  .gallery-button {
+    transform: translateY(-50%);
+  }
+
+  .gallery-button:hover {
+    transform: translateY(-51%) scale(1.01);
+  }
+
+  .gallery-button:active {
+    transform: translateY(-45%) scale(0.95);
   }
 
   .modal-close {

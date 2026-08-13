@@ -18,21 +18,16 @@
 
   <body>
     <nav class="nav">
-      <div
-        class="nav-container"
-        style="flex-direction: column; align-items: start"
-      >
-        <div
-          style="display: flex; height: 50%; width: 100%; align-items: center"
-        >
-          <img
-            src="resources/images/icon.svg"
-            class="icon-small"
-            alt="profile"
-          />
-          <p style="margin: 5px 0px">Samuel Cutts</p>
+      <div class="nav-container nav-profile">
+        <img
+          src="resources/images/icon.svg"
+          class="nav-profile-avatar"
+          alt="Samuel Cutts"
+        />
+        <div class="nav-profile-info">
+          <p class="nav-profile-name">Samuel Cutts</p>
+          <p class="nav-profile-location">Kortrijk, Belgium</p>
         </div>
-        <p style="margin: 0px 0px 10px 10px">Kortrijk, Belgium</p>
       </div>
       <div class="nav-container" style="justify-content: center">
         <ul class="nav-links">
@@ -43,17 +38,13 @@
       <div class="nav-container" style="justify-content: end">
         <div class="social-icons">
           <div class="about-tags">
-            <a
-              onclick="copyEmail()"
-              class="w-full h-full flex items-center"
-              style="cursor: pointer"
-            >
+            <a onclick="copyEmail()" class="about-tag" style="cursor: pointer">
               <img src="resources/images/email.png" alt="email" class="icon" />
             </a>
             <a
               href="https://www.youtube.com/@Scuttsy"
               target="_blank"
-              class="w-full h-full flex items-center"
+              class="about-tag"
             >
               <img
                 src="resources/images/youtube.png"
@@ -65,7 +56,7 @@
             <a
               href="https://www.linkedin.com/in/samuel-cutts-02a096296/"
               target="_blank"
-              class="w-full h-full flex items-center"
+              class="about-tag"
             >
               <img
                 src="resources/images/linkedin.png"
@@ -77,8 +68,9 @@
             <a
               href="https://drive.google.com/uc?export=download&id=1lIUAza6jhN02VE3Hs9L0eYje8xfcCHTz"
               target="_blank"
-              class="w-full h-full flex items-center font-bold"
+              class="about-tag"
             >
+              <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
               <p>CV</p>
             </a>
           </div>
@@ -193,11 +185,11 @@
                 </p>
               </div>
             </section>
-            <div class="flex col items-center">
+            <div class="flex col items-center w-full">
               <iframe
+                class="w-full"
                 src="https://store.steampowered.com/widget/4104680/"
                 frameborder="0"
-                width="600"
                 height="190"
               ></iframe>
             </div>
@@ -229,7 +221,9 @@
                 to the player.
               </p>
             </div>
-            <div class="flex row-rev gap-3 space-between mb-3 mt-3">
+            <div
+              class="flex row-rev gap-3 space-between mb-3 mt-3 stack-mobile"
+            >
               <div class="col w-50%">
                 <p>
                   In vague terms, the feedback comes together to turn a section
@@ -300,7 +294,7 @@
 
             <div class="mt-3">
               <h2>HLSL</h2>
-              <div class="flex row space-between w-full">
+              <div class="flex row space-between w-full stack-mobile">
                 <div class="col w-60%">
                   <p>
                     The system paints to a
@@ -312,44 +306,44 @@
                   </p>
                   <div class="round-box" style="font-size: small">
                     <h4 style="text-align: center">Texture paint shader:</h4>
-                    <pre class="prettyprint">
-        fixed4 frag (v2f i) : SV_Target{   
-            if(_PrepareUV > 0 ){
-                return float4(0, 0, 1, 1);
-            }         
-        
-            float4 col = tex2D(_MainTex, i.uv);
-            float4 res = float4(0,0,0,1);
-        
-            float f = 0;
-        
-            //R: Ground
-            if (_PainterColor.r > 0.0){
-                f = mask(i.worldPos, _PainterPosition, _Radius, _Hardness);
-                res.r = lerp(col.r, _PainterColor.r, f * _Strength);
-                }
-        
-            //G: Overgrowth
-            if (_PainterColor.g > 0.0){
-                float d = anCircle(i.worldPos, _PainterPosition, _Radius, _Width);
-                float ringmask = d &lt; 0.0 ? 1.0 : 0.0;
-                float edgefade = 1 - exp((-6 * _Hardness) * abs(d)); // my smoothstep
-                
-                _PainterColor.g = saturate(_PainterColor.g);
-        
-                res.g = _PainterColor.g * ringmask * edgefade;
-        
-                }
-        
-            //B: Foliage
-            if (_PainterColor.b > 0.0){
-                res.b = lerp(col.b, _PainterColor.b, f * _Strength);
-                }
-        
-          
-            return res;
-        
+                    <pre class="prettyprint font-xs-mobile">
+fixed4 frag (v2f i) : SV_Target{   
+    if(_PrepareUV > 0 ){
+        return float4(0, 0, 1, 1);
+    }         
+
+    float4 col = tex2D(_MainTex, i.uv);
+    float4 res = float4(0,0,0,1);
+
+    float f = 0;
+
+    //R: Ground
+    if (_PainterColor.r > 0.0){
+        f = mask(i.worldPos, _PainterPosition, _Radius, _Hardness);
+        res.r = lerp(col.r, _PainterColor.r, f * _Strength);
         }
+
+    //G: Overgrowth
+    if (_PainterColor.g > 0.0){
+        float d = anCircle(i.worldPos, _PainterPosition, _Radius, _Width);
+        float ringmask = d &lt; 0.0 ? 1.0 : 0.0;
+        float edgefade = 1 - exp((-6 * _Hardness) * abs(d)); // my smoothstep
+        
+        _PainterColor.g = saturate(_PainterColor.g);
+
+        res.g = _PainterColor.g * ringmask * edgefade;
+
+        }
+
+    //B: Foliage
+    if (_PainterColor.b > 0.0){
+        res.b = lerp(col.b, _PainterColor.b, f * _Strength);
+        }
+
+  
+    return res;
+
+}
         
                     </pre>
                   </div>
@@ -407,7 +401,7 @@
 
             <div class="mt-12">
               <h2>Shadergraph</h2>
-              <div class="flex row gap-3">
+              <div class="flex row gap-3 stack-mobile">
                 <div class="w-60%">
                   <img
                     src="resources/images/ParaFauna/AdaptaSolva_GrassShader.jpg"
@@ -423,7 +417,7 @@
                   </p>
                 </div>
               </div>
-              <div class="flex row-rev mt-3 gap-3">
+              <div class="flex row-rev mt-3 gap-3 stack-mobile">
                 <div class="w-60%">
                   <img
                     src="resources/images/ParaFauna/AdaptaSolva_GroundShader.jpg"
@@ -444,7 +438,7 @@
 
             <div class="mt-12">
               <h2>Automatic setup</h2>
-              <div class="flex row space-between gap-3">
+              <div class="flex row space-between gap-3 stack-mobile">
                 <div class="col w-40%">
                   <p class="text-center">
                     It was important that this tool wouldn't impact our artists
@@ -531,7 +525,7 @@
             </div>
 
             <!-- Iteration 1 -->
-            <div class="flex row space-between">
+            <div class="flex row space-between stack-mobile">
               <div class="col w-50% mr-2 text-center">
                 <p>
                   I was inspired by the hub worlds of traditional puzzle
@@ -556,7 +550,7 @@
 
             <!-- Iteration 2 -->
             <div class="section section-description mt-2">
-              <div class="flex row-rev space-between">
+              <div class="flex row-rev space-between stack-mobile">
                 <div class="col w-50% ml-2 text-center">
                   <p>
                     We found after playtesting that the core idea of the
@@ -593,7 +587,7 @@
             <div id="platforming" class="section-content">
               <h2>Platforming sections</h2>
               <div class="section section-description mt-2">
-                <div class="flex row gap space-between">
+                <div class="flex row gap space-between stack-mobile">
                   <div class="col w-50% mr-2 text-center">
                     <p>
                       In addtion to the Hub world, I added traversal sections
@@ -676,7 +670,7 @@
 
           <section class="section section-description mt-12">
             <h2>Looking back</h2>
-            <div class="flex row w-full">
+            <div class="flex row w-full stack-mobile">
               <div class="w-50% col">
                 <p>
                   My time working Adapta Solva gave me valuable experience in

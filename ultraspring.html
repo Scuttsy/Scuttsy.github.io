@@ -17,17 +17,16 @@
 
   <body>
     <nav class="nav">
-      <div
-        class="nav-container"
-        style="flex-direction: column; align-items: start"
-      >
-        <div
-          style="display: flex; height: 50%; width: 100%; align-items: center"
-        >
-          <img src="resources/images/icon.svg" class="icon-small" />
-          <p style="margin: 5px 0px">Samuel Cutts</p>
+      <div class="nav-container nav-profile">
+        <img
+          src="resources/images/icon.svg"
+          class="nav-profile-avatar"
+          alt="Samuel Cutts"
+        />
+        <div class="nav-profile-info">
+          <p class="nav-profile-name">Samuel Cutts</p>
+          <p class="nav-profile-location">Kortrijk, Belgium</p>
         </div>
-        <p style="margin: 0px 0px 10px 10px">Kortrijk, Belgium</p>
       </div>
       <div class="nav-container" style="justify-content: center">
         <ul class="nav-links">
@@ -38,17 +37,13 @@
       <div class="nav-container" style="justify-content: end">
         <div class="social-icons">
           <div class="about-tags">
-            <a
-              onclick="copyEmail()"
-              class="w-full h-full flex items-center"
-              style="cursor: pointer"
-            >
+            <a onclick="copyEmail()" class="about-tag" style="cursor: pointer">
               <img src="resources/images/email.png" alt="email" class="icon" />
             </a>
             <a
               href="https://www.youtube.com/@Scuttsy"
               target="_blank"
-              class="w-full h-full flex items-center"
+              class="about-tag"
             >
               <img
                 src="resources/images/youtube.png"
@@ -60,7 +55,7 @@
             <a
               href="https://www.linkedin.com/in/samuel-cutts-02a096296/"
               target="_blank"
-              class="w-full h-full flex items-center"
+              class="about-tag"
             >
               <img
                 src="resources/images/linkedin.png"
@@ -72,7 +67,7 @@
             <a
               href="https://drive.google.com/uc?export=download&id=1lIUAza6jhN02VE3Hs9L0eYje8xfcCHTz"
               target="_blank"
-              class="w-full h-full flex items-center font-bold"
+              class="about-tag"
             >
               <!-- <img src="resources/images/cv.png" alt="linkedin" class="icon"> -->
               <p>CV</p>
@@ -102,23 +97,27 @@
       <section class="overview-grid pad-2">
         <div class="overview-item">
           <div class="overview-label">Engine</div>
-          <div class="overview-content">Unity</div>
+          <div class="overview-content"><p>Unity</p></div>
         </div>
 
         <div class="overview-item">
           <div class="overview-label">Genre</div>
-          <div class="overview-content">Platformer / Runner</div>
+          <div class="overview-content">
+            <p>Platformer / Runner</p>
+          </div>
         </div>
 
         <div class="overview-item">
           <div class="overview-label">Project Duration</div>
-          <div class="overview-content">40 hours</div>
+          <div class="overview-content">
+            <p>40 hours</p>
+          </div>
         </div>
 
         <div class="overview-item">
           <div class="overview-label">Team & production</div>
           <div class="overview-content">
-            Solo Developer (minus sound assets)
+            <p>Solo Developer (minus sound assets)</p>
           </div>
         </div>
 
@@ -138,19 +137,20 @@
         <div class="overview-item">
           <div class="overview-label">Goals</div>
           <div class="overview-content">
-            Design and iterate on a single mechanic to make the player feel as
-            fast as possible, while still lending a feeling of control to
-            encourage speedrunning.
+            <p>
+              Design and iterate on a single mechanic to make the player feel as
+              fast as possible, while still lending a feeling of control to
+              encourage speedrunning.
+            </p>
           </div>
         </div>
       </section>
 
       <div class="main-description">
-        <div id="trailer" class="w-full" style="height: 40rem">
+        <div id="trailer" class="w-full">
           <h1 style="text-align: center">Trailer</h1>
-          <div class="h-full" style="margin-top: 30px">
+          <div class="video-embed" style="margin-top: 30px">
             <iframe
-              class="w-full h-full"
               src="https://www.youtube.com/embed/qNHrM5zMWhY?si=2PvPM_zQRo8tdEdQ"
               frameborder="0"
               allow="autoplay; picture-in-picture"
@@ -206,7 +206,7 @@
         <!-- Iteration 0 -->
         <section class="section section-description mb-3">
           <h1>Starting point</h1>
-          <div class="flex row space-between">
+          <div class="flex row space-between stack-mobile">
             <div class="col w-50% mr-2 text-center">
               <p>
                 The very first iteration was intended to be a simple platformer,
@@ -238,7 +238,7 @@
         <section class="section section-description mt-12">
           <h1>Iterations</h1>
 
-          <div class="flex row-rev space-between end">
+          <div class="flex row-rev space-between end stack-mobile">
             <div class="flex col w-50% ml-2">
               <p class="mb">
                 I made the decision to fully pivot the idea after noticing some
@@ -274,7 +274,7 @@
 
         <!-- Iteration 2 -->
         <section class="section section-description">
-          <div class="flex row space-between">
+          <div class="flex row space-between stack-mobile">
             <div class="col w-50% mr-2">
               <p class="mb-3">
                 I then brainstormed solutions to these issues and decided to
@@ -319,7 +319,7 @@
 
         <!-- Iteration 3 -->
         <section class="section section-description">
-          <div class="flex row-rev space-between">
+          <div class="flex row-rev space-between stack-mobile">
             <div class="col w-50% ml-2">
               <p>
                 After implementing these changes I playtested the game again and
@@ -364,7 +364,7 @@
         <!-- Post mortem -->
         <section class="section section-description mt-12 mb-12">
           <h1>post-mortem</h1>
-          <div class="flex row w-full">
+          <div class="flex row w-full stack-mobile">
             <p class="mr-2" style="margin-top: 30px">
               Looking back I think it's a decent game. More importantly I
               managed to turn a boring concept into a fun prototype very

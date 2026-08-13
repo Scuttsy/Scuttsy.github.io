@@ -128,4 +128,9 @@ a {
     font-size: 1rem;
     text-align: center;
   }
+
+  .font-xs-mobile {
+    font-size: 0.6rem;
+    text-align: left;
+  }
 }
